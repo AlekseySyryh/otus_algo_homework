@@ -1,0 +1,71 @@
+<input> 5 5 4 3 2 1
+; 1 - n
+; 2 - n+6 указатель на последний элемент
+; 3 - n+7 указатель после последнего элемента
+; 4 - tmp
+; 5 - i
+; 6 - k
+; 7 - элемент[0]
+;...
+read 1 ; n
+load 1
+add =6
+store 2
+add =1
+store 3
+load =7
+store 4 ; tmp = указатель на первый элемень
+read:
+read *4 ;*tmp
+load 4
+add =1 
+store 4 ;++tmp
+load 3
+sub 4 
+jgtz read ; while (tmp < std::end(элемент)) (феншуйно конечно !=, но...)
+
+load =7
+store 5 ; i = std::begin()
+ext:
+load 5
+add =1
+store 6 ;k = i+1
+int:
+load *6
+sub *5
+jgtz no_exch
+jz no_exch
+load *6
+store 4 ;tmp = элемент[k];
+load *5
+store *6; элемент[k] = элемент[i];
+load 4
+store *5; элемент[i] = tmp; 
+no_exch:
+
+load 6
+add =1
+store 6;++k
+load 3
+sub 6
+jgtz int ;для (каждого k от i+1 до N-1)
+
+load 5
+add =1
+store 5 ; ++i 
+load 2
+sub 5
+jgtz ext ; для (каждого i от 0 до N-2) (при i = n-1 внутренний цикл вырожден) 
+
+load =7
+store 4 
+write:
+write *4
+load 4
+add =1
+store 4
+load 3
+sub 4 
+jgtz write
+
+halt

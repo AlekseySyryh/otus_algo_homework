@@ -1,0 +1,19 @@
+<input> 10 3
+read 1
+read 3
+load =0
+store 2
+next:
+load 1
+sub 3
+jgtz continue
+jz continue
+write 2
+write 1
+halt
+continue:
+store 1
+load 2
+add =1
+store 2
+jmp next
