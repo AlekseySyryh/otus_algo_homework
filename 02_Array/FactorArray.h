@@ -1,33 +1,34 @@
 #pragma once
 
 #include "IArray.h"
-
 template <typename T>
-class VectorArray : public IArray<T>{
+class FactorArray : public IArray<T> {
 public:
-    VectorArray():VectorArray(10){
+    FactorArray():FactorArray(50,10){}
+    FactorArray(size_t factor, size_t initLength):
+        allocated(initLength), factor(factor),size_(0),initLength(initLength) {
+        array = new T[allocated];
+    }
 
-    }
-    VectorArray(size_t vector):vector(vector),size_(0),allocated(0) {
-        array = new T[0];
-    }
-    void reset() {
+    void reset() override {
         delete[](array);
-        array = new T[0];
-        allocated = 0;
+        allocated = initLength;
         size_ = 0;
+        array = new T[allocated];
     }
+
     size_t size() const override {
         return size_;
     }
 
     void add(T item) override {
-        add(item, size_);
+        add(item, allocated);
     }
 
     T get(size_t index) const override {
         return array[index];
     }
+
 
     void add(T item, size_t index) override {
         if (size_ == allocated) {
@@ -40,7 +41,6 @@ public:
 
     T remove(size_t index) override {
         T removed = array[index];
-        //Формально про освобождение памяти у нас требования нет.
         std::move(array + index + 1, array + size_, array + index);
         --size_;
         return removed;
@@ -48,13 +48,13 @@ public:
 
 private:
     void resize(){
-        T* newArray = new T[allocated+vector];
+        T* newArray = new T[allocated+allocated*factor/100];
         std::move(array,array+allocated,newArray);
         delete[](array);
         array = newArray;
-        allocated += vector;
+        allocated += allocated*factor/100;
     }
     T* array;
-    const size_t vector;
+    const size_t initLength,factor;
     size_t allocated,size_;
 };

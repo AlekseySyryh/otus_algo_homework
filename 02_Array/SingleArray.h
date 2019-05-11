@@ -5,9 +5,8 @@
 template <typename T>
 class SingleArray : public IArray<T>{
 public:
-    SingleArray() {
+    SingleArray():allocated(0) {
         array = new T[0];
-        allocated = 0;
     }
 
     void reset() {
