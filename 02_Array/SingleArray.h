@@ -8,7 +8,9 @@ public:
     SingleArray():allocated(0) {
         array = new T[0];
     }
-
+    ~SingleArray(){
+        delete[](array);
+    }
     void reset() {
         delete[](array);
         array = new T[0];

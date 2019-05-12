@@ -9,6 +9,9 @@ public:
         allocated(initLength), factor(factor),size_(0),initLength(initLength) {
         array = new T[allocated];
     }
+    ~FactorArray(){
+        delete[](array);
+    }
 
     void reset() override {
         delete[](array);
@@ -22,7 +25,7 @@ public:
     }
 
     void add(T item) override {
-        add(item, allocated);
+        add(item, size_);
     }
 
     T get(size_t index) const override {

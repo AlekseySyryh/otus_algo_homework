@@ -11,6 +11,10 @@ public:
     VectorArray(size_t vector):vector(vector),size_(0),allocated(0) {
         array = new T[0];
     }
+    ~VectorArray(){
+        delete[](array);
+    }
+
     void reset() {
         delete[](array);
         array = new T[0];
@@ -40,7 +44,6 @@ public:
 
     T remove(size_t index) override {
         T removed = array[index];
-        //Формально про освобождение памяти у нас требования нет.
         std::move(array + index + 1, array + size_, array + index);
         --size_;
         return removed;

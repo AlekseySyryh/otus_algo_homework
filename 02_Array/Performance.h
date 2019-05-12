@@ -35,6 +35,28 @@ bool checkValid(IArray<int>& array){
         std::cout << "Remove - Fail" << std::endl;
         return false;
     }
+    array.reset();
+    for (int i = 0; i < 1000; ++i) {
+        array.add(i);
+    }
+    for (int j = 0; j < 1000; ++j) {
+        if (array.get(j) != j) {
+            std::cout << "Back insert - Fail" << std::endl;
+            return false;
+        }
+    }
+    std::cout << "Back insert - OK" << std::endl;
+    array.reset();
+    for (int i = 0; i < 1000; ++i) {
+        array.add(i,0);
+    }
+    for (int j = 0; j < 1000; ++j) {
+        if (array.get(j) != 999-j) {
+            std::cout << "Front insert - Fail" << std::endl;
+            return false;
+        }
+    }
+    std::cout << "Front insert - OK" << std::endl;
     return true;
 }
 
@@ -80,7 +102,7 @@ void checkPerformance(IArray<int>& array, size_t n){
     std::cout << n << " reads from first position " << std::chrono::duration_cast<std::chrono::milliseconds>
             (end-start).count() << "ms." << std::endl;
     for (size_t i = 0; i < n; ++i) {
-        ixes[i] = std::rand()%(n+1);
+        ixes[i] = std::rand()%n;
     }
     start = std::chrono::system_clock::now();
     for (const auto& ix : ixes) {
@@ -107,9 +129,24 @@ void checkPerformance(IArray<int>& array, size_t n){
     std::cout << n << " removes from first position " << std::chrono::duration_cast<std::chrono::milliseconds>
             (end-start).count() << "ms." << std::endl;
     array.reset();
+    ixes.clear();
+    ixes.resize(n);
     for (size_t i = 0; i < n; ++i) {
         array.add(i,i);
-    } start = std::chrono::system_clock::now();
+        ixes[i] = std::rand()%(n-i);
+    }
+    start = std::chrono::system_clock::now();
+    for (const auto& ix: ixes) {
+        array.remove(ix);
+    }
+    end = std::chrono::system_clock::now();
+    std::cout << n << " removes from random position " << std::chrono::duration_cast<std::chrono::milliseconds>
+            (end-start).count() << "ms." << std::endl;
+    array.reset();
+    for (size_t i = 0; i < n; ++i) {
+        array.add(i,i);
+    }
+    start = std::chrono::system_clock::now();
     while (array.size() > 0) {
         array.remove(array.size()-1);
     }
