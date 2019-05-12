@@ -10,7 +10,6 @@ public:
     MatrixArray():MatrixArray(10){}
     MatrixArray(size_t vector):vector(vector),size_(0){
     }
-
     void reset() override {
         for (int i = 0; i < array.size(); ++i) {
             delete(array.get(i));
