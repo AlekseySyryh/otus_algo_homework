@@ -5,7 +5,7 @@
 template <typename T>
 struct Rec{
     T item;
-    Rec* next;
+    Rec* next = nullptr;
 };
 
 template <typename T>

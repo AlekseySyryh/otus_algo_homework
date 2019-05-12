@@ -111,6 +111,7 @@ void checkPerformance(IArray<int>& array, size_t n){
     end = std::chrono::system_clock::now();
     std::cout << n << " reads from random position " << std::chrono::duration_cast<std::chrono::milliseconds>
             (end-start).count() << "ms." << std::endl;
+    start = std::chrono::system_clock::now();
     for (size_t i = 0; i < n; ++i) {
         array.get(n-1);
     }
