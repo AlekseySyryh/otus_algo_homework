@@ -5,6 +5,7 @@
 #include "MatrixArray.h"
 #include "LinkedList.h"
 #include "DoubleLinkedList.h"
+#include "SpaceArray.h"
 
 int main() {
     const size_t tests = 100000;
@@ -20,5 +21,7 @@ int main() {
     Test(linkedList,tests);
     DoubleLinkedList<int> doubleLinkedList;
     Test(doubleLinkedList,tests);
+    SpaceArray<int> spaceArray;
+    Test(spaceArray,tests);
     return 0;
 }
