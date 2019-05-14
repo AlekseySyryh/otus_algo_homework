@@ -6,6 +6,11 @@
 #include "LinkedList.h"
 #include "DoubleLinkedList.h"
 #include "SpaceArray.h"
+#include "STLVector.h"
+#include "STLDeque.h"
+#include "STLForwardList.h"
+#include "STLList.h"
+
 
 int main() {
     const size_t tests = 100000;
@@ -23,5 +28,13 @@ int main() {
     Test(doubleLinkedList,tests);
     SpaceArray<int> spaceArray;
     Test(spaceArray,tests);
+    STLVector<int> stlVector;
+    Test(stlVector, tests);
+    STLDeque<int> stlDeque;
+    Test(stlDeque, tests);
+    STLForwardList<int> stlForwardList;
+    Test(stlForwardList, tests);
+    STLList<int> stlList;
+    Test(stlList, tests);
     return 0;
 }
