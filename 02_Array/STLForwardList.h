@@ -37,11 +37,14 @@ public:
     }
 
     T remove(size_t index) override {
-        T deleted = get(index);
+        T deleted;
         if (index == 0) {
+            deleted = *array.begin();
             array.pop_front();
         } else {
-            array.erase_after(std::next(array.begin(), index - 1));
+            auto deleteAfter = std::next(array.begin(), index - 1);
+            deleted = *std::next(deleteAfter);
+            array.erase_after(deleteAfter);
         }
         return deleted;
     }

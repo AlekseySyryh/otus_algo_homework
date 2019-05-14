@@ -55,6 +55,16 @@ public:
     T remove(size_t index) override {
         auto result = find(index);
         T deleted = result.block->item->remove(result.index);
+        if (result.block->item->size() == 0) {
+            if (result.block != firstBlock) {
+                auto *block = firstBlock;
+                while (block->next != result.block) {
+                    block = block->next;
+                }
+                block->next = result.block->next;
+                delete (result.block);
+            }
+        }
         --size_;
         return deleted;
     }

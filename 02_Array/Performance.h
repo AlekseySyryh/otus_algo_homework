@@ -123,7 +123,7 @@ void checkPerformance(IArray<int>& array, size_t n){
         array.add(i,i);
     }
     start = std::chrono::system_clock::now();
-    while (array.size() > 0) {
+    for (size_t i = 0; i < n; ++i) {
         array.remove(0);
     }
     end = std::chrono::system_clock::now();
@@ -148,7 +148,7 @@ void checkPerformance(IArray<int>& array, size_t n){
         array.add(i,i);
     }
     start = std::chrono::system_clock::now();
-    while (array.size() > 0) {
+    for (size_t i = 0; i < n; ++i) {
         array.remove(array.size()-1);
     }
     end = std::chrono::system_clock::now();
