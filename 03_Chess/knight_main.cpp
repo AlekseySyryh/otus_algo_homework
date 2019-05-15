@@ -1,5 +1,6 @@
 #include <iostream>
 #include <array>
+#include <vector>
 #include <chrono>
 #include <iomanip>
 
@@ -70,16 +71,20 @@ void checkPerformance() {
     std::chrono::time_point<std::chrono::system_clock> start, end;
     const size_t tests = 100000000;
     size_t t1, t2;
-    start = std::chrono::system_clock::now();
+    std::vector<int> ids(tests);
     for (int i = 0; i < tests; ++i) {
-        solve(std::rand() % (64));
+        ids[i] = std::rand() % (64);
+    }
+    start = std::chrono::system_clock::now();
+    for (auto i : ids) {
+        solve(i);
     }
     end = std::chrono::system_clock::now();
     std::cout << "solve() " << (t1 = std::chrono::duration_cast<std::chrono::milliseconds>
             (end - start).count()) << "ms." << std::endl;
     start = std::chrono::system_clock::now();
-    for (int i = 0; i < tests; ++i) {
-        solveFast(std::rand() % (64));
+    for (auto i : ids) {
+        solveFast(i);
     }
     end = std::chrono::system_clock::now();
     std::cout << "solveFast() " << (t2 = std::chrono::duration_cast<std::chrono::milliseconds>
