@@ -1,0 +1,267 @@
+
+
+
+ПОДГОТОВКА
+
+Тема:	Разбор FENа
+	Дано:	rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+	Надо:
+  +-----------------+
+8 | r n b q k b n r |
+7 | p p p p p p p p |
+6 | . . . . . . . . |
+5 | . . . . . . . . |
+4 | . . . . . . . . |
+3 | . . . . . . . . |
+2 | P P P P P P P P |
+1 | R N B Q K B N R |
+  +-----------------+
+    a b c d e f g h
+
+Тема: Сборка FENа
+	Дано: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KkQq - 0 1
+	Надо: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+
+СЧЁТЧИК ХОДОВ
+
+Тема: Изменение очерёдности и номера хода
+	Дано: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+	      e2e2
+	Надо: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+	Дано: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+	      e7e7
+	Надо: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 2
+
+Тема: Увеличение счётчика полуходов без хода пешкой и взятий
+	Дано: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+	      b1f3
+	Надо: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 1 1
+
+	Дано: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+	      e2e4
+	Надо: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+	Дано: rnbqkb1r/pppppppp/8/4N3/6n1/8/PPPPPPPP/RNBQKB1R w KQkq - 4 3
+	      e5g4
+	Надо: rnbqkb1r/pppppppp/8/8/6N1/8/PPPPPPPP/RNBQKB1R b KQkq - 0 3
+
+	Дано: rnbqkb1r/pppppppp/8/4N3/6n1/8/PPPPPPPP/RNBQKB1R w KQkq - 4 3
+	      b1f3
+	Надо: rnbqkb1r/pppppppp/8/4N3/6n1/2N5/PPPPPPPP/R1BQKB1R b KQkq - 5 3
+
+ПЕРЕМЕЩЕНИЕ
+
+Тема: Ход без взятия
+	Дано: k7/r7/b7/q7/N7/B7/R7/K7 w - - 15 48
+		  a2h2
+	Надо: k7/r7/b7/q7/N7/B7/7R/K7 b - - 16 48
+
+	Дано: k7/r7/b7/q7/N7/B7/7R/K7 b - - 16 48
+		  a5e1
+	Надо: k7/r7/b7/8/N7/B7/7R/K3q3 w - - 17 49
+
+Тема: Ход со взятием
+	Дано: rnbqkbnr/ppp1pppp/8/3p4/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2
+		  e4d5
+	Надо: rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPP1PPP/RNBQKBNR b KQkq - 0 2
+
+	Дано: rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPP1PPP/RNBQKBNR b KQkq - 0 2
+	      d8d5
+	Надо: rnb1kbnr/ppp1pppp/8/3q4/8/8/PPPP1PPP/RNBQKBNR w KQkq - 0 3
+
+Тема: Превращение пешки
+	Дано: rnbqkbnr/pppp1ppp/4P3/8/8/8/Pp3PPP/RNBQKBNR b KQkq - 0 5
+	      b2a1q
+	Надо: rnbqkbnr/pppp1ppp/4P3/8/8/8/P4PPP/qNBQKBNR w Kkq - 0 6
+
+	Дано: rnbqkbnr/pppp1ppp/4P3/8/8/8/Pp3PPP/RNBQKBNR b KQkq - 0 5
+	      b2a1b
+	Надо: rnbqkbnr/pppp1ppp/4P3/8/8/8/P4PPP/bNBQKBNR w Kkq - 0 6
+
+	Дано: rnbqkbnr/pppp1ppp/4P3/8/8/8/P4PPP/qNBQKBNR w Kkq - 0 6
+	      d7c8R
+	Надо: rnRq1bnr/ppp1kppp/8/8/8/8/P4PPP/qNBQKBNR b K - 0 7
+
+	Дано: rnbqkbnr/pppp1ppp/4P3/8/8/8/P4PPP/qNBQKBNR w Kkq - 0 6
+	      d7c8N
+	Надо: rnNq1bnr/ppp1kppp/8/8/8/8/P4PPP/qNBQKBNR b K - 0 7
+
+Тема: Фиксация битого поля
+	Дано: rnbqkbnr/ppp1pppp/8/4P3/3p4/8/PPPP1PPP/RNBQKBNR w KQkq - 0 3
+	      c2c4
+	Надо: rnbqkbnr/ppp1pppp/8/4P3/2Pp4/8/PP1P1PPP/RNBQKBNR b KQkq c3 0 3
+	Дано: rnbqkbnr/ppp1pppp/8/4P3/2Pp4/8/PP1P1PPP/RNBQKBNR b KQkq c3 0 3
+	      f7f5
+	Надо: rnbqkbnr/ppp1p1pp/8/4Pp2/2Pp4/8/PP1P1PPP/RNBQKBNR w KQkq f6 0 4
+	Дано: rnbqkbnr/ppp1pppp/8/8/3p4/N6N/PPPPPPPP/R1BQKB1R w KQkq - 0 3
+		  b2b4
+	Надо: rnbqkbnr/ppp1pppp/8/8/1P1p4/N6N/P1PPPPPP/R1BQKB1R b KQkq - 0 3
+
+Тема: Взятие на проходе
+	Дано: rnbqkbnr/ppp1pppp/8/4P3/2Pp4/8/PP1P1PPP/RNBQKBNR b KQkq c3 0 3
+		  d4c3
+	Надо: rnbqkbnr/ppp1pppp/8/4P3/8/2p5/PP1P1PPP/RNBQKBNR w KQkq - 0 4
+
+	Дано: r1bqkbnr/ppp1p1pp/2n5/4PpP1/8/2p5/PP1P1P1P/RNBQKBNR w KQkq f6 0 6
+		  g5f6
+	Надо: r1bqkbnr/ppp1p1pp/2n2P2/4P3/8/2p5/PP1P1P1P/RNBQKBNR b KQkq - 0 6
+
+	Дано: r1bqkbnr/ppp1p1pp/2n5/4PpP1/8/2p5/PP1P1P1P/RNBQKBNR w KQkq f6 0 6
+		  e5f6
+	Надо: r1bqkbnr/ppp1p1pp/2n2P2/6P1/8/2p5/PP1P1P1P/RNBQKBNR b KQkq - 0 6
+
+	Дано: r2qkbnr/pppbp2p/2n2p2/4PpP1/8/2p2N2/PP1P1P1P/RNBQK2R w KQkq - 0 9
+	      e5f6
+	Надо: r2qkbnr/pppbp2p/2n2P2/5pP1/8/2p2N2/PP1P1P1P/RNBQK2R b KQkq - 0 9
+
+Тема: Убирание флага рокировки при ходе королём
+	Дано: r3k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R b KQkq - 0 16
+	      e8d8
+	Надо: r2k3r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQ - 1 17
+
+	Дано: r2k3r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQ - 1 17
+	      e1d1
+	Надо: r2k3r/pppppppp/8/N7/8/8/PPPPPPPP/R2K3R b - - 2 17
+
+	Дано: r3k2r/pppppppp/8/n7/2N5/8/PPPPPPPP/R3K2R w KQkq - 4 16
+	      e1d1
+	Надо: r3k2r/pppppppp/8/n7/2N5/8/PPPPPPPP/R2K3R b kq - 5 16
+
+Тема: Убирание флага рокировки при ходе ладьёй
+	Дано: r3k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R b KQkq - 0 16
+	      a8b8
+	Надо: 1r2k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQk - 1 17
+
+	Дано: 1r2k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQk - 1 17
+	      h1g1
+	Надо: 1r2k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K1R1 b Qk - 2 17
+
+	Дано: 1r2k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K1R1 b Qk - 2 17
+	      h8g8
+	Надо: 1r2k1r1/pppppppp/8/N7/8/8/PPPPPPPP/R3K1R1 w Q - 3 18
+
+	Дано: 1r2k1r1/pppppppp/8/N7/8/8/PPPPPPPP/R3K1R1 w Q - 3 18
+	      a1c1
+	Надо: 1r2k1r1/pppppppp/8/N7/8/8/PPPPPPPP/2R1K1R1 b - - 4 18
+
+Тема: Рокировка в короткую сторону
+	Дано: r3k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R b KQkq - 0 16
+	      e8g8
+	Надо: r4rk1/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQ - 1 17
+
+	Дано: r4rk1/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQ - 1 17
+	      e1g1
+	Надо: r4rk1/pppppppp/8/N7/8/8/PPPPPPPP/R4RK1 b - - 2 17
+
+Тема: Рокировка в длинную сторону
+	Дано: r3k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R b KQkq - 0 16
+		  e8c8
+	Надо: 2kr3r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQ - 1 17
+
+	Дано: 2kr3r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQ - 1 17
+	      e1c1
+	Надо: 2kr3r/pppppppp/8/N7/8/8/PPPPPPPP/2KR3R b - - 2 17
+
+ГЕНЕРАЦИЯ ХОДОВ ФИГУРАМИ
+
+Сортировка и группировка ходов
+	Дано: FEN + список ходов
+	Надо: отсортировать список ходов по алфавиту и сгруппировать по первым клеткам
+
+	Дано: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
+	      a2a3 b2b3 c2c3 d2d3 e2e3 f2f3 g2g3 h2h3
+	      a2a4 b2b4 c2c4 d2d4 e2e4 f2f4 g2g4 h2h4
+	      b1c3 b1a3 g1h3 g1f3
+	Надо: b1a3 b1c3
+	      g1f3 g1h3
+		  a2a3 a2a4
+	      b2b3 b2b4
+	      c2c3 c2c4
+	      d2d3 d2d4
+	      e2e3 e2e4
+	      f2f3 f2f4
+	      g2g3 g2g4
+	      h2h3 h2h4
+
+Тема: Ход конём
+	Дано: 2k5/8/8/4N3/8/8/P7/2K5 b - - 6 19
+	Надо: e5d3 e5f3 e5c4 e5g4 e5c6 e5g6 e5d7 e5c7
+	Дано: конь на краю
+	Дано: конь в углу
+	Дано: конь может взять фигуры противника
+	Дано: конь упирается в свои фигуры
+	Дано: конь есть, но ходов нет
+	Дано: 2k5/8/8/4N3/2N5/8/P7/2K5 w - - 6 19
+	Надо: c4...
+	      e5...
+	Дано: Несколько коней
+	Дано: 32 коня
+
+Тема: ход ладьёй
+	Дано: ладье никто не мешает
+	Дано: ладья упирается в чужие фигуры
+	Дано: ладья упирается в свои фигуры
+	Дано: нет ходов
+	Дано: несколько ладьей
+	Дано: ход чёрных
+
+Тема: ход слоном
+	Дано: слону никто не мешает
+	Дано: слон упирается в чужие фигуры
+	Дано: слон упирается в свои фигуры
+	Дано: у слона нет ходов
+	Дано: Несколько слонов
+	Дано: ход чёрных
+
+Тема: ход ферзём
+	Дано: верзю никто не мешает
+	Дано: ферзь упирается в чужие фигуры
+	Дано: ферзь упирается в свои фигуры
+	Дано: у ферзя нет ходов
+	Дано: Несколько ферзей
+	Дано: ход чёрных
+
+Тема: ход королём
+	Дано: ход королём в любую сторону
+	Дано: ход чёрным королём
+	Дано: позиции на краю и в углу
+
+Тема: разные фигуры
+	Дано: различные позиции со всеми фигурами
+	Надо: список всех возможных ходов
+
+
+ГЕНЕРАЦИЯ ХОДОВ ПЕШКАМИ
+
+	Дано: ход на одно поле
+	Дано: ход на два поля
+	Дано: взятие по диагонали
+	Дано: превращение в фигуру
+	Дано: взятие на проходе
+	Дано: те же варианты, но ход чёрных
+	Дано: несколько пешек с разными вариантами
+
+ШАХ
+	Дано: позиция
+	Надо: определить наличие шаха
+
+	Дано: позиция
+	Надо: найти все ходы, после которых не будет шаха
+
+РОКИРОВКА
+	Дано: рокировка в короткую сторону
+	Дано: рокировка в длинную сторону
+	Дано: Ходы чёрного короля
+	Дано: варианты невозможных рокировок:
+			король под шахом
+			поле после рокировки под шахом
+			перепрыгиваемое поле под шахом
+
+МАТ и ПАТ
+	Дано: позиция
+	Надо: опеределить мат или пат здесь
+
+НИЧЬЯ
+	Дано: позиция
+	Надо: определить ничейную/невозможную позицию
