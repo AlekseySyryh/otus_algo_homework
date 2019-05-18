@@ -77,7 +77,7 @@ public:
             }
             oss << (i == 7 ? ' ' : '/');
         }
-        oss << (nextW ? "w " : "n ");
+        oss << (nextW ? "w " : "b ");
         if (Kok) oss << 'K';
         if (Qok) oss << 'Q';
         if (kok) oss << 'k';
@@ -86,6 +86,20 @@ public:
         oss << enPassant << " " << halfmove << " " << fullmove;
         return oss.str();
     };
+
+    void move(std::string move) {
+        if (!nextW) ++fullmove;
+        nextW = !nextW;
+        size_t cf = move[0] - 'a';
+        size_t rf = 8 - (move[1] - '0');
+        size_t ct = move[2] - 'a';
+        size_t rt = 8 - (move[3] - '0');
+        if (board[rf][cf] == 'p' || board[rf][cf] == 'P' || board[rt][ct] != '.') {
+            halfmove = 0;
+        } else {
+            ++halfmove;
+        }
+    }
 private:
     std::array<std::array<char, 8>, 8> board;
     bool nextW, Kok, Qok, kok, qok;
