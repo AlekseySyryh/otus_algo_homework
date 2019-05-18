@@ -30,15 +30,19 @@ public:
         iss >> c;
         nextW = (c == 'w' || c == 'W');
         iss >> c;
-        while (c != ' ') {
+        if (c != '-')
+            while (true) {
             if (c == 'K') Kok = true;
             else if (c == 'Q') Qok = true;
             else if (c == 'k') kok = true;
             else if (c == 'q') qok = true;
-            else break;
+            else {
+                iss.seekg(-1, std::ios::cur);
+                break;
+            }
             iss >> c;
         }
-        iss.seekg(-1, std::ios::cur);
+
         iss >> enPassant >> halfmove >> fullmove;
     }
 
@@ -83,6 +87,7 @@ public:
         if (kok) oss << 'k';
         if (qok) oss << 'q';
         if (Kok | Qok | kok | qok) oss << ' ';
+        else oss << "- ";
         oss << enPassant << " " << halfmove << " " << fullmove;
         return oss.str();
     };
@@ -99,10 +104,14 @@ public:
         } else {
             ++halfmove;
         }
+        if (cf != ct || rf != rt) {
+            board[rt][ct] = board[rf][cf];
+            board[rf][cf] = '.';
+        }
     }
 private:
     std::array<std::array<char, 8>, 8> board;
-    bool nextW, Kok, Qok, kok, qok;
+    bool nextW, Kok = false, Qok = false, kok = false, qok = false;
     std::string enPassant;
     size_t halfmove, fullmove;
 };
