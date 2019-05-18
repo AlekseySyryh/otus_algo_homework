@@ -91,7 +91,6 @@ void halfMoveNoChange() {
     }
     std::cout << "Ok" << std::endl;
 }
-
 void noTakeMove() {
     std::cout << "No take move:";
     state a("k7/r7/b7/q7/N7/B7/R7/K7 w - - 15 48");
@@ -112,11 +111,31 @@ void noTakeMove() {
     std::cout << "OK" << std::endl;
 }
 
+void takeMove() {
+    std::cout << "Take move:";
+    state a("rnbqkbnr/ppp1pppp/8/3p4/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2");
+    a.move("e4d5");
+    std::string excepted = "rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPP1PPP/RNBQKBNR b KQkq - 0 2";
+    std::string actual = a.build();
+    if (excepted != actual) {
+        std::cout << "Test 1 fail" << std::endl;
+        return;
+    }
+    a.move("d8d5");
+    excepted = "rnb1kbnr/ppp1pppp/8/3q4/8/8/PPPP1PPP/RNBQKBNR w KQkq - 0 3";
+    actual = a.build();
+    if (excepted != actual) {
+        std::cout << "Test 2 fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
 int main() {
     parseFEN();
     buildFEN();
     moveNoChange();
     halfMoveNoChange();
     noTakeMove();
+    takeMove();
     return EXIT_SUCCESS;
 }
