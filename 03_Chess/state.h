@@ -108,6 +108,15 @@ public:
         if (kok && (cf == 7 && rf == 0 || ct==7 && rt ==0 || board[rf][cf] == 'k')) kok = false;
         if (Qok && (cf == 0 && rf == 7 || ct==0 && rt ==7 || board[rf][cf] == 'K')) Qok = false;
         if (Kok && (cf == 7 && rf == 7 || ct==7 && rt ==7 || board[rf][cf] == 'K')) Kok = false;
+        if ((board[rf][cf] == 'p' || board[rf][cf] == 'P') &&
+            (rf == 1 && rt == 3 || rf == 6 && rt == 4) &&
+            !underAttack((rf + rt) / 2, cf, nextW)) {
+            std::ostringstream oss;
+            oss << (char) (cf + 'a') << (rf == 6 ? '3' : '6');
+            enPassant = oss.str();
+        } else {
+            enPassant = "-";
+        }
         if (cf != ct || rf != rt) {
             if (move.length()==5)
             {
@@ -119,6 +128,9 @@ public:
         }
     }
 private:
+    bool underAttack(size_t r, size_t c, bool isWhite) {
+        return false;
+    }
     std::array<std::array<char, 8>, 8> board;
     bool nextW, Kok = false, Qok = false, kok = false, qok = false;
     std::string enPassant;

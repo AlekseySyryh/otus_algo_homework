@@ -2,6 +2,8 @@
 #include "state.h"
 #include <algorithm>
 
+#define noattackcheck
+
 void parseFEN() {
     std::cout << "Parse FEN:";
     state a("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
@@ -169,7 +171,37 @@ void pawnConvert(){
         std::cout << "Test 4 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
         return;
     }
-    std::cout << "OK";
+    std::cout << "OK" << std::endl;
+}
+
+void enPassantFix() {
+    std::cout << "En passant fix:";
+    state a("rnbqkbnr/ppp1pppp/8/4P3/3p4/8/PPPP1PPP/RNBQKBNR w KQkq - 0 3");
+    a.move("c2c4");
+    std::string excepted = "rnbqkbnr/ppp1pppp/8/4P3/2Pp4/8/PP1P1PPP/RNBQKBNR b KQkq c3 0 3";
+    std::string actual = a.build();
+    if (excepted != actual) {
+        std::cout << "Test 1 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        return;
+    }
+    a.move("f7f5");
+    excepted = "rnbqkbnr/ppp1p1pp/8/4Pp2/2Pp4/8/PP1P1PPP/RNBQKBNR w KQkq f6 0 4";
+    actual = a.build();
+    if (excepted != actual) {
+        std::cout << "Test 2 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        return;
+    }
+#ifndef noattackcheck
+    state b("rnbqkbnr/ppp1pppp/8/8/3p4/N6N/PPPPPPPP/R1BQKB1R w KQkq - 0 3");
+    b.move("b2b4");
+    excepted = "rnbqkbnr/ppp1pppp/8/8/1P1p4/N6N/P1PPPPPP/R1BQKB1R b KQkq - 0 3";
+    actual = b.build();
+    if (excepted!=actual){
+        std::cout << "Test 3 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        return;
+    }
+#endif
+    std::cout << "OK" << std::endl;
 }
 
 int main() {
@@ -180,5 +212,6 @@ int main() {
     noTakeMove();
     takeMove();
     pawnConvert();
+    enPassantFix();
     return EXIT_SUCCESS;
 }
