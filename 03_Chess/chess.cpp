@@ -153,7 +153,7 @@ void pawnConvert(){
         std::cout << "Test 2 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
         return;
     }
-    state c("rnbqkbnr/pppp1ppp/4P3/8/8/8/P4PPP/qNBQKBNR w Kkq - 0 6");
+    state c("rnbq1bnr/pppPkppp/8/8/8/8/P4PPP/qNBQKBNR w K - 0 6");
     c.move("d7c8R");
     excepted = "rnRq1bnr/ppp1kppp/8/8/8/8/P4PPP/qNBQKBNR b K - 0 6";
     actual = c.build();
@@ -161,7 +161,7 @@ void pawnConvert(){
         std::cout << "Test 3 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
         return;
     }
-    state d("rnbqkbnr/pppp1ppp/4P3/8/8/8/P4PPP/qNBQKBNR w Kkq - 0 6");
+    state d("rnbq1bnr/pppPkppp/8/8/8/8/P4PPP/qNBQKBNR w K - 0 6");
     d.move("d7c8N");
     excepted = "rnNq1bnr/ppp1kppp/8/8/8/8/P4PPP/qNBQKBNR b K - 0 6";
     actual = d.build();
