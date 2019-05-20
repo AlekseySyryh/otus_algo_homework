@@ -18,6 +18,7 @@ public:
     SpaceArray(size_t vector):vector(vector),size_(0){
         firstBlock = new Rec<VectorArray<T>*>;
         firstBlock->item = new VectorArray<T>(vector);
+        lastBlock = firstBlock;
     }
 
     size_t size() const override {
@@ -25,7 +26,11 @@ public:
     }
 
     void add(T item) override {
-        add(item, size_);
+        if (lastBlock->item->size() == vector) {
+            extendBlock(lastBlock);
+        }
+        lastBlock->item->add(item);
+        ++size_;
     }
 
     T get(size_t index) const override {
@@ -37,14 +42,7 @@ public:
         auto result = find(index);
         auto insRec = result.block;
         if (insRec->item->size() == vector){
-            auto newRec = new Rec<VectorArray<T>*>;
-            newRec->item = new VectorArray<T>;
-            newRec->next = insRec->next;
-            insRec->next = newRec;
-            for (int i = 0; i < vector/2; ++i) {
-                T itemToAdd = insRec->item->remove(insRec->item->size()-1);
-                newRec->item->add(itemToAdd,0);
-            }
+            extendBlock(insRec);
             result = find(index);
             insRec = result.block;
          }
@@ -63,6 +61,9 @@ public:
                 }
                 block->next = result.block->next;
                 delete (result.block);
+                if (block->next == nullptr) {
+                    lastBlock = block;
+                }
             }
         }
         --size_;
@@ -78,11 +79,16 @@ public:
         }
         firstBlock = new Rec<VectorArray<T>*>;
         firstBlock->item = new VectorArray<T>(vector);
+        lastBlock = firstBlock;
         size_ = 0;
     }
 
 private:
     FindResult<T> find(size_t index) const {
+        if (size_ - index < lastBlock->item->size()) {
+            index -= (size_ - lastBlock->item->size());
+            return {lastBlock, index};
+        }
         auto *block = firstBlock;
         while (block->item->size() <= index &&
                block->next != nullptr){
@@ -91,7 +97,22 @@ private:
         }
         return {block,index};
     }
-    Rec<VectorArray<T>*>* firstBlock;
+
+    void extendBlock(Rec<VectorArray<T> *> *insRec) {
+        auto newRec = new Rec<VectorArray<T> *>;
+        newRec->item = new VectorArray<T>;
+        newRec->next = insRec->next;
+        insRec->next = newRec;
+        for (int i = 0; i < vector / 2; ++i) {
+            T itemToAdd = insRec->item->remove(insRec->item->size() - 1);
+            newRec->item->add(itemToAdd, 0);
+        }
+        if (lastBlock->next != nullptr) {
+            lastBlock = lastBlock->next;
+        }
+    }
+
+    Rec<VectorArray<T> *> *firstBlock, *lastBlock;
     size_t size_;
     const size_t vector;
 };
