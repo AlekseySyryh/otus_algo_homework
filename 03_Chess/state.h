@@ -104,8 +104,17 @@ public:
         } else {
             ++halfmove;
         }
+        if (qok && (cf == 0 && rf == 0 || ct==0 && rt ==0 || board[rf][cf] == 'k')) qok = false;
+        if (kok && (cf == 7 && rf == 0 || ct==7 && rt ==0 || board[rf][cf] == 'k')) kok = false;
+        if (Qok && (cf == 0 && rf == 7 || ct==0 && rt ==7 || board[rf][cf] == 'K')) Qok = false;
+        if (Kok && (cf == 7 && rf == 7 || ct==7 && rt ==7 || board[rf][cf] == 'K')) Kok = false;
         if (cf != ct || rf != rt) {
-            board[rt][ct] = board[rf][cf];
+            if (move.length()==5)
+            {
+                board[rt][ct] = move[4];
+            } else {
+                board[rt][ct] = board[rf][cf];
+            }
             board[rf][cf] = '.';
         }
     }
