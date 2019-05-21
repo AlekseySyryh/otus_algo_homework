@@ -3,6 +3,7 @@
 #include <array>
 #include <sstream>
 #include "pos.h"
+#include "move.h"
 
 class state {
 public:
@@ -92,35 +93,40 @@ public:
         return oss.str();
     };
 
-    void move(std::string move) {
+    void makeMove(std::string newMove) {
+        move mv(newMove);
+        makeMove(mv);
+    }
+
+    void makeMove(const move &newMove) {
         if (!nextW) ++fullmove;
         nextW = !nextW;
-        pos from(move.substr(0, 2));
-        pos to(move.substr(2, 2));
-        if (at(from) == 'p' || at(from) == 'P' || at(to) != '.') {
+
+        if (at(newMove.from) == 'p' || at(newMove.from) == 'P' || at(newMove.to) != '.') {
             halfmove = 0;
         } else {
             ++halfmove;
         }
-        if (qok && (from.name == "a8" || to.name == "a8" || at(from) == 'k')) qok = false;
-        if (kok && (from.name == "h8" || to.name == "h8" || at(from) == 'k')) kok = false;
-        if (Qok && (from.name == "a1" || to.name == "a1" || at(from) == 'K')) Qok = false;
-        if (Kok && (from.name == "h1" || to.name == "h1" || at(from) == 'K')) Kok = false;
-        if ((at(from) == 'p' || at(from) == 'P') &&
-            (from.rowc == '2' && to.rowc == '4' || from.rowc == '7' && to.rowc == '5')) {
-            pos ep((from.row + to.row) / 2, from.col);
+        if (qok && (newMove.from.name == "a8" || newMove.to.name == "a8" || at(newMove.from) == 'k')) qok = false;
+        if (kok && (newMove.from.name == "h8" || newMove.to.name == "h8" || at(newMove.from) == 'k')) kok = false;
+        if (Qok && (newMove.from.name == "a1" || newMove.to.name == "a1" || at(newMove.from) == 'K')) Qok = false;
+        if (Kok && (newMove.from.name == "h1" || newMove.to.name == "h1" || at(newMove.from) == 'K')) Kok = false;
+        if ((at(newMove.from) == 'p' || at(newMove.from) == 'P') &&
+            (newMove.from.rowc == '2' && newMove.to.rowc == '4' ||
+             newMove.from.rowc == '7' && newMove.to.rowc == '5')) {
+            pos ep((newMove.from.row + newMove.to.row) / 2, newMove.from.col);
             enPassant = ep.name;
         } else {
             enPassant = "-";
         }
-        if (from != to) {
-            if (move.length()==5)
+        if (newMove.valid) {
+            if (newMove.pawnConvert)
             {
-                at(to) = move[4];
+                at(newMove.to) = newMove.newFigure;
             } else {
-                at(to) = at(from);
+                at(newMove.to) = at(newMove.from);
             }
-            at(from) = '.';
+            at(newMove.from) = '.';
         }
     }
 private:
