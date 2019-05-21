@@ -2,7 +2,7 @@
 
 
 void parseFEN() {
-    std::cout << "Parse FEN:";
+    std::cout << "Parse FEN:\t\t\t";
     state a("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
     std::string excepted = "  +-----------------+\n"
                            "8 | r n b q k b n r |\n"
@@ -23,7 +23,7 @@ void parseFEN() {
 }
 
 void buildFEN() {
-    std::cout << "Build FEN:";
+    std::cout << "Build FEN:\t\t\t";
     state a("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KqkQ - 0 1");
     std::string excepted = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
     std::string actual = a.build();
@@ -34,7 +34,7 @@ void buildFEN() {
 }
 
 void moveNoChange() {
-    std::cout << "Move number change:";
+    std::cout << "Move number change:\t\t";
     state a("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
     a.makeMove("e2e2");
     std::string excepted = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1";
@@ -55,7 +55,7 @@ void moveNoChange() {
 }
 
 void halfMoveNoChange() {
-    std::cout << "Half move number change:";
+    std::cout << "Half move number change:\t";
     state a("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
     a.makeMove("b1f3");
     char excepted = '1';
@@ -95,7 +95,7 @@ void halfMoveNoChange() {
 }
 
 void noTakeMove() {
-    std::cout << "No take move:";
+    std::cout << "No take move:\t\t\t";
     state a("k7/r7/b7/q7/N7/B7/R7/K7 w - - 15 48");
     a.makeMove("a2h2");
     std::string excepted = "k7/r7/b7/q7/N7/B7/7R/K7 b - - 16 48";
@@ -115,7 +115,7 @@ void noTakeMove() {
 }
 
 void takeMove() {
-    std::cout << "Take move:";
+    std::cout << "Take move:\t\t\t";
     state a("rnbqkbnr/ppp1pppp/8/3p4/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2");
     a.makeMove("e4d5");
     std::string excepted = "rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPP1PPP/RNBQKBNR b KQkq - 0 2";
@@ -135,7 +135,7 @@ void takeMove() {
 }
 
 void pawnConvert() {
-    std::cout << "Pawn convert:";
+    std::cout << "Pawn convert:\t\t\t";
     state a("rnbqkbnr/pppp1ppp/4P3/8/8/8/Pp3PPP/RNBQKBNR b KQkq - 0 5");
     a.makeMove("b2a1q");
     std::string excepted = "rnbqkbnr/pppp1ppp/4P3/8/8/8/P4PPP/qNBQKBNR w Kkq - 0 6";
@@ -172,7 +172,7 @@ void pawnConvert() {
 }
 
 void enPassantFix() {
-    std::cout << "En passant fix:";
+    std::cout << "En passant fix:\t\t\t";
     state a("rnbqkbnr/ppp1pppp/8/4P3/3p4/8/PPPP1PPP/RNBQKBNR w KQkq - 0 3");
     a.makeMove("c2c4");
     std::string excepted = "rnbqkbnr/ppp1pppp/8/4P3/2Pp4/8/PP1P1PPP/RNBQKBNR b KQkq c3 0 3";
@@ -202,7 +202,7 @@ void enPassantFix() {
 }
 
 void sortAndGroupMoves() {
-    std::cout << "Sort and group moves:";
+    std::cout << "Sort and group moves:\t\t";
     state a("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
     std::vector<move> moves{{"a2a3"},
                             {"b2b3"},
@@ -245,7 +245,7 @@ void sortAndGroupMoves() {
 }
 
 void knightMoves() {
-    std::cout << "Knight Moves:";
+    std::cout << "Knight Moves:\t\t\t";
     state a("2k5/8/8/4N3/8/8/P7/2K5 w - - 6 19");
     std::vector<move> possibleMoves = a.getPossibleKnightMoves();
     if (possibleMoves.size() != 8 ||
@@ -305,7 +305,7 @@ void knightMoves() {
 }
 
 void rockMoves() {
-    std::cout << "Rock Moves:";
+    std::cout << "Rock Moves:\t\t\t";
     state a("2k5/8/8/8/4R3/8/8/K7 w - -");
     std::vector<move> possibleMoves = a.getPossibleRockMoves();
     if (possibleMoves.size() != 14 ||
