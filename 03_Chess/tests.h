@@ -201,6 +201,48 @@ void enPassantFix() {
     std::cout << "OK" << std::endl;
 }
 
+void sortAndGroupMoves() {
+    std::cout << "Sort and group moves:";
+    state a("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
+    std::vector<move> moves{{"a2a3"},
+                            {"b2b3"},
+                            {"c2c3"},
+                            {"d2d3"},
+                            {"e2e3"},
+                            {"f2f3"},
+                            {"g2g3"},
+                            {"h2h3"},
+                            {"a2a4"},
+                            {"b2b4"},
+                            {"c2c4"},
+                            {"d2d4"},
+                            {"e2e4"},
+                            {"f2f4"},
+                            {"g2g4"},
+                            {"h2h4"},
+                            {"b1c3"},
+                            {"b1a3"},
+                            {"g1h3"},
+                            {"g1f3"}};
+    std::vector<std::vector<move>> excepted = {
+            {{"b1a3"}, {"b1c3"}},
+            {{"g1f3"}, {"g1h3"}},
+            {{"a2a3"}, {"a2a4"}},
+            {{"b2b3"}, {"b2b4"}},
+            {{"c2c3"}, {"c2c4"}},
+            {{"d2d3"}, {"d2d4"}},
+            {{"e2e3"}, {"e2e4"}},
+            {{"f2f3"}, {"f2f4"}},
+            {{"g2g3"}, {"g2g4"}},
+            {{"h2h3"}, {"h2h4"}}};
+    std::vector<std::vector<move>> actual = a.sortAndGroup(moves);
+
+    if (excepted == actual) {
+        std::cout << "OK" << std::endl;
+    } else {
+        std::cout << "Fail" << std::endl;
+    }
+}
 
 void allTests() {
     parseFEN();
@@ -211,4 +253,7 @@ void allTests() {
     takeMove();
     pawnConvert();
     enPassantFix();
+
+
+    sortAndGroupMoves();
 }

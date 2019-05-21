@@ -2,6 +2,8 @@
 
 #include <array>
 #include <sstream>
+#include <vector>
+#include <algorithm>
 #include "pos.h"
 #include "move.h"
 
@@ -129,6 +131,21 @@ public:
             at(newMove.from) = '.';
         }
     }
+
+    std::vector<std::vector<move>> sortAndGroup(std::vector<move> moves) {
+        std::vector<std::vector<move>> ret(1);
+        std::sort(moves.begin(), moves.end());
+        pos grPos = moves.front().from;
+        for (const auto &newMove : moves) {
+            if (grPos != newMove.from) {
+                grPos = newMove.from;
+                ret.emplace_back();
+            }
+            ret.back().emplace_back(newMove);
+        }
+        return ret;
+    }
+
 private:
     char &at(const pos &pos) {
         return board[pos.row][pos.col];
