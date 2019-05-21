@@ -91,7 +91,7 @@ void halfMoveNoChange() {
         std::cout << "Test 4 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
-    std::cout << "Ok" << std::endl;
+    std::cout << "OK" << std::endl;
 }
 
 void noTakeMove() {
@@ -304,6 +304,57 @@ void knightMoves() {
     std::cout << "OK" << std::endl;
 }
 
+void rockMoves() {
+    std::cout << "Rock Moves:";
+    state a("2k5/8/8/8/4R3/8/8/K7 w - -");
+    std::vector<move> possibleMoves = a.getPossibleRockMoves();
+    if (possibleMoves.size() != 14 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4a4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4b4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4c4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4d4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4f4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4g4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4h4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e1")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e7")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e8")) != 1) {
+        std::cout << "Middle test fail" << std::endl;
+        return;
+    }
+    a = state("2k5/4p3/8/8/1p2R1p1/4p3/8/K7 w - -");
+    possibleMoves = a.getPossibleRockMoves();
+    if (possibleMoves.size() != 9 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4b4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4c4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4d4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4f4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4g4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e7")) != 1) {
+        std::cout << "Take test fail" << std::endl;
+        return;
+    }
+    a = state("2k5/4p3/8/8/1p2r1p1/4p3/8/K7 b - -");
+    possibleMoves = a.getPossibleRockMoves();
+    if (possibleMoves.size() != 5 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4c4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4d4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4f4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4e6")) != 1) {
+        std::cout << "Block test fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
+
 void allTests() {
     parseFEN();
     buildFEN();
@@ -317,4 +368,5 @@ void allTests() {
 
     sortAndGroupMoves();
     knightMoves();
+    rockMoves();
 }

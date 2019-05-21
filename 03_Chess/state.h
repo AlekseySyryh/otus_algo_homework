@@ -176,11 +176,46 @@ public:
         return ret;
     }
 
+    std::vector<move> getPossibleRockMoves() {
+        std::vector<move> ret;
+        for (int i = 0; i < 8; ++i) {
+            for (int j = 0; j < 8; ++j) {
+                pos p(i, j);
+                if (isWhite(p) == nextWhite &&
+                    normalize(p) == 'r') {
+                    pos pn = p;
+                    do {
+                        pn = pos(pn.row - 1, pn.col);
+                    } while (addMoveIfOk(ret, p, pn));
+                    pn = p;
+                    do {
+                        pn = pos(pn.row + 1, pn.col);
+                    } while (addMoveIfOk(ret, p, pn));
+                    pn = p;
+                    do {
+                        pn = pos(pn.row, pn.col - 1);
+                    } while (addMoveIfOk(ret, p, pn));
+                    pn = p;
+                    do {
+                        pn = pos(pn.row, pn.col + 1);
+                    } while (addMoveIfOk(ret, p, pn));
+                }
+            }
+        }
+        return ret;
+    }
+
 private:
-    void addMoveIfOk(std::vector<move> &ret, const pos &oldpos, const pos &newpos) const {
-        if (newpos.valid &&
-            (at(newpos) == '.' || (isWhite(newpos) != isWhite(oldpos))))
+    bool addMoveIfOk(std::vector<move> &ret, const pos &oldpos, const pos &newpos) const {
+        if (newpos.valid) {
+            if (at(newpos) != '.' && isWhite(newpos) == isWhite(oldpos)) {
+                return false;
+            }
             ret.emplace_back(oldpos, newpos);
+            bool okToContinue = (at(newpos) == '.');
+            return okToContinue;
+        }
+        return false;
     }
 
     char at(const pos &pos) const {
