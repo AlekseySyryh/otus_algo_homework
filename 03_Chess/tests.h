@@ -355,6 +355,55 @@ void rockMoves() {
     std::cout << "OK" << std::endl;
 }
 
+void bishopMoves() {
+    std::cout << "Bishop Moves:\t\t\t";
+    state a("4k3/8/8/8/4B3/8/8/4K3 w - - 5 7");
+    std::vector<move> possibleMoves = a.getPossibleBishopMoves();
+    if (possibleMoves.size() != 13 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4a8")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4b7")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4c6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4d5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4f3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4g2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4h1")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4b1")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4c2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4d3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4f5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4g6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4h7")) != 1) {
+        std::cout << "Middle test fail" << std::endl;
+        return;
+    }
+    a = state("4k3/8/2R5/5R2/4b3/8/6R1/1R2K3 b - - 5 7");
+    possibleMoves = a.getPossibleBishopMoves();
+    if (possibleMoves.size() != 8 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4c6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4d5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4f3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4g2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4b1")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4c2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4d3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4f5")) != 1) {
+        std::cout << "Take test fail" << std::endl;
+        return;
+    }
+    a = state("4k3/8/2R5/5R2/4B3/8/6R1/1R2K3 w - - 5 7");
+    possibleMoves = a.getPossibleBishopMoves();
+    if (possibleMoves.size() != 4 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4d5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4f3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4c2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e4d3")) != 1) {
+        std::cout << "Block test fail" << std::endl;
+        return;
+    }
+
+    std::cout << "OK" << std::endl;
+}
+
 void allTests() {
     parseFEN();
     buildFEN();
@@ -369,4 +418,5 @@ void allTests() {
     sortAndGroupMoves();
     knightMoves();
     rockMoves();
+    bishopMoves();
 }
