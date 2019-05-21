@@ -244,6 +244,66 @@ void sortAndGroupMoves() {
     }
 }
 
+void knightMoves() {
+    std::cout << "Knight Moves:";
+    state a("2k5/8/8/4N3/8/8/P7/2K5 w - - 6 19");
+    std::vector<move> possibleMoves = a.getPossibleKnightMoves();
+    if (possibleMoves.size() != 8 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5d3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5f3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5c4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5g4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5c6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5g6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5d7")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5f7")) != 1) {
+        std::cout << "Middle test fail" << std::endl;
+        return;
+    }
+
+    a = state("8/1k6/8/8/3K4/8/8/n1n1n2n b - -");
+    possibleMoves = a.getPossibleKnightMoves();
+    if (possibleMoves.size() != 12 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("a1b3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("a1c2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("c1a2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("c1e2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("c1b3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("c1d3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e1c2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e1g2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e1d3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e1f3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("h1f2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("h1g3")) != 1) {
+        std::cout << "Multiple test fail" << std::endl;
+        return;
+    }
+
+    a = state("2k5/3p1b2/2p3p1/4N3/2q3p1/3r1n2/P7/K7 w - -");
+    possibleMoves = a.getPossibleKnightMoves();
+    if (possibleMoves.size() != 8 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5d3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5f3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5c4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5g4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5c6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5g6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5d7")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("e5f7")) != 1) {
+        std::cout << "Can take test fail" << std::endl;
+        return;
+    }
+
+    a = state("8/3R1R2/2R3R1/k3N3/2R3R1/3R1R2/P7/K7 w - -");
+    possibleMoves = a.getPossibleKnightMoves();
+    if (possibleMoves.size() != 0) {
+        std::cout << "Block test fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
+
 void allTests() {
     parseFEN();
     buildFEN();
@@ -256,4 +316,5 @@ void allTests() {
 
 
     sortAndGroupMoves();
+    knightMoves();
 }

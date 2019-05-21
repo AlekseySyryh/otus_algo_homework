@@ -10,6 +10,7 @@ public:
         name = oss.str();
         colc = name[0];
         rowc = name[1];
+        valid = (row >= 0 && row <= 7 && col >= 0 && col <= 7);
     }
 
     pos(std::string name) {
@@ -18,6 +19,7 @@ public:
         row = 8 - (name[1] - '0');
         colc = name[0];
         rowc = name[1];
+        valid = (row >= 0 && row <= 7 && col >= 0 && col <= 7);
     }
 
     bool operator!=(const pos &other) const {
@@ -31,4 +33,5 @@ public:
     size_t row, col;
     std::string name;
     char colc, rowc;
+    bool valid;
 };

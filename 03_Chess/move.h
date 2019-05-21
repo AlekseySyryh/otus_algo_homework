@@ -2,11 +2,21 @@
 
 class move {
 public:
-    move(std::string move) : from(move.substr(0, 2)), to(move.substr(2, 2)) {
+    move(pos from, pos to) : from(from), to(to) {
         valid = (from != to);
+        pawnConvert = false;
+        std::ostringstream oss;
+        oss << from.name << to.name;
+        name = oss.str();
+    }
+
+    move(std::string move) : from(move.substr(0, 2)), to(move.substr(2, 2)), name(move) {
+        valid = (from != to);
+
         if (move.length() == 5) {
             pawnConvert = true;
             newFigure = move[4];
+
         } else {
             pawnConvert = false;
         }
@@ -37,4 +47,5 @@ public:
     pos from, to;
     bool valid, pawnConvert;
     char newFigure;
+    std::string name;
 };

@@ -31,7 +31,7 @@ public:
             if (i != 7) iss >> c;
         }
         iss >> c;
-        nextW = (c == 'w' || c == 'W');
+        nextWhite = (c == 'w' || c == 'W');
         iss >> c;
         if (c != '-')
             while (true) {
@@ -84,7 +84,7 @@ public:
             }
             oss << (i == 7 ? ' ' : '/');
         }
-        oss << (nextW ? "w " : "b ");
+        oss << (nextWhite ? "w " : "b ");
         if (Kok) oss << 'K';
         if (Qok) oss << 'Q';
         if (kok) oss << 'k';
@@ -101,8 +101,8 @@ public:
     }
 
     void makeMove(const move &newMove) {
-        if (!nextW) ++fullmove;
-        nextW = !nextW;
+        if (!nextWhite) ++fullmove;
+        nextWhite = !nextWhite;
 
         if (at(newMove.from) == 'p' || at(newMove.from) == 'P' || at(newMove.to) != '.') {
             halfmove = 0;
@@ -113,7 +113,7 @@ public:
         if (kok && (newMove.from.name == "h8" || newMove.to.name == "h8" || at(newMove.from) == 'k')) kok = false;
         if (Qok && (newMove.from.name == "a1" || newMove.to.name == "a1" || at(newMove.from) == 'K')) Qok = false;
         if (Kok && (newMove.from.name == "h1" || newMove.to.name == "h1" || at(newMove.from) == 'K')) Kok = false;
-        if ((at(newMove.from) == 'p' || at(newMove.from) == 'P') &&
+        if (normalize(newMove.from) == 'p' &&
             (newMove.from.rowc == '2' && newMove.to.rowc == '4' ||
              newMove.from.rowc == '7' && newMove.to.rowc == '5')) {
             pos ep((newMove.from.row + newMove.to.row) / 2, newMove.from.col);
@@ -146,13 +146,60 @@ public:
         return ret;
     }
 
+    std::vector<move> getPossibleKnightMoves() {
+        std::vector<move> ret;
+        for (int i = 0; i < 8; ++i) {
+            for (int j = 0; j < 8; ++j) {
+                pos p(i, j);
+                if (
+                        isWhite(p) == nextWhite &&
+                        normalize(p) == 'n') {
+                    pos np = pos(i - 2, j - 1);
+                    addMoveIfOk(ret, p, np);
+                    np = pos(i - 2, j + 1);
+                    addMoveIfOk(ret, p, np);
+                    np = pos(i - 1, j - 2);
+                    addMoveIfOk(ret, p, np);
+                    np = pos(i - 1, j + 2);
+                    addMoveIfOk(ret, p, np);
+                    np = pos(i + 2, j - 1);
+                    addMoveIfOk(ret, p, np);
+                    np = pos(i + 2, j + 1);
+                    addMoveIfOk(ret, p, np);
+                    np = pos(i + 1, j - 2);
+                    addMoveIfOk(ret, p, np);
+                    np = pos(i + 1, j + 2);
+                    addMoveIfOk(ret, p, np);
+                }
+            }
+        }
+        return ret;
+    }
+
 private:
+    void addMoveIfOk(std::vector<move> &ret, const pos &oldpos, const pos &newpos) const {
+        if (newpos.valid &&
+            (at(newpos) == '.' || (isWhite(newpos) != isWhite(oldpos))))
+            ret.emplace_back(oldpos, newpos);
+    }
+
+    char at(const pos &pos) const {
+        return board[pos.row][pos.col];
+    }
     char &at(const pos &pos) {
         return board[pos.row][pos.col];
     }
 
+    bool isWhite(const pos &pos) const {
+        return at(pos) >= 'A' && at(pos) <= 'Z';
+    }
+
+    char normalize(const pos &pos) const {
+        return isWhite(pos) ? at(pos) - 'A' + 'a' : at(pos);
+    }
+
     std::array<std::array<char, 8>, 8> board;
-    bool nextW, Kok = false, Qok = false, kok = false, qok = false;
+    bool nextWhite, Kok = false, Qok = false, kok = false, qok = false;
     std::string enPassant;
     size_t halfmove, fullmove;
 };
