@@ -22,7 +22,7 @@ void parseFEN() {
     if (excepted == actual)
         std::cout << "OK" << std::endl;
     else
-        std::cout << "Fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Fail " << std::endl << actual << std::endl << excepted << std::endl;
 }
 
 void buildFEN() {
@@ -33,7 +33,7 @@ void buildFEN() {
     if (excepted == actual)
         std::cout << "OK" << std::endl;
     else
-        std::cout << "Fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Fail " << std::endl << actual << std::endl << excepted << std::endl;
 }
 
 void moveNoChange() {
@@ -43,14 +43,14 @@ void moveNoChange() {
     std::string excepted = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1";
     std::string actual = a.build();
     if (excepted != actual) {
-        std::cout << "Test 1 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 1 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     a.move("e7e7");
     excepted = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 2";
     actual = a.build();
     if (excepted != actual) {
-        std::cout << "Test 2 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 2 fail " << std::endl << actual << std::endl << excepted << std::endl;
     } else {
         std::cout << "OK" << std::endl;
 
@@ -65,7 +65,7 @@ void halfMoveNoChange() {
     std::string answer = a.build();
     char actual = answer[answer.length() - 3];
     if (excepted != actual) {
-        std::cout << "Test 1 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 1 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     a.move("e2e4");
@@ -73,7 +73,7 @@ void halfMoveNoChange() {
     answer = a.build();
     actual = answer[answer.length() - 3];
     if (excepted != actual) {
-        std::cout << "Test 2 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 2 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     state b("rnbqkb1r/pppppppp/8/4N3/6n1/8/PPPPPPPP/RNBQKB1R w KQkq - 4 3");
@@ -82,7 +82,7 @@ void halfMoveNoChange() {
     answer = b.build();
     actual = answer[answer.length() - 3];
     if (excepted != actual) {
-        std::cout << "Test 3 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 3 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     state c("rnbqkb1r/pppppppp/8/4N3/6n1/8/PPPPPPPP/RNBQKB1R w KQkq - 4 3");
@@ -91,7 +91,7 @@ void halfMoveNoChange() {
     answer = c.build();
     actual = answer[answer.length() - 3];
     if (excepted != actual) {
-        std::cout << "Test 4 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 4 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     std::cout << "Ok" << std::endl;
@@ -104,14 +104,14 @@ void noTakeMove() {
     std::string excepted = "k7/r7/b7/q7/N7/B7/7R/K7 b - - 16 48";
     std::string actual = a.build();
     if (excepted != actual) {
-        std::cout << "Test 1 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 1 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     a.move("a5e1");
     excepted = "k7/r7/b7/8/N7/B7/7R/K3q3 w - - 17 49";
     actual = a.build();
     if (excepted != actual) {
-        std::cout << "Test 2 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 2 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     std::cout << "OK" << std::endl;
@@ -124,14 +124,14 @@ void takeMove() {
     std::string excepted = "rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPP1PPP/RNBQKBNR b KQkq - 0 2";
     std::string actual = a.build();
     if (excepted != actual) {
-        std::cout << "Test 1 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 1 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     a.move("d8d5");
     excepted = "rnb1kbnr/ppp1pppp/8/3q4/8/8/PPPP1PPP/RNBQKBNR w KQkq - 0 3";
     actual = a.build();
     if (excepted != actual) {
-        std::cout << "Test 2 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 2 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     std::cout << "OK" << std::endl;
@@ -144,7 +144,7 @@ void pawnConvert(){
     std::string excepted = "rnbqkbnr/pppp1ppp/4P3/8/8/8/P4PPP/qNBQKBNR w Kkq - 0 6";
     std::string actual = a.build();
     if (excepted!=actual){
-        std::cout << "Test 1 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 1 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     state b("rnbqkbnr/pppp1ppp/4P3/8/8/8/Pp3PPP/RNBQKBNR b KQkq - 0 5");
@@ -152,7 +152,7 @@ void pawnConvert(){
     excepted = "rnbqkbnr/pppp1ppp/4P3/8/8/8/P4PPP/bNBQKBNR w Kkq - 0 6";
     actual = b.build();
     if (excepted!=actual){
-        std::cout << "Test 2 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 2 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     state c("rnbq1bnr/pppPkppp/8/8/8/8/P4PPP/qNBQKBNR w K - 0 6");
@@ -160,7 +160,7 @@ void pawnConvert(){
     excepted = "rnRq1bnr/ppp1kppp/8/8/8/8/P4PPP/qNBQKBNR b K - 0 6";
     actual = c.build();
     if (excepted!=actual){
-        std::cout << "Test 3 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 3 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     state d("rnbq1bnr/pppPkppp/8/8/8/8/P4PPP/qNBQKBNR w K - 0 6");
@@ -168,7 +168,7 @@ void pawnConvert(){
     excepted = "rnNq1bnr/ppp1kppp/8/8/8/8/P4PPP/qNBQKBNR b K - 0 6";
     actual = d.build();
     if (excepted!=actual){
-        std::cout << "Test 4 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 4 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     std::cout << "OK" << std::endl;
@@ -181,14 +181,14 @@ void enPassantFix() {
     std::string excepted = "rnbqkbnr/ppp1pppp/8/4P3/2Pp4/8/PP1P1PPP/RNBQKBNR b KQkq c3 0 3";
     std::string actual = a.build();
     if (excepted != actual) {
-        std::cout << "Test 1 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 1 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
     a.move("f7f5");
     excepted = "rnbqkbnr/ppp1p1pp/8/4Pp2/2Pp4/8/PP1P1PPP/RNBQKBNR w KQkq f6 0 4";
     actual = a.build();
     if (excepted != actual) {
-        std::cout << "Test 2 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 2 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
 #ifndef noattackcheck
@@ -197,7 +197,7 @@ void enPassantFix() {
     excepted = "rnbqkbnr/ppp1pppp/8/8/1P1p4/N6N/P1PPPPPP/R1BQKB1R b KQkq - 0 3";
     actual = b.build();
     if (excepted!=actual){
-        std::cout << "Test 3 fail ('" << actual << "'!='" << excepted << "')" << std::endl;
+        std::cout << "Test 3 fail " << std::endl << actual << std::endl << excepted << std::endl;
         return;
     }
 #endif

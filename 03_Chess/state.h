@@ -2,7 +2,7 @@
 
 #include <array>
 #include <sstream>
-
+#include "pos.h"
 
 class state {
 public:
@@ -95,42 +95,39 @@ public:
     void move(std::string move) {
         if (!nextW) ++fullmove;
         nextW = !nextW;
-        size_t cf = move[0] - 'a';
-        size_t rf = 8 - (move[1] - '0');
-        size_t ct = move[2] - 'a';
-        size_t rt = 8 - (move[3] - '0');
-        if (board[rf][cf] == 'p' || board[rf][cf] == 'P' || board[rt][ct] != '.') {
+        pos from(move.substr(0, 2));
+        pos to(move.substr(2, 2));
+        if (at(from) == 'p' || at(from) == 'P' || at(to) != '.') {
             halfmove = 0;
         } else {
             ++halfmove;
         }
-        if (qok && (cf == 0 && rf == 0 || ct==0 && rt ==0 || board[rf][cf] == 'k')) qok = false;
-        if (kok && (cf == 7 && rf == 0 || ct==7 && rt ==0 || board[rf][cf] == 'k')) kok = false;
-        if (Qok && (cf == 0 && rf == 7 || ct==0 && rt ==7 || board[rf][cf] == 'K')) Qok = false;
-        if (Kok && (cf == 7 && rf == 7 || ct==7 && rt ==7 || board[rf][cf] == 'K')) Kok = false;
-        if ((board[rf][cf] == 'p' || board[rf][cf] == 'P') &&
-            (rf == 1 && rt == 3 || rf == 6 && rt == 4) &&
-            !underAttack((rf + rt) / 2, cf, nextW)) {
-            std::ostringstream oss;
-            oss << (char) (cf + 'a') << (rf == 6 ? '3' : '6');
-            enPassant = oss.str();
+        if (qok && (from.name == "a8" || to.name == "a8" || at(from) == 'k')) qok = false;
+        if (kok && (from.name == "h8" || to.name == "h8" || at(from) == 'k')) kok = false;
+        if (Qok && (from.name == "a1" || to.name == "a1" || at(from) == 'K')) Qok = false;
+        if (Kok && (from.name == "h1" || to.name == "h1" || at(from) == 'K')) Kok = false;
+        if ((at(from) == 'p' || at(from) == 'P') &&
+            (from.rowc == '2' && to.rowc == '4' || from.rowc == '7' && to.rowc == '5')) {
+            pos ep((from.row + to.row) / 2, from.col);
+            enPassant = ep.name;
         } else {
             enPassant = "-";
         }
-        if (cf != ct || rf != rt) {
+        if (from != to) {
             if (move.length()==5)
             {
-                board[rt][ct] = move[4];
+                at(to) = move[4];
             } else {
-                board[rt][ct] = board[rf][cf];
+                at(to) = at(from);
             }
-            board[rf][cf] = '.';
+            at(from) = '.';
         }
     }
 private:
-    bool underAttack(size_t r, size_t c, bool isWhite) {
-        return false;
+    char &at(const pos &pos) {
+        return board[pos.row][pos.col];
     }
+
     std::array<std::array<char, 8>, 8> board;
     bool nextW, Kok = false, Qok = false, kok = false, qok = false;
     std::string enPassant;
