@@ -133,15 +133,18 @@ public:
     }
 
     std::vector<std::vector<move>> sortAndGroup(std::vector<move> moves) {
-        std::vector<std::vector<move>> ret(1);
-        std::sort(moves.begin(), moves.end());
-        pos grPos = moves.front().from;
-        for (const auto &newMove : moves) {
-            if (grPos != newMove.from) {
-                grPos = newMove.from;
-                ret.emplace_back();
+        std::vector<std::vector<move>> ret;
+        if (moves.size() != 0) {
+            ret.resize(1);
+            std::sort(moves.begin(), moves.end());
+            pos grPos = moves.front().from;
+            for (const auto &newMove : moves) {
+                if (grPos != newMove.from) {
+                    grPos = newMove.from;
+                    ret.emplace_back();
+                }
+                ret.back().emplace_back(newMove);
             }
-            ret.back().emplace_back(newMove);
         }
         return ret;
     }
