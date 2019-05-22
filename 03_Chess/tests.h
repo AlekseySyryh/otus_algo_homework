@@ -516,6 +516,33 @@ void queenMoves() {
     std::cout << "OK" << std::endl;
 }
 
+void kingMoves() {
+    std::cout << "King Moves:\t\t\t";
+    state board("8/8/8/8/7k/4K3/8/8 w - - 5 43");
+    std::vector<move> expected = {{"e3d4"},
+                                  {"e3e4"},
+                                  {"e3f4"},
+                                  {"e3d3"},
+                                  {"e3f3"},
+                                  {"e3d2"},
+                                  {"e3e2"},
+                                  {"e3f2"}};
+    std::vector<move> actual = board.getPossibleKingMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Middle test fail" << std::endl;
+        return;
+    }
+    board = {"8/8/8/6NN/6Nk/4K1nn/8/8 b - - w - - 3 45"};
+    expected = {{"h4g5"},
+                {"h4h5"},
+                {"h4g4"}};
+    actual = board.getPossibleKingMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Block/take test fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
 
 void allTests() {
     parseFEN();
@@ -533,4 +560,5 @@ void allTests() {
     rockMoves();
     bishopMoves();
     queenMoves();
+    kingMoves();
 }
