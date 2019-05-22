@@ -404,6 +404,75 @@ void bishopMoves() {
     std::cout << "OK" << std::endl;
 }
 
+void queenMoves() {
+    std::cout << "Queen Moves:\t\t\t";
+    state a("4k3/8/8/3Q4/8/8/8/4K3 w - - 5 7");
+    std::vector<move> possibleMoves = a.getPossibleQueenMoves();
+    if (possibleMoves.size() != 27 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5a8")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5d8")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5g8")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5b7")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5d7")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5f7")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5c6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5d6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5e6")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5a5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5b5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5c5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5e5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5f5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5g5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5h5")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5c4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5d4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5e4")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5b3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5d3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5f3")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5a2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5d2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5g2")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5d1")) != 1 ||
+        std::count(possibleMoves.begin(), possibleMoves.end(), move("d5h1")) != 1) {
+        std::cout << "Middle test fail" << std::endl;
+        return;
+    }
+
+    a = state("4k3/8/2PPP3/2PqP3/8/1P1P4/6P1/4K3 b - - 5 9");
+    possibleMoves = a.getPossibleQueenMoves();
+    std::vector<move> excepted = {{"d5c6"},
+                                  {"d5d6"},
+                                  {"d5e6"},
+                                  {"d5c5"},
+                                  {"d5e5"},
+                                  {"d5c4"},
+                                  {"d5d4"},
+                                  {"d5e4"},
+                                  {"d5b3"},
+                                  {"d5d3"},
+                                  {"d5f3"},
+                                  {"d5g2"}};
+    if (a.sortAndGroup(possibleMoves) != a.sortAndGroup(excepted)) {
+        std::cout << "Take test fail" << std::endl;
+        return;
+    }
+    a = state("4k3/8/2PPP3/2PQP3/8/1P1P4/6P1/4K3 w - -5 9");
+    possibleMoves = a.getPossibleQueenMoves();
+    excepted = {{"d5c4"},
+                {"d5d4"},
+                {"d5e4"},
+                {"d5f3"}};
+    if (a.sortAndGroup(possibleMoves) != a.sortAndGroup(excepted)) {
+        std::cout << "Block test fail" << std::endl;
+        return;
+    }
+
+    std::cout << "OK" << std::endl;
+}
+
+
 void allTests() {
     parseFEN();
     buildFEN();
@@ -419,4 +488,5 @@ void allTests() {
     knightMoves();
     rockMoves();
     bishopMoves();
+    queenMoves();
 }

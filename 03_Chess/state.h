@@ -234,6 +234,51 @@ public:
         return ret;
     }
 
+    std::vector<move> getPossibleQueenMoves() {
+        std::vector<move> ret;
+        for (int i = 0; i < 8; ++i) {
+            for (int j = 0; j < 8; ++j) {
+                pos p(i, j);
+                if (isWhite(p) == nextWhite &&
+                    normalize(p) == 'q') {
+                    pos pn = p;
+                    do {
+                        pn = pos(pn.row - 1, pn.col);
+                    } while (addMoveIfOk(ret, p, pn));
+                    pn = p;
+                    do {
+                        pn = pos(pn.row + 1, pn.col);
+                    } while (addMoveIfOk(ret, p, pn));
+                    pn = p;
+                    do {
+                        pn = pos(pn.row, pn.col - 1);
+                    } while (addMoveIfOk(ret, p, pn));
+                    pn = p;
+                    do {
+                        pn = pos(pn.row, pn.col + 1);
+                    } while (addMoveIfOk(ret, p, pn));
+                    pn = p;
+                    do {
+                        pn = pos(pn.row - 1, pn.col - 1);
+                    } while (addMoveIfOk(ret, p, pn));
+                    pn = p;
+                    do {
+                        pn = pos(pn.row - 1, pn.col + 1);
+                    } while (addMoveIfOk(ret, p, pn));
+                    pn = p;
+                    do {
+                        pn = pos(pn.row + 1, pn.col - 1);
+                    } while (addMoveIfOk(ret, p, pn));
+                    pn = p;
+                    do {
+                        pn = pos(pn.row + 1, pn.col + 1);
+                    } while (addMoveIfOk(ret, p, pn));
+                }
+            }
+        }
+        return ret;
+    }
+
 private:
     bool addMoveIfOk(std::vector<move> &ret, const pos &oldpos, const pos &newpos) const {
         if (newpos.valid) {
