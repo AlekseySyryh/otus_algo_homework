@@ -664,10 +664,34 @@ void pawnMoves() {
                 {"g7g5"},
                 {"h7h6"}};
     actual = board.getPossiblePawnMoves();
-    auto a1 = board.sortAndGroup(actual);
-    auto a2 = board.sortAndGroup(expected);
     if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
         std::cout << "Multiple black test fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
+
+void allMoves() {
+    std::cout << "All moves:\t\t\t";
+    state board("N6k/2P5/8/B7/8/RPP5/1P6/QK6 w - - 1 3");
+    std::vector<move> expected = {{"a1a2"},
+                                  {"a3a2"},
+                                  {"a3a4"},
+                                  {"a5b4"},
+                                  {"a5b6"},
+                                  {"a8b6"},
+                                  {"b1a2"},
+                                  {"b1c1"},
+                                  {"b1c2"},
+                                  {"b3b4"},
+                                  {"c3c4"},
+                                  {"c7c8Q"},
+                                  {"c7c8R"},
+                                  {"c7c8B"},
+                                  {"c7c8N"}};
+    std::vector<move> actual = board.getAllMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Test fail" << std::endl;
         return;
     }
     std::cout << "OK" << std::endl;
@@ -691,4 +715,5 @@ void allTests() {
     queenMoves();
     kingMoves();
     pawnMoves();
+    allMoves();
 }

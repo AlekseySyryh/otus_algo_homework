@@ -371,6 +371,23 @@ public:
         return ret;
     }
 
+    std::vector<move> getAllMoves() {
+        std::vector<move> ret;
+        auto addon = getPossibleBishopMoves();
+        std::copy(addon.begin(), addon.end(), std::back_inserter(ret));
+        addon = getPossibleKingMoves();
+        std::copy(addon.begin(), addon.end(), std::back_inserter(ret));
+        addon = getPossibleKnightMoves();
+        std::copy(addon.begin(), addon.end(), std::back_inserter(ret));
+        addon = getPossiblePawnMoves();
+        std::copy(addon.begin(), addon.end(), std::back_inserter(ret));
+        addon = getPossibleQueenMoves();
+        std::copy(addon.begin(), addon.end(), std::back_inserter(ret));
+        addon = getPossibleRockMoves();
+        std::copy(addon.begin(), addon.end(), std::back_inserter(ret));
+        return ret;
+    }
+
 private:
     bool addMoveIfOk(std::vector<move> &ret, const pos &oldpos, const pos &newpos) const {
         if (newpos.valid) {
