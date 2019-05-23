@@ -10,6 +10,14 @@ public:
         name = oss.str();
     }
 
+    move(pos from, pos to, char newFigure) : move(from, to) {
+        pawnConvert = true;
+        this->newFigure = newFigure;
+        std::ostringstream oss;
+        oss << from.name << to.name << newFigure;
+        name = oss.str();
+    }
+
     move(std::string move) : from(move.substr(0, 2)), to(move.substr(2, 2)), name(move) {
         valid = (from != to);
 
@@ -36,12 +44,18 @@ public:
             if (from.rowc != other.from.rowc) {
                 return from.rowc < other.from.rowc;
             }
-            return from.colc < other.from.colc;
+            if (from.colc != other.from.colc) {
+                return from.colc < other.from.colc;
+            }
+            return pawnConvert && other.pawnConvert && newFigure < other.newFigure;
         }
         if (to.rowc != other.to.rowc) {
             return to.rowc < other.to.rowc;
         }
-        return to.colc < other.to.colc;
+        if (to.colc != other.to.colc) {
+            return to.colc < other.to.colc;
+        }
+        return pawnConvert && other.pawnConvert && newFigure < other.newFigure;
     }
 
     pos from, to;

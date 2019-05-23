@@ -303,6 +303,74 @@ public:
         return ret;
     }
 
+    std::vector<move> getPossiblePawnMoves() {
+        std::vector<move> ret;
+        for (int i = 0; i < 8; ++i) {
+            for (int j = 0; j < 8; ++j) {
+                pos p(i, j);
+                if (isWhite(p) == nextWhite &&
+                    normalize(p) == 'p') {
+                    if (nextWhite) {
+                        if (at(pos{p.row - 1, p.col}) == '.') {
+                            if (p.rowc != '7') {
+                                ret.emplace_back(p, pos{p.row - 1, p.col});
+                            } else {
+                                ret.emplace_back(p, pos{p.row - 1, p.col}, 'Q');
+                                ret.emplace_back(p, pos{p.row - 1, p.col}, 'R');
+                                ret.emplace_back(p, pos{p.row - 1, p.col}, 'B');
+                                ret.emplace_back(p, pos{p.row - 1, p.col}, 'N');
+                            }
+
+                            if (p.rowc == '2' && at(pos{p.row - 2, p.col}) == '.') {
+                                ret.emplace_back(p, pos{p.row - 2, p.col});
+                            }
+                        }
+
+                        pos p1 = {p.row - 1, p.col - 1};
+                        if (p1.valid && (
+                                (at(p1) != '.' && !isWhite(p1)) ||
+                                enPassant == p1.name)) {
+                            ret.emplace_back(p, p1);
+                        }
+                        p1 = {p.row - 1, p.col + 1};
+                        if (p1.valid && (
+                                (at(p1) != '.' && !isWhite(p1)) ||
+                                enPassant == p1.name)) {
+                            ret.emplace_back(p, p1);
+                        }
+                    } else {
+                        if (at(pos{p.row + 1, p.col}) == '.') {
+                            if (p.rowc != '2') {
+                                ret.emplace_back(p, pos{p.row + 1, p.col});
+                            } else {
+                                ret.emplace_back(p, pos{p.row + 1, p.col}, 'q');
+                                ret.emplace_back(p, pos{p.row + 1, p.col}, 'r');
+                                ret.emplace_back(p, pos{p.row + 1, p.col}, 'b');
+                                ret.emplace_back(p, pos{p.row + 1, p.col}, 'n');
+                            }
+                            if (p.rowc == '7' && at(pos{p.row + 2, p.col}) == '.') {
+                                ret.emplace_back(p, pos{p.row + 2, p.col});
+                            }
+                        }
+                        pos p1 = {p.row + 1, p.col - 1};
+                        if (p1.valid && (
+                                (at(p1) != '.' && isWhite(p1)) ||
+                                enPassant == p1.name)) {
+                            ret.emplace_back(p, p1);
+                        }
+                        p1 = {p.row + 1, p.col + 1};
+                        if (p1.valid && (
+                                (at(p1) != '.' && isWhite(p1)) ||
+                                enPassant == p1.name)) {
+                            ret.emplace_back(p, p1);
+                        }
+                    }
+                }
+            }
+        }
+        return ret;
+    }
+
 private:
     bool addMoveIfOk(std::vector<move> &ret, const pos &oldpos, const pos &newpos) const {
         if (newpos.valid) {

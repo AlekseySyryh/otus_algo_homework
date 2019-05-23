@@ -245,7 +245,7 @@ void sortAndGroupMoves() {
 }
 
 void knightMoves() {
-    std::cout << "Knight Moves:\t\t\t";
+    std::cout << "Knight moves:\t\t\t";
     state board("2k5/8/8/4N3/8/8/P7/2K5 w - - 6 19");
     std::vector<move> expected = {{"e5d3"},
                                   {"e5f3"},
@@ -306,7 +306,7 @@ void knightMoves() {
 }
 
 void rockMoves() {
-    std::cout << "Rock Moves:\t\t\t";
+    std::cout << "Rock moves:\t\t\t";
     state board("2k5/8/8/8/4R3/8/8/K7 w - - 6 19");
     std::vector<move> expected = {{"e4a4"},
                                   {"e4b4"},
@@ -372,7 +372,7 @@ void rockMoves() {
 }
 
 void bishopMoves() {
-    std::cout << "Bishop Moves:\t\t\t";
+    std::cout << "Bishop moves:\t\t\t";
     state board("4k3/8/8/8/4B3/8/8/4K3 w - - 5 7");
     std::vector<move> expected{{"e4a8"},
                                {"e4b7"},
@@ -435,7 +435,7 @@ void bishopMoves() {
 }
 
 void queenMoves() {
-    std::cout << "Queen Moves:\t\t\t";
+    std::cout << "Queen moves:\t\t\t";
     state board("4k3/8/8/3Q4/8/8/8/4K3 w - - 5 7");
     std::vector<move> actual = board.getPossibleQueenMoves();
     std::vector<move> expected = {{"d5a8"},
@@ -517,7 +517,7 @@ void queenMoves() {
 }
 
 void kingMoves() {
-    std::cout << "King Moves:\t\t\t";
+    std::cout << "King moves:\t\t\t";
     state board("8/8/8/8/7k/4K3/8/8 w - - 5 43");
     std::vector<move> expected = {{"e3d4"},
                                   {"e3e4"},
@@ -532,6 +532,7 @@ void kingMoves() {
         std::cout << "Middle test fail" << std::endl;
         return;
     }
+
     board = {"8/8/8/6NN/6Nk/4K1nn/8/8 b - - w - - 3 45"};
     expected = {{"h4g5"},
                 {"h4h5"},
@@ -539,6 +540,134 @@ void kingMoves() {
     actual = board.getPossibleKingMoves();
     if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
         std::cout << "Block/take test fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
+
+void pawnMoves() {
+    std::cout << "Pawn moves:\t\t\t";
+    state board("4k3/8/6p1/8/8/1P6/8/4K3 w - - 1 3");
+    std::vector<move> expected = {{"b3b4"}};
+    std::vector<move> actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "One step white test fail" << std::endl;
+        return;
+    }
+
+    board = {"4k3/8/6p1/8/8/1P6/8/4K3 b - - 1 3"};
+    expected = {{"g6g5"}};
+    actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "One step black test fail" << std::endl;
+        return;
+    }
+
+    board = {"4k3/5p2/8/8/8/8/3P4/4K3 w - - 1 3"};
+    expected = {{"d2d3"},
+                {"d2d4"}};
+    actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Two step white test fail" << std::endl;
+        return;
+    }
+
+    board = {"4k3/5p2/8/8/8/8/3P4/4K3 b - - 1 3"};
+    expected = {{"f7f6"},
+                {"f7f5"}};
+    actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Two step black test fail" << std::endl;
+        return;
+    }
+
+    board = {"3k4/3p4/2R1R3/8/2r1r3/3P4/8/3K4 w - - 1 3"};
+    expected = {{"d3d4"},
+                {"d3c4"},
+                {"d3e4"}};
+    actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Take white test fail" << std::endl;
+        return;
+    }
+
+    board = {"3k4/8/3p4/2R1R3/2r1r3/3P4/8/3K4 b - - 1 3"};
+    expected = {{"d6d5"},
+                {"d6c5"},
+                {"d6e5"}};
+    actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Take black test fail" << std::endl;
+        return;
+    }
+
+    board = {"3k4/8/8/5Pp1/8/8/8/1K6 w g6 - 1 3"};
+    expected = {{"f5f6"},
+                {"f5g6"}};
+    actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "En passant white test fail" << std::endl;
+        return;
+    }
+
+    board = {"3k4/8/8/8/5Pp1/8/8/1K6 b f3 - 1 3"};
+    expected = {{"g4g3"},
+                {"g4f3"}};
+    actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "En passant test fail" << std::endl;
+        return;
+    }
+
+    board = {"3k4/6P1/8/8/8/8/8/1K6 w - - 1 3"};
+    expected = {{"g7g8Q"},
+                {"g7g8R"},
+                {"g7g8B"},
+                {"g7g8N"}};
+    actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Convert white test fail" << std::endl;
+        return;
+    }
+
+    board = {"3k4/8/8/8/8/8/7p/1K6 b - - 1 3"};
+    expected = {{"h2h1q"},
+                {"h2h1r"},
+                {"h2h1b"},
+                {"h2h1n"}};
+    actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Convert black test fail" << std::endl;
+        return;
+    }
+
+    board = {"3k4/8/3r2R1/3P2PP/2r2R2/r3R3/P1PPPP2/1K6 w - - 1 3"};
+    expected = {{"c2c3"},
+                {"d2d3"},
+                {"d2d4"},
+                {"f2f3"},
+                {"h5h6"}};
+    actual = board.getPossiblePawnMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Multiple white test fail" << std::endl;
+        return;
+    }
+
+    board = {"3k4/p1pp2pp/R1r5/3r3R/1p6/8/4pp2/1K3r2 b - - 1 3"};
+    expected = {{"b4b3"},
+                {"d7d6"},
+                {"e2e1q"},
+                {"e2e1b"},
+                {"e2e1r"},
+                {"e2e1n"},
+                {"g7g6"},
+                {"g7g5"},
+                {"h7h6"}};
+    actual = board.getPossiblePawnMoves();
+    auto a1 = board.sortAndGroup(actual);
+    auto a2 = board.sortAndGroup(expected);
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Multiple black test fail" << std::endl;
         return;
     }
     std::cout << "OK" << std::endl;
@@ -561,4 +690,5 @@ void allTests() {
     bishopMoves();
     queenMoves();
     kingMoves();
+    pawnMoves();
 }
