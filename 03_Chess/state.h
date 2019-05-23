@@ -91,7 +91,16 @@ public:
         if (qok) oss << 'q';
         if (Kok | Qok | kok | qok) oss << ' ';
         else oss << "- ";
-        oss << enPassant << " " << halfmove << " " << fullmove;
+        if (enPassant != "-") {
+            if (underAttack(pos{enPassant})) {
+                oss << enPassant;
+            } else {
+                oss << "-";
+            }
+        } else {
+            oss << enPassant;
+        }
+        oss << " " << halfmove << " " << fullmove;
         return oss.str();
     };
 
@@ -389,6 +398,13 @@ public:
     }
 
 private:
+    bool underAttack(pos pos) {
+        std::vector<move> allMoves = getAllMoves();
+        return std::any_of(allMoves.begin(), allMoves.end(), [&pos](const auto &move) {
+            return move.to == pos;
+        });
+    }
+
     bool addMoveIfOk(std::vector<move> &ret, const pos &oldpos, const pos &newpos) const {
         if (newpos.valid) {
             if (at(newpos) != '.' && isWhite(newpos) == isWhite(oldpos)) {

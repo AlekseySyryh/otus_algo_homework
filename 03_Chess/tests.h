@@ -188,16 +188,16 @@ void enPassantFix() {
         std::cout << "Test 2 fail " << std::endl << actual << std::endl << expected << std::endl;
         return;
     }
-#ifndef noattackcheck
+
     board = state("rnbqkbnr/ppp1pppp/8/8/3p4/N6N/PPPPPPPP/R1BQKB1R w KQkq - 0 3");
-    board.move("b2b4");
+    board.makeMove("b2b4");
     expected = "rnbqkbnr/ppp1pppp/8/8/1P1p4/N6N/P1PPPPPP/R1BQKB1R b KQkq - 0 3";
     actual = board.build();
     if (expected!=actual){
         std::cout << "Test 3 fail " << std::endl << actual << std::endl << expected << std::endl;
         return;
     }
-#endif
+
     std::cout << "OK" << std::endl;
 }
 

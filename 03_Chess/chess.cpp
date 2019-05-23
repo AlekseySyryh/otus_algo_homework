@@ -2,8 +2,6 @@
 #include "state.h"
 #include <algorithm>
 
-#define noattackcheck
-
 #include "tests.h"
 
 int main() {
