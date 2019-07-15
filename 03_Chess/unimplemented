@@ -2,23 +2,6 @@ https://lichess.org/editor/
 
 ПЕРЕМЕЩЕНИЕ
 
-Тема: Убирание флага рокировки при ходе ладьёй
-	Дано: r3k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R b KQkq - 0 16
-	      a8b8
-	Надо: 1r2k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQk - 1 17
-
-	Дано: 1r2k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQk - 1 17
-	      h1g1
-	Надо: 1r2k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K1R1 b Qk - 2 17
-
-	Дано: 1r2k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K1R1 b Qk - 2 17
-	      h8g8
-	Надо: 1r2k1r1/pppppppp/8/N7/8/8/PPPPPPPP/R3K1R1 w Q - 3 18
-
-	Дано: 1r2k1r1/pppppppp/8/N7/8/8/PPPPPPPP/R3K1R1 w Q - 3 18
-	      a1c1
-	Надо: 1r2k1r1/pppppppp/8/N7/8/8/PPPPPPPP/2R1K1R1 b - - 4 18
-
 Тема: Рокировка в короткую сторону
 	Дано: r3k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R b KQkq - 0 16
 	      e8g8

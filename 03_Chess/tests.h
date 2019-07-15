@@ -271,6 +271,43 @@ void kingResetCastling() {
     std::cout << "OK" << std::endl;
 }
 
+void rockResetCastling() {
+    std::cout << "Rock reset castling:\t\t\t";
+    state board("r3k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R b KQkq - 0 16");
+    board.makeMove("a8b8");
+    std::string expected = "1r2k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQk - 1 17";
+    std::string actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 1 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+    board.makeMove("h1g1");
+    expected = "1r2k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K1R1 b Qk - 2 17";
+    actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 2 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+    board.makeMove("h8g8");
+    expected = "1r2k1r1/pppppppp/8/N7/8/8/PPPPPPPP/R3K1R1 w Q - 3 18";
+    actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 3 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+    board.makeMove("a1c1");
+    expected = "1r2k1r1/pppppppp/8/N7/8/8/PPPPPPPP/2R1K1R1 b - - 4 18";
+    actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 4 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+
+
+    std::cout << "OK" << std::endl;
+}
+
+
 void sortAndGroupMoves() {
     std::cout << "Sort and group moves:\t\t";
     state board("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
@@ -778,6 +815,7 @@ void allTests() {
     enPassantFix();
     enPassantTake();
     kingResetCastling();
+    rockResetCastling();
     sortAndGroupMoves();
     knightMoves();
     rockMoves();
