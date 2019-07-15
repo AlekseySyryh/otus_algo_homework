@@ -235,6 +235,35 @@ void enPassantTake() {
     expected = "r2qkbnr/pppbp2p/2n2P2/5pP1/8/2p2N2/PP1P1P1P/RNBQK2R b KQkq - 0 9";
     actual = board.build();
     if (expected != actual) {
+        std::cout << "Test 4 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+
+    std::cout << "OK" << std::endl;
+}
+
+void kingResetCastling() {
+    std::cout << "King reset castling:\t\t\t";
+    state board("r3k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R b KQkq - 0 16");
+    board.makeMove("e8d8");
+    std::string expected = "r2k3r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQ - 1 17";
+    std::string actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 1 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+    board.makeMove("e1d1");
+    expected = "r2k3r/pppppppp/8/N7/8/8/PPPPPPPP/R2K3R b - - 2 17";
+    actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 2 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+    board={"r3k2r/pppppppp/8/n7/2N5/8/PPPPPPPP/R3K2R w KQkq - 4 16"};
+    board.makeMove("e1d1");
+    expected = "r3k2r/pppppppp/8/n7/2N5/8/PPPPPPPP/R2K3R b kq - 5 16";
+    actual = board.build();
+    if (expected != actual) {
         std::cout << "Test 3 fail " << std::endl << actual << std::endl << expected << std::endl;
         return;
     }
@@ -748,7 +777,7 @@ void allTests() {
     pawnConvert();
     enPassantFix();
     enPassantTake();
-
+    kingResetCastling();
     sortAndGroupMoves();
     knightMoves();
     rockMoves();
