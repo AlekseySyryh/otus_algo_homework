@@ -201,6 +201,47 @@ void enPassantFix() {
     std::cout << "OK" << std::endl;
 }
 
+void enPassantTake() {
+    std::cout << "En passant take:\t\t\t";
+    state board("rnbqkbnr/ppp1pppp/8/4P3/2Pp4/8/PP1P1PPP/RNBQKBNR b KQkq c3 0 3");
+    board.makeMove("d4c3");
+    std::string expected = "rnbqkbnr/ppp1pppp/8/4P3/8/2p5/PP1P1PPP/RNBQKBNR w KQkq - 0 4";
+    std::string actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 1 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+
+    board=state("r1bqkbnr/ppp1p1pp/2n5/4PpP1/8/2p5/PP1P1P1P/RNBQKBNR w KQkq f6 0 6");
+    board.makeMove("g5f6");
+    expected = "r1bqkbnr/ppp1p1pp/2n2P2/4P3/8/2p5/PP1P1P1P/RNBQKBNR b KQkq - 0 6";
+    actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 2 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+
+    board=state("r1bqkbnr/ppp1p1pp/2n5/4PpP1/8/2p5/PP1P1P1P/RNBQKBNR w KQkq f6 0 6");
+    board.makeMove("e5f6");
+    expected = "r1bqkbnr/ppp1p1pp/2n2P2/6P1/8/2p5/PP1P1P1P/RNBQKBNR b KQkq - 0 6";
+    actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 3 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+
+    board=state("r2qkbnr/pppbp2p/2n2p2/4PpP1/8/2p2N2/PP1P1P1P/RNBQK2R w KQkq - 0 9");
+    board.makeMove("e5f6");
+    expected = "r2qkbnr/pppbp2p/2n2P2/5pP1/8/2p2N2/PP1P1P1P/RNBQK2R b KQkq - 0 9";
+    actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 3 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+
+    std::cout << "OK" << std::endl;
+}
+
 void sortAndGroupMoves() {
     std::cout << "Sort and group moves:\t\t";
     state board("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
@@ -706,7 +747,7 @@ void allTests() {
     takeMove();
     pawnConvert();
     enPassantFix();
-
+    enPassantTake();
 
     sortAndGroupMoves();
     knightMoves();

@@ -122,12 +122,20 @@ public:
         if (kok && (newMove.from.name == "h8" || newMove.to.name == "h8" || at(newMove.from) == 'k')) kok = false;
         if (Qok && (newMove.from.name == "a1" || newMove.to.name == "a1" || at(newMove.from) == 'K')) Qok = false;
         if (Kok && (newMove.from.name == "h1" || newMove.to.name == "h1" || at(newMove.from) == 'K')) Kok = false;
+
         if (normalize(newMove.from) == 'p' &&
             (newMove.from.rowc == '2' && newMove.to.rowc == '4' ||
              newMove.from.rowc == '7' && newMove.to.rowc == '5')) {
             pos ep((newMove.from.row + newMove.to.row) / 2, newMove.from.col);
             enPassant = ep.name;
         } else {
+            if (normalize(newMove.from) == 'p' && newMove.to.name == enPassant) {
+                if (nextWhite) {
+                    at(pos(newMove.to.row-1,newMove.to.col)) = '.';
+                } else {
+                    at(pos(newMove.to.row+1,newMove.to.col)) = '.';
+                }
+            }
             enPassant = "-";
         }
         if (newMove.valid) {
@@ -139,6 +147,7 @@ public:
             }
             at(newMove.from) = '.';
         }
+
     }
 
     std::vector<std::vector<move>> sortAndGroup(std::vector<move> moves) {
