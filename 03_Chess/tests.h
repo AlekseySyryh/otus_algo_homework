@@ -307,6 +307,27 @@ void rockResetCastling() {
     std::cout << "OK" << std::endl;
 }
 
+void shortCastling() {
+    std::cout << "Short castling:\t\t\t";
+    state board("r3k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R b KQkq - 0 16");
+    board.makeMove("e8g8");
+    std::string expected = "r4rk1/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQ - 1 17";
+    std::string actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 1 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+    board.makeMove("e1g1");
+    expected = "r4rk1/pppppppp/8/N7/8/8/PPPPPPPP/R4RK1 b - - 2 17";
+    actual = board.build();
+    if (expected != actual) {
+        std::cout << "Test 2 fail " << std::endl << actual << std::endl << expected << std::endl;
+        return;
+    }
+
+    std::cout << "OK" << std::endl;
+}
+
 
 void sortAndGroupMoves() {
     std::cout << "Sort and group moves:\t\t";
@@ -816,6 +837,7 @@ void allTests() {
     enPassantTake();
     kingResetCastling();
     rockResetCastling();
+    shortCastling();
     sortAndGroupMoves();
     knightMoves();
     rockMoves();

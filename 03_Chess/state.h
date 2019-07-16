@@ -118,10 +118,6 @@ public:
         } else {
             ++halfmove;
         }
-        if (qok && (newMove.from.name == "a8" || newMove.to.name == "a8" || at(newMove.from) == 'k')) qok = false;
-        if (kok && (newMove.from.name == "h8" || newMove.to.name == "h8" || at(newMove.from) == 'k')) kok = false;
-        if (Qok && (newMove.from.name == "a1" || newMove.to.name == "a1" || at(newMove.from) == 'K')) Qok = false;
-        if (Kok && (newMove.from.name == "h1" || newMove.to.name == "h1" || at(newMove.from) == 'K')) Kok = false;
 
         if (normalize(newMove.from) == 'p' &&
             (newMove.from.rowc == '2' && newMove.to.rowc == '4' ||
@@ -145,8 +141,22 @@ public:
             } else {
                 at(newMove.to) = at(newMove.from);
             }
+            if (newMove.name == "e8g8" && kok){
+                at(pos("g8"))='k';
+                at(pos("f8"))='r';
+                at(pos("h8"))='.';
+            } else if (newMove.name == "e1g1" && Kok){
+                at(pos("g1"))='K';
+                at(pos("f1"))='R';
+                at(pos("h1"))='.';
+            }
             at(newMove.from) = '.';
         }
+        if (qok && (newMove.from.name == "a8" || newMove.to.name == "a8" || at(newMove.to) == 'k')) qok = false;
+        if (kok && (newMove.from.name == "h8" || newMove.to.name == "h8" || at(newMove.to) == 'k')) kok = false;
+        if (Qok && (newMove.from.name == "a1" || newMove.to.name == "a1" || at(newMove.to) == 'K')) Qok = false;
+        if (Kok && (newMove.from.name == "h1" || newMove.to.name == "h1" || at(newMove.to) == 'K')) Kok = false;
+
 
     }
 
