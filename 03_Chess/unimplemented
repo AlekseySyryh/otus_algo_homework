@@ -1,16 +1,5 @@
 https://lichess.org/editor/
 
-ПЕРЕМЕЩЕНИЕ
-
-Тема: Рокировка в длинную сторону
-	Дано: r3k2r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R b KQkq - 0 16
-		  e8c8
-	Надо: 2kr3r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQ - 1 17
-
-	Дано: 2kr3r/pppppppp/8/N7/8/8/PPPPPPPP/R3K2R w KQ - 1 17
-	      e1c1
-	Надо: 2kr3r/pppppppp/8/N7/8/8/PPPPPPPP/2KR3R b - - 2 17
-
 ШАХ
 	Дано: позиция
 	Надо: определить наличие шаха

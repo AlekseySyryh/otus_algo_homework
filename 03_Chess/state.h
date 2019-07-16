@@ -149,6 +149,14 @@ public:
                 at(pos("g1"))='K';
                 at(pos("f1"))='R';
                 at(pos("h1"))='.';
+            } else if (newMove.name == "e8c8" && kok){
+                    at(pos("c8"))='k';
+                    at(pos("d8"))='r';
+                    at(pos("a8"))='.';
+            } else if (newMove.name == "e1c1" && Kok){
+                at(pos("c1"))='K';
+                at(pos("d1"))='R';
+                at(pos("a1"))='.';
             }
             at(newMove.from) = '.';
         }
