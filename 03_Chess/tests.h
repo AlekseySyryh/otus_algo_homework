@@ -870,6 +870,33 @@ void isCheck() {
     std::cout << "OK" << std::endl;
 }
 
+void noCheckMoves() {
+    std::cout << "No check moves:\t\t\t";
+    state board("4k3/4r3/8/8/8/8/8/4K3 w - - 5 10");
+    std::vector<move> expected = {{"e1d1"},
+                                  {"e1d2"},
+                                  {"e1f1"},
+                                  {"e1f2"}};
+    std::vector<move> actual = board.getAllNonCheckMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "White test fail" << std::endl;
+        return;
+    }
+
+    board={"4k3/8/2B5/8/8/8/8/4K3 b - - 5 10"};
+    expected = {{"e8d8"},
+                                  {"e8f8"},
+                                  {"e8e7"},
+                                  {"e8f7"}};
+    actual = board.getAllNonCheckMoves();
+    if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
+        std::cout << "Black test fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
+
+
 void allTests() {
     parseFEN();
     buildFEN();
@@ -893,4 +920,5 @@ void allTests() {
     pawnMoves();
     allMoves();
     isCheck();
+    noCheckMoves();
 }

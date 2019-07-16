@@ -424,6 +424,19 @@ public:
         return ret;
     }
 
+    std::vector<move> getAllNonCheckMoves(){
+        std::vector<move> moves;
+        for(const move& possibleMove:getAllMoves()){
+            auto otherState = state(build());
+            otherState.makeMove(possibleMove);
+            otherState.nextWhite = !otherState.nextWhite;
+            if(!otherState.isCheck()){
+                moves.push_back(possibleMove);
+            }
+        }
+        return moves;
+    }
+
     bool isCheck(){
         auto otherState = state(build());
         otherState.nextWhite = !otherState.nextWhite;
