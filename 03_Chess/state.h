@@ -424,6 +424,19 @@ public:
         return ret;
     }
 
+    bool isCheck(){
+        auto otherState = state(build());
+        otherState.nextWhite = !otherState.nextWhite;
+        for (const move &enemyMove: otherState.getAllMoves()){
+            if (normalize(enemyMove.to)=='k' &&
+                isWhite(enemyMove.to) == nextWhite){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 private:
     bool underAttack(pos pos) {
         std::vector<move> allMoves = getAllMoves();

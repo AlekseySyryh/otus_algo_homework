@@ -845,6 +845,31 @@ void allMoves() {
     std::cout << "OK" << std::endl;
 }
 
+void isCheck() {
+    std::cout << "Is check:\t\t\t";
+    state board("4k3/3r4/8/8/8/8/8/4K3 w - - 5 10");
+    if (board.isCheck()){
+        std::cout << "Test 1 fail" << std::endl;
+        return;
+    }
+    board={"4k3/4r3/8/8/8/8/8/4K3 w - - 5 10"};
+    if (!board.isCheck()){
+        std::cout << "Test 2 fail" << std::endl;
+        return;
+    }
+    board={"4k3/1B6/8/8/8/8/8/4K3 b - - 5 10"};
+    if (board.isCheck()){
+        std::cout << "Test 3 fail" << std::endl;
+        return;
+    }
+    board={"4k3/8/2B5/8/8/8/8/4K3 b - - 5 10"};
+    if (!board.isCheck()){
+        std::cout << "Test 4 fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
+
 void allTests() {
     parseFEN();
     buildFEN();
@@ -867,4 +892,5 @@ void allTests() {
     kingMoves();
     pawnMoves();
     allMoves();
+    isCheck();
 }
