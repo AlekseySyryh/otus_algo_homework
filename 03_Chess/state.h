@@ -471,8 +471,12 @@ public:
         return false;
     }
 
-    bool isCheckMate() {
+    bool isCheckmate() {
         return isCheck() && getAllNonCheckMoves().size() == 0;
+    }
+
+    bool isStalemate() {
+        return !isCheck() && getAllNonCheckMoves().size() == 0;
     }
 
 private:

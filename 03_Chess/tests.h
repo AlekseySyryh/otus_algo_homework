@@ -1143,21 +1143,46 @@ void badCastlingMoves() {
     std::cout << "OK" << std::endl;
 }
 
-void checkMate() {
+void checkmate() {
     std::cout << "Is checkmate:\t\t\t";
     state board("k7/8/8/8/8/8/8/7K w - - 5 7");
-    if (board.isCheckMate()) {
+    if (board.isCheckmate()) {
         std::cout << "Test 1 fail" << std::endl;
         return;
     }
     board = {"k6r/8/8/8/8/8/8/7K w - - 5 8"};
-    if (board.isCheckMate()) {
+    if (board.isCheckmate()) {
         std::cout << "Test 2 fail" << std::endl;
         return;
     }
     board = {"k5rr/8/8/8/8/8/8/7K w - - 5 8"};
-    if (!board.isCheckMate()) {
+    if (!board.isCheckmate()) {
         std::cout << "Test 3 fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
+
+void stalemate() {
+    std::cout << "Is stalemate:\t\t\t";
+    state board("k7/8/8/8/8/8/8/7K w - - 5 7");
+    if (board.isStalemate()) {
+        std::cout << "Test 1 fail" << std::endl;
+        return;
+    }
+    board = {"k6r/8/8/8/8/8/8/7K w - - 5 8"};
+    if (board.isStalemate()) {
+        std::cout << "Test 2 fail" << std::endl;
+        return;
+    }
+    board = {"k5rr/8/8/8/8/8/8/7K w - - 5 8"};
+    if (board.isStalemate()) {
+        std::cout << "Test 3 fail" << std::endl;
+        return;
+    }
+    board = {"k5r1/8/8/8/8/8/r7/7K w - - 5 8"};
+    if (!board.isStalemate()) {
+        std::cout << "Test 4 fail" << std::endl;
         return;
     }
     std::cout << "OK" << std::endl;
@@ -1190,5 +1215,6 @@ void allTests() {
     noCheckMoves();
     goodCastlingMoves();
     badCastlingMoves();
-    checkMate();
+    checkmate();
+    stalemate();
 }
