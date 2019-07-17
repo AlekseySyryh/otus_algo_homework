@@ -92,7 +92,7 @@ public:
         if (Kok | Qok | kok | qok) oss << ' ';
         else oss << "- ";
         if (enPassant != "-") {
-            if (underAttack(pos{enPassant})) {
+            if (underOurAttack(pos{enPassant})) {
                 oss << enPassant;
             } else {
                 oss << "-";
@@ -333,18 +333,24 @@ public:
                     addMoveIfOk(ret, p, pos{p.row - 1, p.col + 1});
                     addMoveIfOk(ret, p, pos{p.row, p.col + 1});
                     addMoveIfOk(ret, p, pos{p.row + 1, p.col + 1});
+
                     if (nextWhite) {
-                        if (Kok) {
+
+                        if (Kok && at({"f1"}) == '.' && at({"g1"}) == '.' &&
+                            !isCheck() && !underEnemyAttack({"f1"}) && !underEnemyAttack({"g1"})) {
                             ret.push_back({"e1g1"});
                         }
-                        if (Qok) {
+                        if (Qok && at({"d1"}) == '.' && at({"c1"}) == '.' && at({"b1"}) == '.' &&
+                            !isCheck() && !underEnemyAttack({"d1"}) && !underEnemyAttack({"c1"})) {
                             ret.push_back({"e1c1"});
                         }
                     } else {
-                        if (kok) {
+                        if (kok && at({"f8"}) == '.' && at({"g8"}) == '.' &&
+                            !isCheck() && !underEnemyAttack({"f8"}) && !underEnemyAttack({"g8"})) {
                             ret.push_back({"e8g8"});
                         }
-                        if (qok) {
+                        if (qok && at({"d8"}) == '.' && at({"c8"}) == '.' && at({"b8"}) == '.' &&
+                            !isCheck() && !underEnemyAttack({"d8"}) && !underEnemyAttack({"c8"})) {
                             ret.push_back({"e8c8"});
                         }
                     }
@@ -466,13 +472,22 @@ public:
     }
 
 private:
-    bool underAttack(pos pos) {
+    bool underOurAttack(const pos &pos) {
         std::vector<move> allMoves = getAllMoves();
         return std::any_of(allMoves.begin(), allMoves.end(), [&pos](const auto &move) {
             return move.to == pos;
         });
     }
 
+    bool underEnemyAttack(const pos &pos) {
+        state other = {build()};
+        other.nextWhite = !other.nextWhite;
+        other.kok = false;
+        other.qok = false;
+        other.Kok = false;
+        other.Qok = false;
+        return other.underOurAttack(pos);
+    }
     bool addMoveIfOk(std::vector<move> &ret, const pos &oldpos, const pos &newpos) const {
         if (newpos.valid) {
             if (at(newpos) != '.' && isWhite(newpos) == isWhite(oldpos)) {

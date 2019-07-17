@@ -193,7 +193,7 @@ void enPassantFix() {
     board.makeMove("b2b4");
     expected = "rnbqkbnr/ppp1pppp/8/8/1P1p4/N6N/P1PPPPPP/R1BQKB1R b KQkq - 0 3";
     actual = board.build();
-    if (expected!=actual){
+    if (expected != actual) {
         std::cout << "Test 3 fail " << std::endl << actual << std::endl << expected << std::endl;
         return;
     }
@@ -212,7 +212,7 @@ void enPassantTake() {
         return;
     }
 
-    board=state("r1bqkbnr/ppp1p1pp/2n5/4PpP1/8/2p5/PP1P1P1P/RNBQKBNR w KQkq f6 0 6");
+    board = state("r1bqkbnr/ppp1p1pp/2n5/4PpP1/8/2p5/PP1P1P1P/RNBQKBNR w KQkq f6 0 6");
     board.makeMove("g5f6");
     expected = "r1bqkbnr/ppp1p1pp/2n2P2/4P3/8/2p5/PP1P1P1P/RNBQKBNR b KQkq - 0 6";
     actual = board.build();
@@ -221,7 +221,7 @@ void enPassantTake() {
         return;
     }
 
-    board=state("r1bqkbnr/ppp1p1pp/2n5/4PpP1/8/2p5/PP1P1P1P/RNBQKBNR w KQkq f6 0 6");
+    board = state("r1bqkbnr/ppp1p1pp/2n5/4PpP1/8/2p5/PP1P1P1P/RNBQKBNR w KQkq f6 0 6");
     board.makeMove("e5f6");
     expected = "r1bqkbnr/ppp1p1pp/2n2P2/6P1/8/2p5/PP1P1P1P/RNBQKBNR b KQkq - 0 6";
     actual = board.build();
@@ -230,7 +230,7 @@ void enPassantTake() {
         return;
     }
 
-    board=state("r2qkbnr/pppbp2p/2n2p2/4PpP1/8/2p2N2/PP1P1P1P/RNBQK2R w KQkq - 0 9");
+    board = state("r2qkbnr/pppbp2p/2n2p2/4PpP1/8/2p2N2/PP1P1P1P/RNBQK2R w KQkq - 0 9");
     board.makeMove("e5f6");
     expected = "r2qkbnr/pppbp2p/2n2P2/5pP1/8/2p2N2/PP1P1P1P/RNBQK2R b KQkq - 0 9";
     actual = board.build();
@@ -259,7 +259,7 @@ void kingResetCastling() {
         std::cout << "Test 2 fail " << std::endl << actual << std::endl << expected << std::endl;
         return;
     }
-    board={"r3k2r/pppppppp/8/n7/2N5/8/PPPPPPPP/R3K2R w KQkq - 4 16"};
+    board = {"r3k2r/pppppppp/8/n7/2N5/8/PPPPPPPP/R3K2R w KQkq - 4 16"};
     board.makeMove("e1d1");
     expected = "r3k2r/pppppppp/8/n7/2N5/8/PPPPPPPP/R2K3R b kq - 5 16";
     actual = board.build();
@@ -619,18 +619,18 @@ void queenMoves() {
     }
 
     board = state("4k3/8/2PPP3/2PqP3/8/1P1P4/6P1/4K3 b - - 5 9");
-    expected = {{                  "d5c6"},
-                                  {"d5d6"},
-                                  {"d5e6"},
-                                  {"d5c5"},
-                                  {"d5e5"},
-                                  {"d5c4"},
-                                  {"d5d4"},
-                                  {"d5e4"},
-                                  {"d5b3"},
-                                  {"d5d3"},
-                                  {"d5f3"},
-                                  {"d5g2"}};
+    expected = {{"d5c6"},
+                {"d5d6"},
+                {"d5e6"},
+                {"d5c5"},
+                {"d5e5"},
+                {"d5c4"},
+                {"d5d4"},
+                {"d5e4"},
+                {"d5b3"},
+                {"d5d3"},
+                {"d5f3"},
+                {"d5g2"}};
     actual = board.getPossibleQueenMoves();
     if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
         std::cout << "Take test fail" << std::endl;
@@ -848,22 +848,22 @@ void allMoves() {
 void isCheck() {
     std::cout << "Is check:\t\t\t";
     state board("4k3/3r4/8/8/8/8/8/4K3 w - - 5 10");
-    if (board.isCheck()){
+    if (board.isCheck()) {
         std::cout << "Test 1 fail" << std::endl;
         return;
     }
-    board={"4k3/4r3/8/8/8/8/8/4K3 w - - 5 10"};
-    if (!board.isCheck()){
+    board = {"4k3/4r3/8/8/8/8/8/4K3 w - - 5 10"};
+    if (!board.isCheck()) {
         std::cout << "Test 2 fail" << std::endl;
         return;
     }
-    board={"4k3/1B6/8/8/8/8/8/4K3 b - - 5 10"};
-    if (board.isCheck()){
+    board = {"4k3/1B6/8/8/8/8/8/4K3 b - - 5 10"};
+    if (board.isCheck()) {
         std::cout << "Test 3 fail" << std::endl;
         return;
     }
-    board={"4k3/8/2B5/8/8/8/8/4K3 b - - 5 10"};
-    if (!board.isCheck()){
+    board = {"4k3/8/2B5/8/8/8/8/4K3 b - - 5 10"};
+    if (!board.isCheck()) {
         std::cout << "Test 4 fail" << std::endl;
         return;
     }
@@ -883,11 +883,11 @@ void noCheckMoves() {
         return;
     }
 
-    board={"4k3/8/2B5/8/8/8/8/4K3 b - - 5 10"};
+    board = {"4k3/8/2B5/8/8/8/8/4K3 b - - 5 10"};
     expected = {{"e8d8"},
-                                  {"e8f8"},
-                                  {"e8e7"},
-                                  {"e8f7"}};
+                {"e8f8"},
+                {"e8e7"},
+                {"e8f7"}};
     actual = board.getAllNonCheckMoves();
     if (board.sortAndGroup(actual) != board.sortAndGroup(expected)) {
         std::cout << "Black test fail" << std::endl;
@@ -938,6 +938,211 @@ void goodCastlingMoves() {
     std::cout << "OK" << std::endl;
 }
 
+void badCastlingMoves() {
+    std::cout << "Bad castling moves:\t\t\t";
+    state board("4k3/8/8/8/8/8/8/4KB1R w K - 5 10");
+    std::vector<move> actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1g1"}) != 0) {
+        std::cout << "Test 1 fail" << std::endl;
+        return;
+    }
+    board = {"4k3/8/8/8/8/8/8/4K1NR w K - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1g1"}) != 0) {
+        std::cout << "Test 2 fail" << std::endl;
+        return;
+    }
+
+    board = {"4k3/4r3/8/8/8/8/8/4K2R w K - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1g1"}) != 0) {
+        std::cout << "Test 3 fail" << std::endl;
+        return;
+    }
+    board = {"4k3/5r2/8/8/8/8/8/4K2R w K - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1g1"}) != 0) {
+        std::cout << "Test 4 fail" << std::endl;
+        return;
+    }
+    board = {"4k3/6r1/8/8/8/8/8/4K2R w K - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1g1"}) != 0) {
+        std::cout << "Test 5 fail" << std::endl;
+        return;
+    }
+    board = {"4k3/8/8/8/8/8/8/R2QK3 w Q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1c1"}) != 0) {
+        std::cout << "Test 6 fail" << std::endl;
+        return;
+    }
+    board = {"4k3/8/8/8/8/8/8/R1B1K3 w Q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1c1"}) != 0) {
+        std::cout << "Test 7 fail" << std::endl;
+        return;
+    }
+    board = {"4k3/8/8/8/8/8/8/RN2K3 w Q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1c1"}) != 0) {
+        std::cout << "Test 8 fail" << std::endl;
+        return;
+    }
+    board = {"4k3/4r3/8/8/8/8/8/R3K3 w Q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1c1"}) != 0) {
+        std::cout << "Test 9 fail" << std::endl;
+        return;
+    }
+    board = {"4k3/3r4/8/8/8/8/8/R3K3 w Q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1c1"}) != 0) {
+        std::cout << "Test 10 fail" << std::endl;
+        return;
+    }
+    board = {"4k3/2r5/8/8/8/8/8/R3K3 w Q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1c1"}) != 0) {
+        std::cout << "Test 11 fail" << std::endl;
+        return;
+    }
+
+    board = {"4kb1r/8/8/8/8/8/8/4K3 b k - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8g8"}) != 0) {
+        std::cout << "Test 12 fail" << std::endl;
+        return;
+    }
+    board = {"4k1nr/8/8/8/8/8/8/4K3 b k - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8g8"}) != 0) {
+        std::cout << "Test 13 fail" << std::endl;
+        return;
+    }
+    board = {"4k2r/8/8/8/8/8/4R3/4K3 b k - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8g8"}) != 0) {
+        std::cout << "Test 14 fail" << std::endl;
+        return;
+    }
+    board = {"4k2r/8/8/8/8/8/5R2/4K3 b k - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8g8"}) != 0) {
+        std::cout << "Test 15 fail" << std::endl;
+        return;
+    }
+    board = {"4k2r/8/8/8/8/8/6R1/4K3 b k - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8g8"}) != 0) {
+        std::cout << "Test 16 fail" << std::endl;
+        return;
+    }
+    board = {"r2qk3/8/8/8/8/8/8/4K3 b q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8c8"}) != 0) {
+        std::cout << "Test 17 fail" << std::endl;
+        return;
+    }
+    board = {"r1b1k3/8/8/8/8/8/8/4K3 b q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8c8"}) != 0) {
+        std::cout << "Test 18 fail" << std::endl;
+        return;
+    }
+    board = {"rn2k3/8/8/8/8/8/8/4K3 b q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8c8"}) != 0) {
+        std::cout << "Test 19 fail" << std::endl;
+        return;
+    }
+    board = {"r3k3/8/8/8/8/8/4R3/4K3 b q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8c8"}) != 0) {
+        std::cout << "Test 20 fail" << std::endl;
+        return;
+    }
+    board = {"r3k3/8/8/8/8/8/3R4/4K3 b q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8c8"}) != 0) {
+        std::cout << "Test 21 fail" << std::endl;
+        return;
+    }
+    board = {"r3k3/8/8/8/8/8/2R5/4K3 b q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8c8"}) != 0) {
+        std::cout << "Test 22 fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
+
 
 void allTests() {
     parseFEN();
@@ -964,4 +1169,5 @@ void allTests() {
     isCheck();
     noCheckMoves();
     goodCastlingMoves();
+    badCastlingMoves();
 }
