@@ -479,6 +479,9 @@ public:
         return !isCheck() && getAllNonCheckMoves().size() == 0;
     }
 
+    bool isDraw() {
+        return halfmove >= 100 || isStalemate();
+    }
 private:
     bool underOurAttack(const pos &pos) {
         std::vector<move> allMoves = getAllMoves();

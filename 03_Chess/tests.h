@@ -1188,6 +1188,26 @@ void stalemate() {
     std::cout << "OK" << std::endl;
 }
 
+void draw() {
+    std::cout << "Is draw:\t\t\t";
+    state board("k7/8/8/8/8/8/8/7K w - - 5 7");
+    if (board.isDraw()) {
+        std::cout << "Test 1 fail" << std::endl;
+        return;
+    }
+    board = {"k7/8/8/8/8/8/8/7K w - - 100 200"};
+    if (!board.isDraw()) {
+        std::cout << "Test 2 fail" << std::endl;
+        return;
+    }
+    board = {"k5r1/8/8/8/8/8/r7/7K w - - 5 8"};
+    if (!board.isDraw()) {
+        std::cout << "Test 3 fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
+
 
 void allTests() {
     parseFEN();
@@ -1217,4 +1237,5 @@ void allTests() {
     badCastlingMoves();
     checkmate();
     stalemate();
+    draw();
 }
