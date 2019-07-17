@@ -1143,6 +1143,26 @@ void badCastlingMoves() {
     std::cout << "OK" << std::endl;
 }
 
+void checkMate() {
+    std::cout << "Is checkmate:\t\t\t";
+    state board("k7/8/8/8/8/8/8/7K w - - 5 7");
+    if (board.isCheckMate()) {
+        std::cout << "Test 1 fail" << std::endl;
+        return;
+    }
+    board = {"k6r/8/8/8/8/8/8/7K w - - 5 8"};
+    if (board.isCheckMate()) {
+        std::cout << "Test 2 fail" << std::endl;
+        return;
+    }
+    board = {"k5rr/8/8/8/8/8/8/7K w - - 5 8"};
+    if (!board.isCheckMate()) {
+        std::cout << "Test 3 fail" << std::endl;
+        return;
+    }
+    std::cout << "OK" << std::endl;
+}
+
 
 void allTests() {
     parseFEN();
@@ -1170,4 +1190,5 @@ void allTests() {
     noCheckMoves();
     goodCastlingMoves();
     badCastlingMoves();
+    checkMate();
 }

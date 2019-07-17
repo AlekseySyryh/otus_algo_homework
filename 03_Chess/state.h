@@ -471,6 +471,10 @@ public:
         return false;
     }
 
+    bool isCheckMate() {
+        return isCheck() && getAllNonCheckMoves().size() == 0;
+    }
+
 private:
     bool underOurAttack(const pos &pos) {
         std::vector<move> allMoves = getAllMoves();
