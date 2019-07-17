@@ -896,6 +896,48 @@ void noCheckMoves() {
     std::cout << "OK" << std::endl;
 }
 
+void goodCastlingMoves() {
+    std::cout << "Good castling moves:\t\t\t";
+    state board("r3k2r/8/8/8/8/8/8/R3K2R w K - 5 10");
+    std::vector<move> actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1g1"}) != 1) {
+        std::cout << "White short test fail" << std::endl;
+        return;
+    }
+    board = {"r3k2r/8/8/8/8/8/8/R3K2R w Q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e1c1"}) != 1) {
+        std::cout << "White long test fail" << std::endl;
+        return;
+    }
+    board = {"r3k2r/8/8/8/8/8/8/R3K2R b k - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move("e8g8")) != 1) {
+        std::cout << "Black short test fail" << std::endl;
+        return;
+    }
+    board = {"r3k2r/8/8/8/8/8/8/R3K2R b q - 5 10"};
+    actual = board.getPossibleKingMoves();
+    if (std::count(
+            actual.begin(),
+            actual.end(),
+            move{"e8c8"}) != 1) {
+        std::cout << "Black long test fail" << std::endl;
+        return;
+    }
+
+    std::cout << "OK" << std::endl;
+}
+
 
 void allTests() {
     parseFEN();
@@ -921,4 +963,5 @@ void allTests() {
     allMoves();
     isCheck();
     noCheckMoves();
+    goodCastlingMoves();
 }

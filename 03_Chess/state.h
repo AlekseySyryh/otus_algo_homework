@@ -333,6 +333,21 @@ public:
                     addMoveIfOk(ret, p, pos{p.row - 1, p.col + 1});
                     addMoveIfOk(ret, p, pos{p.row, p.col + 1});
                     addMoveIfOk(ret, p, pos{p.row + 1, p.col + 1});
+                    if (nextWhite) {
+                        if (Kok) {
+                            ret.push_back({"e1g1"});
+                        }
+                        if (Qok) {
+                            ret.push_back({"e1c1"});
+                        }
+                    } else {
+                        if (kok) {
+                            ret.push_back({"e8g8"});
+                        }
+                        if (qok) {
+                            ret.push_back({"e8c8"});
+                        }
+                    }
                 }
             }
         }
