@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(euclid euclid.cpp)
 add_executable(pow pow.cpp)
+add_executable(prime prime.cpp)
