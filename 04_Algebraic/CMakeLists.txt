@@ -3,4 +3,4 @@ project(04_Algebraic)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(04_Algebraic main.cpp)
+add_executable(euclid euclid.cpp)
