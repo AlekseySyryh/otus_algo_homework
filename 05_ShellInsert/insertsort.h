@@ -15,6 +15,22 @@ void insertSort(array &data) {
     }
 }
 
+template<class array>
+void insertSort(array &data, size_t step, size_t offset) {
+    int n = data.size();
+    for (int i = offset; i < n; i += step) {
+        auto x = data[i];
+        int j = i - step;
+        while (j >= 0 && data[j] > x) {
+            data[j + step] = data[j];
+            j -= step;
+        }
+        data[j + step] = x;
+    }
+}
+
+
+
 //Модно, стильно, молодежно, по STLному (у нас тут современный C++ или где?)
 template<class BidirectionalIt, class Compare>
 void insertSort(BidirectionalIt first, BidirectionalIt last, Compare comp) {
