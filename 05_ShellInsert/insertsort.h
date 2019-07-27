@@ -1,6 +1,5 @@
 #pragma once
 
-//По рабоче-крестьянски
 template<class array>
 void insertSort(array &data) {
     int n = data.size();
@@ -27,34 +26,4 @@ void insertSort(array &data, size_t step, size_t offset) {
         }
         data[j + step] = x;
     }
-}
-
-
-
-//Модно, стильно, молодежно, по STLному (у нас тут современный C++ или где?)
-template<class BidirectionalIt, class Compare>
-void insertSort(BidirectionalIt first, BidirectionalIt last, Compare comp) {
-    if (first == last) return;
-    for (auto it = std::next(first); it < last; ++it) {
-        auto x = *it;
-        auto j = std::prev(it);
-        bool moveNeeded = true;
-        while (comp(x, *j)) {
-            *std::next(j) = *j;
-            if (j == first) { //Пришлось чутка покостылить, ведь std::prev(first) - это UB.
-                moveNeeded = false;
-                *j = x;
-                break;
-            }
-            --j;
-        }
-        if (moveNeeded) {
-            *std::next(j) = x;
-        }
-    }
-}
-
-template<class BidirectionalIt>
-void insertSort(BidirectionalIt first, BidirectionalIt last) {
-    insertSort(first, last, std::less<>());
 }

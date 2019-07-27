@@ -1,6 +1,7 @@
 #pragma once
 
 #include "sequence.h"
+#include "insertsort.h"
 #include <functional>
 
 template<class array>
