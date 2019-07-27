@@ -1,0 +1,630 @@
+20 Random
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+20 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+20 10% elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+40 Random
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+40 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+40 10% elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+80 Random
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+80 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+80 10% elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+160 Random
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+160 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+160 10% elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 1 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+320 Random
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+320 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+320 10% elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+640 Random
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 1 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+640 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+640 10% elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+1280 Random
+Insert sort 2 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+1280 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+1280 10% elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 1 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+2560 Random
+Insert sort 12 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+2560 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 0 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+2560 10% elemets swaped
+Insert sort 2 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 1 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 1 ms
+5120 Random
+Insert sort 48 ms
+Shell sort (Shell, 1959) 1 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 2 ms
+Shell sort (Papernov & Stasevich, 1965) 1 ms
+Shell sort (Pratt, 1971) 2 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 1 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 1 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+5120 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 1 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 0 ms
+Shell sort (Pratt, 1971) 2 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 1 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+5120 10% elemets swaped
+Insert sort 11 ms
+Shell sort (Shell, 1959) 2 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 1 ms
+Shell sort (Pratt, 1971) 2 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 1 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 2 ms
+Shell sort (Sedgewick, 1982) 1 ms
+Shell sort (Sedgewick, 1986) 1 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 1 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 1 ms
+10240 Random
+Insert sort 242 ms
+Shell sort (Shell, 1959) 4 ms
+Shell sort (Frank & Lazarus, 1960) 2 ms
+Shell sort (Hibbard, 1963) 3 ms
+Shell sort (Papernov & Stasevich, 1965) 3 ms
+Shell sort (Pratt, 1971) 7 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 2 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 2 ms
+Shell sort (Sedgewick, 1982) 2 ms
+Shell sort (Sedgewick, 1986) 2 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 3 ms
+Shell sort (Tokuda, 1992) 2 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 2 ms
+10240 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 0 ms
+Shell sort (Frank & Lazarus, 1960) 0 ms
+Shell sort (Hibbard, 1963) 0 ms
+Shell sort (Papernov & Stasevich, 1965) 1 ms
+Shell sort (Pratt, 1971) 6 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 0 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 0 ms
+Shell sort (Sedgewick, 1982) 0 ms
+Shell sort (Sedgewick, 1986) 0 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 0 ms
+Shell sort (Tokuda, 1992) 0 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 0 ms
+10240 10% elemets swaped
+Insert sort 45 ms
+Shell sort (Shell, 1959) 3 ms
+Shell sort (Frank & Lazarus, 1960) 2 ms
+Shell sort (Hibbard, 1963) 2 ms
+Shell sort (Papernov & Stasevich, 1965) 2 ms
+Shell sort (Pratt, 1971) 7 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 1 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 2 ms
+Shell sort (Sedgewick, 1982) 1 ms
+Shell sort (Sedgewick, 1986) 3 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 1 ms
+Shell sort (Tokuda, 1992) 2 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 1 ms
+20480 Random
+Insert sort 784 ms
+Shell sort (Shell, 1959) 10 ms
+Shell sort (Frank & Lazarus, 1960) 7 ms
+Shell sort (Hibbard, 1963) 7 ms
+Shell sort (Papernov & Stasevich, 1965) 8 ms
+Shell sort (Pratt, 1971) 17 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 7 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 6 ms
+Shell sort (Sedgewick, 1982) 6 ms
+Shell sort (Sedgewick, 1986) 8 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 6 ms
+Shell sort (Tokuda, 1992) 7 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 6 ms
+20480 5 elemets swaped
+Insert sort 0 ms
+Shell sort (Shell, 1959) 2 ms
+Shell sort (Frank & Lazarus, 1960) 2 ms
+Shell sort (Hibbard, 1963) 3 ms
+Shell sort (Papernov & Stasevich, 1965) 2 ms
+Shell sort (Pratt, 1971) 15 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 2 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 1 ms
+Shell sort (Sedgewick, 1982) 1 ms
+Shell sort (Sedgewick, 1986) 3 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 2 ms
+Shell sort (Tokuda, 1992) 2 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 1 ms
+20480 10% elemets swaped
+Insert sort 291 ms
+Shell sort (Shell, 1959) 21 ms
+Shell sort (Frank & Lazarus, 1960) 9 ms
+Shell sort (Hibbard, 1963) 9 ms
+Shell sort (Papernov & Stasevich, 1965) 8 ms
+Shell sort (Pratt, 1971) 26 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 8 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 8 ms
+Shell sort (Sedgewick, 1982) 6 ms
+Shell sort (Sedgewick, 1986) 6 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 5 ms
+Shell sort (Tokuda, 1992) 5 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 4 ms
+40960 Random
+Insert sort 3483 ms
+Shell sort (Shell, 1959) 38 ms
+Shell sort (Frank & Lazarus, 1960) 16 ms
+Shell sort (Hibbard, 1963) 16 ms
+Shell sort (Papernov & Stasevich, 1965) 16 ms
+Shell sort (Pratt, 1971) 46 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 20 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 18 ms
+Shell sort (Sedgewick, 1982) 15 ms
+Shell sort (Sedgewick, 1986) 16 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 16 ms
+Shell sort (Tokuda, 1992) 17 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 16 ms
+40960 5 elemets swaped
+Insert sort 1 ms
+Shell sort (Shell, 1959) 5 ms
+Shell sort (Frank & Lazarus, 1960) 6 ms
+Shell sort (Hibbard, 1963) 6 ms
+Shell sort (Papernov & Stasevich, 1965) 6 ms
+Shell sort (Pratt, 1971) 35 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 4 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 4 ms
+Shell sort (Sedgewick, 1982) 3 ms
+Shell sort (Sedgewick, 1986) 6 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 4 ms
+Shell sort (Tokuda, 1992) 5 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 4 ms
+40960 10% elemets swaped
+Insert sort 768 ms
+Shell sort (Shell, 1959) 64 ms
+Shell sort (Frank & Lazarus, 1960) 14 ms
+Shell sort (Hibbard, 1963) 14 ms
+Shell sort (Papernov & Stasevich, 1965) 17 ms
+Shell sort (Pratt, 1971) 47 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 15 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 13 ms
+Shell sort (Sedgewick, 1982) 11 ms
+Shell sort (Sedgewick, 1986) 12 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 11 ms
+Shell sort (Tokuda, 1992) 12 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 10 ms
+81920 Random
+Insert sort 12221 ms
+Shell sort (Shell, 1959) 98 ms
+Shell sort (Frank & Lazarus, 1960) 38 ms
+Shell sort (Hibbard, 1963) 39 ms
+Shell sort (Papernov & Stasevich, 1965) 40 ms
+Shell sort (Pratt, 1971) 91 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 34 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 29 ms
+Shell sort (Sedgewick, 1982) 29 ms
+Shell sort (Sedgewick, 1986) 30 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 28 ms
+Shell sort (Tokuda, 1992) 31 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 30 ms
+81920 5 elemets swaped
+Insert sort 2 ms
+Shell sort (Shell, 1959) 14 ms
+Shell sort (Frank & Lazarus, 1960) 13 ms
+Shell sort (Hibbard, 1963) 14 ms
+Shell sort (Papernov & Stasevich, 1965) 14 ms
+Shell sort (Pratt, 1971) 83 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 9 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 10 ms
+Shell sort (Sedgewick, 1982) 8 ms
+Shell sort (Sedgewick, 1986) 12 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 12 ms
+Shell sort (Tokuda, 1992) 13 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 8 ms
+81920 10% elemets swaped
+Insert sort 2434 ms
+Shell sort (Shell, 1959) 571 ms
+Shell sort (Frank & Lazarus, 1960) 29 ms
+Shell sort (Hibbard, 1963) 31 ms
+Shell sort (Papernov & Stasevich, 1965) 30 ms
+Shell sort (Pratt, 1971) 87 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 27 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 26 ms
+Shell sort (Sedgewick, 1982) 24 ms
+Shell sort (Sedgewick, 1986) 27 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 24 ms
+Shell sort (Tokuda, 1992) 26 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 24 ms
+163840 Random
+Insert sort 49441 ms
+Shell sort (Shell, 1959) 322 ms
+Shell sort (Frank & Lazarus, 1960) 82 ms
+Shell sort (Hibbard, 1963) 87 ms
+Shell sort (Papernov & Stasevich, 1965) 92 ms
+Shell sort (Pratt, 1971) 209 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 76 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 62 ms
+Shell sort (Sedgewick, 1982) 60 ms
+Shell sort (Sedgewick, 1986) 66 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 63 ms
+Shell sort (Tokuda, 1992) 63 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 79 ms
+163840 5 elemets swaped
+Insert sort 4 ms
+Shell sort (Shell, 1959) 27 ms
+Shell sort (Frank & Lazarus, 1960) 27 ms
+Shell sort (Hibbard, 1963) 28 ms
+Shell sort (Papernov & Stasevich, 1965) 30 ms
+Shell sort (Pratt, 1971) 177 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 18 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 22 ms
+Shell sort (Sedgewick, 1982) 16 ms
+Shell sort (Sedgewick, 1986) 24 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 26 ms
+Shell sort (Tokuda, 1992) 28 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 16 ms
+163840 10% elemets swaped
+Insert sort 8019 ms
+Shell sort (Shell, 1959) 2065 ms
+Shell sort (Frank & Lazarus, 1960) 63 ms
+Shell sort (Hibbard, 1963) 67 ms
+Shell sort (Papernov & Stasevich, 1965) 66 ms
+Shell sort (Pratt, 1971) 196 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 58 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 53 ms
+Shell sort (Sedgewick, 1982) 51 ms
+Shell sort (Sedgewick, 1986) 55 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 52 ms
+Shell sort (Tokuda, 1992) 56 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 52 ms
+327680 Random
+Insert sort 196325 ms
+Shell sort (Shell, 1959) 704 ms
+Shell sort (Frank & Lazarus, 1960) 192 ms
+Shell sort (Hibbard, 1963) 198 ms
+Shell sort (Papernov & Stasevich, 1965) 196 ms
+Shell sort (Pratt, 1971) 457 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 176 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 136 ms
+Shell sort (Sedgewick, 1982) 131 ms
+Shell sort (Sedgewick, 1986) 138 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 129 ms
+Shell sort (Tokuda, 1992) 131 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 224 ms
+327680 5 elemets swaped
+Insert sort 10 ms
+Shell sort (Shell, 1959) 59 ms
+Shell sort (Frank & Lazarus, 1960) 60 ms
+Shell sort (Hibbard, 1963) 63 ms
+Shell sort (Papernov & Stasevich, 1965) 64 ms
+Shell sort (Pratt, 1971) 402 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 42 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 47 ms
+Shell sort (Sedgewick, 1982) 36 ms
+Shell sort (Sedgewick, 1986) 54 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 53 ms
+Shell sort (Tokuda, 1992) 49 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 33 ms
+327680 10% elemets swaped
+Insert sort 21910 ms
+Shell sort (Shell, 1959) 4709 ms
+Shell sort (Frank & Lazarus, 1960) 132 ms
+Shell sort (Hibbard, 1963) 140 ms
+Shell sort (Papernov & Stasevich, 1965) 135 ms
+Shell sort (Pratt, 1971) 441 ms
+Shell sort (Pratt, 1971, Knuth, 1973) 117 ms
+Shell sort (Incerpi & Sedgewick, 1985, Knuth) 115 ms
+Shell sort (Sedgewick, 1982) 108 ms
+Shell sort (Sedgewick, 1986) 117 ms
+Shell sort (Gonnet & Baeza-Yates, 1991) 108 ms
+Shell sort (Tokuda, 1992) 111 ms
+Shell sort (Ciura, 2001, Dovgopol, 2011) 110 ms
