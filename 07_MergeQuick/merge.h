@@ -1,5 +1,7 @@
 #pragma once
 
+#include <future>
+
 template<typename array>
 void merge(array &data, array &copy, int begin, int mid, int end) {
     int first = begin;
@@ -58,4 +60,35 @@ template<typename array>
 void mergeSortInsert(array &data) {
     array copy(data);
     splitInsert(data, copy, 0, data.size());
+}
+
+template<typename array>
+void splitParallel(array &data, array &copy, int begin, int end) {
+    if (end - begin < 16) {
+        for (int i = begin; i < end; ++i) {
+            auto x = data[i];
+            int j = i - 1;
+            while (j >= begin && data[j] > x) {
+                data[j + 1] = data[j];
+                copy[j + 1] = data[j];
+                --j;
+            }
+            data[j + 1] = x;
+            copy[j + 1] = x;
+        }
+        return;
+    }
+
+    auto mid = (end + begin) / 2;
+    auto future1 = std::async([&]() { splitInsert(copy, data, begin, mid); });
+    auto future2 = std::async([&]() { splitInsert(copy, data, mid, end); });
+    future1.wait();
+    future2.wait();
+    merge(copy, data, begin, mid, end);
+}
+
+template<typename array>
+void mergeSortParallel(array &data) {
+    array copy(data);
+    splitParallel(data, copy, 0, data.size());
 }

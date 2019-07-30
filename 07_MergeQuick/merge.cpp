@@ -35,6 +35,18 @@ int main() {
         std::cout << "Fail";
         return EXIT_FAILURE;
     }
+    data2 = std::vector<int>(data);
+    std::cout << "Parallel ";
+    start = std::chrono::system_clock::now();
+    mergeSortParallel(data2);
+    end = std::chrono::system_clock::now();
+    if (std::is_sorted(data2.begin(), data2.end())) {
+        std::cout << "OK (" << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms)"
+                  << std::endl;
+    } else {
+        std::cout << "Fail";
+        return EXIT_FAILURE;
+    }
 
     return EXIT_SUCCESS;
 }
