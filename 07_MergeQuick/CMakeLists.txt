@@ -3,4 +3,4 @@ project(07_MergeQuick)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(07_MergeQuick main.cpp)
+add_executable(merge merge.cpp merge.h)
