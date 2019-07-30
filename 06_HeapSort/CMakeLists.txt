@@ -3,4 +3,5 @@ project(05_ShellInsert)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(06_HearSort main.cpp)
+add_executable(hearSort main.cpp)
+add_executable(priorityQueue priorityQueue.cpp)
