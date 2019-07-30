@@ -11,12 +11,25 @@ int main() {
     for (int i = 0; i < len; ++i) {
         data[i] = rand();
     }
+    std::vector<int> data2(data);
     std::cout << "Classic ";
     start = std::chrono::system_clock::now();
-    mergeSortClassic(data);
+    mergeSortClassic(data2);
     end = std::chrono::system_clock::now();
-    if (std::is_sorted(data.begin(), data.end())) {
-        std::cout << "OK (" << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << ") ms"
+    if (std::is_sorted(data2.begin(), data2.end())) {
+        std::cout << "OK (" << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms)"
+                  << std::endl;
+    } else {
+        std::cout << "Fail";
+        return EXIT_FAILURE;
+    }
+    data2 = std::vector<int>(data);
+    std::cout << "With insert ";
+    start = std::chrono::system_clock::now();
+    mergeSortInsert(data2);
+    end = std::chrono::system_clock::now();
+    if (std::is_sorted(data2.begin(), data2.end())) {
+        std::cout << "OK (" << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms)"
                   << std::endl;
     } else {
         std::cout << "Fail";
