@@ -13,7 +13,8 @@ struct algInfo {
 std::vector<algInfo> algorithms =
         {
                 {"Classic",      quickSort},
-                {"Median pivot", quickSortMedian}
+                {"Median pivot", quickSortMedian},
+                {"Random pivot", quickSortRandom}
         };
 
 void doTest(std::vector<int> data) {
@@ -45,8 +46,8 @@ void test(int len) {
     doTest(data);
     std::sort(data.begin(), data.end());
     for (int i = 0; i < 5; ++i) {
-        long ix1 = std::rand() / (RAND_MAX * len);
-        long ix2 = std::rand() / (RAND_MAX * len);
+        long ix1 = 1.0 * std::rand() / RAND_MAX * len;
+        long ix2 = 1.0 * std::rand() / RAND_MAX * len;
         std::swap(data[ix1], data[ix2]);
     }
     std::cout << len << " 5 elemets swaped" << std::endl;
@@ -55,16 +56,16 @@ void test(int len) {
     std::cout << len << " reversed" << std::endl;
     doTest(data);
     for (int i = 0; i < 5; ++i) {
-        long ix1 = std::rand() / (RAND_MAX * len);
-        long ix2 = std::rand() / (RAND_MAX * len);
+        long ix1 = 1.0 * std::rand() / RAND_MAX * len;
+        long ix2 = 1.0 * std::rand() / RAND_MAX * len;
         std::swap(data[ix1], data[ix2]);
     }
     std::cout << len << " 5 elemets swaped  and reversed" << std::endl;
     doTest(data);
     std::sort(data.begin(), data.end());
     for (int i = 0; i < len * 0.1; ++i) {
-        long ix1 = std::rand() / (RAND_MAX * len);
-        long ix2 = std::rand() / (RAND_MAX * len);
+        long ix1 = 1.0 * std::rand() / RAND_MAX * len;
+        long ix2 = 1.0 * std::rand() / RAND_MAX * len;
         std::swap(data[ix1], data[ix2]);
     }
     std::cout << len << " 10% elemets swaped" << std::endl;

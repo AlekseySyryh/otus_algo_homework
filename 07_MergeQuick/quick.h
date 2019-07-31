@@ -2,7 +2,8 @@
 
 enum pivotStrategy {
     last,
-    median
+    median,
+    random
 };
 
 int partition(std::vector<int> &data, int begin, int end, pivotStrategy strategy) {
@@ -15,6 +16,11 @@ int partition(std::vector<int> &data, int begin, int end, pivotStrategy strategy
             std::swap(data[begin], data[end - 1]);
         } else if ((mid >= first && mid <= last) || (mid <= first && mid >= last)) {
             std::swap(data[middleIx], data[end - 1]);
+        }
+    } else if (strategy == pivotStrategy::random) {
+        if (end - begin != 1) {
+            int ix = begin + 1.0 * std::rand() * (end - begin - 1) / RAND_MAX;
+            std::swap(data[ix], data[end - 1]);
         }
     }
     int pivot = data[end - 1];
@@ -49,5 +55,9 @@ bool quickSort(std::vector<int> &data) {
 
 bool quickSortMedian(std::vector<int> &data) {
     return quickSortStep(data, 0, data.size(), 0, pivotStrategy::median);
+}
+
+bool quickSortRandom(std::vector<int> &data) {
+    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::random);
 }
 
