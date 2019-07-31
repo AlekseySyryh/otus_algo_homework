@@ -3,8 +3,7 @@
 #include <future>
 #include <list>
 
-template<typename array>
-void merge(array &data, array &copy, int begin, int mid, int end) {
+void merge(std::vector<int> &data, std::vector<int> &copy, int begin, int mid, int end) {
     int first = begin;
     int second = mid;
     for (int ptr = begin; ptr < end; ++ptr) {
@@ -18,8 +17,7 @@ void merge(array &data, array &copy, int begin, int mid, int end) {
     }
 }
 
-template<typename array>
-void splitClassic(array &data, array &copy, int begin, int end) {
+void splitClassic(std::vector<int> &data, std::vector<int> &copy, int begin, int end) {
     if (end - begin < 2)
         return;
     auto mid = (end + begin) / 2;
@@ -28,14 +26,12 @@ void splitClassic(array &data, array &copy, int begin, int end) {
     merge(copy, data, begin, mid, end);
 }
 
-template<typename array>
-void mergeSortClassic(array &data) {
-    array copy(data);
+void mergeSortClassic(std::vector<int> &data) {
+    std::vector<int> copy(data);
     splitClassic(data, copy, 0, data.size());
 }
 
-template<typename array>
-void insertSort(array &data, int begin, int end) {
+void insertSort(std::vector<int> &data, int begin, int end) {
     for (int i = begin; i < end; ++i) {
         auto x = data.at(i);
         int j = i - 1;
@@ -47,8 +43,7 @@ void insertSort(array &data, int begin, int end) {
     }
 }
 
-template<typename array>
-void insertSort(array &data, array &copy, int begin, int end) {
+void insertSort(std::vector<int> &data, std::vector<int> &copy, int begin, int end) {
     for (int i = begin; i < end; ++i) {
         auto x = data[i];
         int j = i - 1;
@@ -62,9 +57,7 @@ void insertSort(array &data, array &copy, int begin, int end) {
     }
 }
 
-
-template<typename array>
-void splitInsert(array &data, array &copy, int begin, int end) {
+void splitInsert(std::vector<int> &data, std::vector<int> &copy, int begin, int end) {
     if (end - begin < 16) {
         insertSort(data, copy, begin, end);
         return;
@@ -76,14 +69,12 @@ void splitInsert(array &data, array &copy, int begin, int end) {
     merge(copy, data, begin, mid, end);
 }
 
-template<typename array>
-void mergeSortInsert(array &data) {
-    array copy(data);
+void mergeSortInsert(std::vector<int> &data) {
+    std::vector<int> copy(data);
     splitInsert(data, copy, 0, data.size());
 }
 
-template<typename array>
-void splitParallel(array &data, array &copy, int begin, int end) {
+void splitParallel(std::vector<int> &data, std::vector<int> &copy, int begin, int end) {
     if (end - begin < 16) {
         for (int i = begin; i < end; ++i) {
             auto x = data[i];
@@ -107,16 +98,14 @@ void splitParallel(array &data, array &copy, int begin, int end) {
     merge(copy, data, begin, mid, end);
 }
 
-template<typename array>
-void mergeSortParallel(array &data) {
-    array copy(data);
+void mergeSortParallel(std::vector<int> &data) {
+    std::vector<int> copy(data);
     splitParallel(data, copy, 0, data.size());
 }
 
 struct run {
     size_t from;
     size_t to;
-
     int size() { return to - from + 1; }
 };
 
@@ -129,8 +118,7 @@ int getMinRun(int n) {
     return n + r;
 }
 
-template<typename array>
-std::list<run> getRuns(array &data) {
+std::list<run> getRuns(std::vector<int> &data) {
     std::list<run> runs;
     int minRun = getMinRun(data.size());
     run currentRun{0, 1};
@@ -174,11 +162,10 @@ std::list<run> getRuns(array &data) {
     return runs;
 }
 
-template<typename array>
-void mergeRun(array &data, int begin, int mid, int end) {
+void mergeRun(std::vector<int> &data, int begin, int mid, int end) {
     int first = 0;
     int second = mid - begin;
-    array copy(end - begin);
+    std::vector<int> copy(end - begin);
     std::copy(data.begin() + begin, data.begin() + end, copy.begin());
     for (int ptr = begin; ptr < end; ++ptr) {
         if (first < mid - begin && (second == end - begin || copy[first] < copy[second])) {
@@ -191,8 +178,7 @@ void mergeRun(array &data, int begin, int mid, int end) {
     }
 }
 
-template<typename array>
-void mergeSortRun(array &data) {
+void mergeSortRun(std::vector<int> &data) {
     std::list<run> runs = getRuns(data);
     while (runs.size() != 1) {
         auto it1 = runs.begin();
@@ -209,8 +195,7 @@ void mergeSortRun(array &data) {
     }
 }
 
-template<typename array>
-void mergeSortRunParallel(array &data) {
+void mergeSortRunParallel(std::vector<int> &data) {
     std::list<run> runs = getRuns(data);
     while (runs.size() != 1) {
         auto it1 = runs.begin();

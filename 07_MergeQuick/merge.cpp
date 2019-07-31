@@ -3,59 +3,38 @@
 #include "merge.h"
 #include <algorithm>
 #include <chrono>
+#include <functional>
+#include <tuple>
+
+struct algInfo {
+    std::string Name;
+    std::function<void(std::vector<int> &)> Func;
+};
+
+std::vector<algInfo> algorithms =
+        {
+                {"Classic",            mergeSortClassic},
+                {"With insert",        mergeSortInsert},
+                {"Parallel split",     mergeSortParallel},
+                {"Run",                mergeSortRun},
+                {"Run parallel merge", mergeSortRunParallel}
+
+        };
 
 void doTest(std::vector<int> data) {
-    std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
-    std::vector<int> d(data);
-    std::cout << "Classic ";
-    start = std::chrono::high_resolution_clock::now();
-    mergeSortClassic(d);
-    end = std::chrono::high_resolution_clock::now();
-    if (!std::is_sorted(d.begin(), d.end())) {
-        std::cout << "Fail!";
-        exit(EXIT_FAILURE);
+    for (const auto &alg : algorithms) {
+        std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
+        std::vector<int> d(data);
+        std::cout << alg.Name << " ";
+        start = std::chrono::high_resolution_clock::now();
+        alg.Func(d);
+        end = std::chrono::high_resolution_clock::now();
+        if (!std::is_sorted(d.begin(), d.end())) {
+            std::cout << "Fail!";
+            exit(EXIT_FAILURE);
+        }
+        std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
     }
-    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
-    d = std::vector<int>(data);
-    std::cout << "With insert ";
-    start = std::chrono::high_resolution_clock::now();
-    mergeSortInsert(d);
-    end = std::chrono::high_resolution_clock::now();
-    if (!std::is_sorted(d.begin(), d.end())) {
-        std::cout << "Fail!";
-        exit(EXIT_FAILURE);
-    }
-    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
-    d = std::vector<int>(data);
-    std::cout << "Parallel split ";
-    start = std::chrono::high_resolution_clock::now();
-    mergeSortParallel(d);
-    end = std::chrono::high_resolution_clock::now();
-    if (!std::is_sorted(d.begin(), d.end())) {
-        std::cout << "Fail!";
-        exit(EXIT_FAILURE);
-    }
-    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
-    d = std::vector<int>(data);
-    std::cout << "Run ";
-    start = std::chrono::high_resolution_clock::now();
-    mergeSortRun(d);
-    end = std::chrono::high_resolution_clock::now();
-    if (!std::is_sorted(d.begin(), d.end())) {
-        std::cout << "Fail!";
-        exit(EXIT_FAILURE);
-    }
-    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
-    d = std::vector<int>(data);
-    std::cout << "Run parallel merge ";
-    start = std::chrono::high_resolution_clock::now();
-    mergeSortRunParallel(d);
-    end = std::chrono::high_resolution_clock::now();
-    if (!std::is_sorted(d.begin(), d.end())) {
-        std::cout << "Fail!";
-        exit(EXIT_FAILURE);
-    }
-    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
 }
 
 void test(int len) {
@@ -95,7 +74,6 @@ void test(int len) {
     std::cout << len << " 10% elemets swaped and reversed" << std::endl;
     doTest(data);
 }
-
 
 int main() {
     int len = 10;
