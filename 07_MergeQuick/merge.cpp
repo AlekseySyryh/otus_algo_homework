@@ -36,10 +36,19 @@ void doTest(std::vector<int> data) {
         exit(EXIT_FAILURE);
     }
     std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
-
+    d = std::vector<int>(data);
+    std::cout << "Run ";
+    start = std::chrono::high_resolution_clock::now();
+    mergeSortRun(d);
+    end = std::chrono::high_resolution_clock::now();
+    if (!std::is_sorted(d.begin(), d.end())) {
+        std::cout << "Fail!";
+        exit(EXIT_FAILURE);
+    }
+    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
 }
 
-void test(size_t len) {
+void test(int len) {
     std::cout << len << " Random" << std::endl;
     std::vector<int> data(len);
     for (int i = 0; i < len; ++i) {
@@ -48,19 +57,26 @@ void test(size_t len) {
     doTest(data);
     std::sort(data.begin(), data.end());
     for (int i = 0; i < 5; ++i) {
-        size_t ix1 = std::rand() * len / RAND_MAX;
-        size_t ix2 = std::rand() * len / RAND_MAX;
+        long ix1 = std::rand() / (RAND_MAX * len);
+        long ix2 = std::rand() / (RAND_MAX * len);
         std::swap(data[ix1], data[ix2]);
     }
     std::cout << len << " 5 elemets swaped" << std::endl;
     doTest(data);
     std::reverse(data.begin(), data.end());
-    std::cout << len << " 5 elemets swaped and reversed" << std::endl;
+    std::cout << len << " reversed" << std::endl;
+    doTest(data);
+    for (int i = 0; i < 5; ++i) {
+        long ix1 = std::rand() / (RAND_MAX * len);
+        long ix2 = std::rand() / (RAND_MAX * len);
+        std::swap(data[ix1], data[ix2]);
+    }
+    std::cout << len << " 5 elemets swaped  and reversed" << std::endl;
     doTest(data);
     std::sort(data.begin(), data.end());
     for (int i = 0; i < len * 0.1; ++i) {
-        size_t ix1 = std::rand() * len / RAND_MAX;
-        size_t ix2 = std::rand() * len / RAND_MAX;
+        long ix1 = std::rand() / (RAND_MAX * len);
+        long ix2 = std::rand() / (RAND_MAX * len);
         std::swap(data[ix1], data[ix2]);
     }
     std::cout << len << " 10% elemets swaped" << std::endl;
