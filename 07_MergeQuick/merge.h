@@ -130,24 +130,7 @@ int getMinRun(int n) {
 }
 
 template<typename array>
-void mergeRun(array &data, int begin, int mid, int end) {
-    int first = 0;
-    int second = mid - begin;
-    array copy(end - begin);
-    std::copy(data.begin() + begin, data.begin() + end, copy.begin());
-    for (int ptr = begin; ptr < end; ++ptr) {
-        if (first < mid - begin && (second == end - begin || copy[first] < copy[second])) {
-            data[ptr] = copy[first];
-            ++first;
-        } else {
-            data[ptr] = copy[second];
-            ++second;
-        }
-    }
-}
-
-template<typename array>
-void mergeSortRun(array &data) {
+std::list<run> getRuns(array &data) {
     std::list<run> runs;
     int minRun = getMinRun(data.size());
     run currentRun{0, 1};
@@ -188,7 +171,29 @@ void mergeSortRun(array &data) {
         runs.push_back(currentRun);
         currentRun = run{currentRun.to + 1, currentRun.to + 2};
     } while (runs.back().to < data.size() - 1);
+    return runs;
+}
 
+template<typename array>
+void mergeRun(array &data, int begin, int mid, int end) {
+    int first = 0;
+    int second = mid - begin;
+    array copy(end - begin);
+    std::copy(data.begin() + begin, data.begin() + end, copy.begin());
+    for (int ptr = begin; ptr < end; ++ptr) {
+        if (first < mid - begin && (second == end - begin || copy[first] < copy[second])) {
+            data[ptr] = copy[first];
+            ++first;
+        } else {
+            data[ptr] = copy[second];
+            ++second;
+        }
+    }
+}
+
+template<typename array>
+void mergeSortRun(array &data) {
+    std::list<run> runs = getRuns(data);
     while (runs.size() != 1) {
         auto it1 = runs.begin();
         auto it2 = std::next(it1);
@@ -202,5 +207,28 @@ void mergeSortRun(array &data) {
             }
         }
     }
-
 }
+
+template<typename array>
+void mergeSortRunParallel(array &data) {
+    std::list<run> runs = getRuns(data);
+    while (runs.size() != 1) {
+        auto it1 = runs.begin();
+        auto it2 = std::next(it1);
+        std::vector<std::future<void>> jobs;
+        while (it1 != runs.end() && it2 != runs.end()) {
+            int begin = it1->from;
+            int mid = it2->from;
+            int end = it2->to + 1;
+            jobs.push_back(std::async([=, &data]() { mergeRun(data, begin, mid, end); }));
+            it1->to = it2->to;
+            it1 = std::next(it2);
+            runs.erase(it2);
+            if (it1 != runs.end()) {
+                it2 = std::next(it1);
+            }
+        }
+    }
+}
+
+

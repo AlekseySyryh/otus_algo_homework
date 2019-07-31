@@ -27,7 +27,7 @@ void doTest(std::vector<int> data) {
     }
     std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
     d = std::vector<int>(data);
-    std::cout << "Parallel ";
+    std::cout << "Parallel split ";
     start = std::chrono::high_resolution_clock::now();
     mergeSortParallel(d);
     end = std::chrono::high_resolution_clock::now();
@@ -40,6 +40,16 @@ void doTest(std::vector<int> data) {
     std::cout << "Run ";
     start = std::chrono::high_resolution_clock::now();
     mergeSortRun(d);
+    end = std::chrono::high_resolution_clock::now();
+    if (!std::is_sorted(d.begin(), d.end())) {
+        std::cout << "Fail!";
+        exit(EXIT_FAILURE);
+    }
+    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << " ms" << std::endl;
+    d = std::vector<int>(data);
+    std::cout << "Run parallel merge ";
+    start = std::chrono::high_resolution_clock::now();
+    mergeSortRunParallel(d);
     end = std::chrono::high_resolution_clock::now();
     if (!std::is_sorted(d.begin(), d.end())) {
         std::cout << "Fail!";
