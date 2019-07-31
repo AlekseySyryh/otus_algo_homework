@@ -4,7 +4,6 @@
 #include <algorithm>
 #include <chrono>
 #include <functional>
-#include <tuple>
 
 struct algInfo {
     std::string Name;
