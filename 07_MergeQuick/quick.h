@@ -1,6 +1,22 @@
 #pragma once
 
-int partition(std::vector<int> &data, int begin, int end) {
+enum pivotStrategy {
+    last,
+    median
+};
+
+int partition(std::vector<int> &data, int begin, int end, pivotStrategy strategy) {
+    if (strategy == pivotStrategy::median) {
+        int middleIx = (begin + end) / 2;
+        int first = data[begin];
+        int mid = data[middleIx];
+        int last = data[end - 1];
+        if ((first >= mid && first <= last) || (first <= mid && first >= last)) {
+            std::swap(data[begin], data[end - 1]);
+        } else if ((mid >= first && mid <= last) || (mid <= first && mid >= last)) {
+            std::swap(data[middleIx], data[end - 1]);
+        }
+    }
     int pivot = data[end - 1];
     int i = begin - 1;
     for (int j = begin; j < end - 1; ++j) {
@@ -15,18 +31,23 @@ int partition(std::vector<int> &data, int begin, int end) {
 
 static size_t maxLevel = 10000;
 
-bool quickSortClassicStep(std::vector<int> &data, int begin, int end, size_t level) {
+bool quickSortStep(std::vector<int> &data, int begin, int end, size_t level, pivotStrategy strategy) {
     if (level > maxLevel) return false;
     if (begin < end) {
-        int pivot = partition(data, begin, end);
-        if (!quickSortClassicStep(data, begin, pivot, level + 1))
+        int pivot = partition(data, begin, end, strategy);
+        if (!quickSortStep(data, begin, pivot, level + 1, strategy))
             return false;
-        if (!quickSortClassicStep(data, pivot + 1, end, level + 1))
+        if (!quickSortStep(data, pivot + 1, end, level + 1, strategy))
             return false;
     }
     return true;
 }
 
-bool quickSortClassic(std::vector<int> &data) {
-    return quickSortClassicStep(data, 0, data.size(), 0);
+bool quickSort(std::vector<int> &data) {
+    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::last);
 }
+
+bool quickSortMedian(std::vector<int> &data) {
+    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::median);
+}
+

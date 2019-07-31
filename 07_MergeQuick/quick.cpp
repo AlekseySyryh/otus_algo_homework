@@ -12,7 +12,8 @@ struct algInfo {
 
 std::vector<algInfo> algorithms =
         {
-                {"Classic", quickSortClassic}
+                {"Classic",      quickSort},
+                {"Median pivot", quickSortMedian}
         };
 
 void doTest(std::vector<int> data) {
