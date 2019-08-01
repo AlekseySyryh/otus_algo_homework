@@ -12,12 +12,13 @@ struct algInfo {
 
 std::vector<algInfo> algorithms =
         {
-                {"Classic",        quickSort},
-                {"Median pivot",   quickMedianSort},
-                {"Random pivot",   quickRandomSort},
-                {"Classic+Insert", quickInsertSort},
-                {"Median+Insert",  quickInsertMedianSort},
-                {"Random+Insert",  quickInsertRandomSort}
+                {"Classic",          quickSort},
+                {"Median pivot",     quickMedianSort},
+                {"Random pivot",     quickRandomSort},
+                {"Classic+Insert",   quickInsertSort},
+                {"Median+Insert",    quickInsertMedianSort},
+                {"Random+Insert",    quickInsertRandomSort},
+                {"Classic+Parallel", quickParallelSort}
         };
 
 void doTest(std::vector<int> data) {
