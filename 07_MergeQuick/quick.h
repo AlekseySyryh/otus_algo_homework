@@ -1,5 +1,7 @@
 #pragma once
 
+#include "insertSort.h"
+
 enum pivotStrategy {
     last,
     median,
@@ -37,27 +39,42 @@ int partition(std::vector<int> &data, int begin, int end, pivotStrategy strategy
 
 static size_t maxLevel = 10000;
 
-bool quickSortStep(std::vector<int> &data, int begin, int end, size_t level, pivotStrategy strategy) {
+bool quickSortStep(std::vector<int> &data, int begin, int end, size_t level, pivotStrategy strategy, bool useInsert) {
     if (level > maxLevel) return false;
-    if (begin < end) {
-        int pivot = partition(data, begin, end, strategy);
-        if (!quickSortStep(data, begin, pivot, level + 1, strategy))
-            return false;
-        if (!quickSortStep(data, pivot + 1, end, level + 1, strategy))
-            return false;
+    if (begin >= end) return true;
+    if (useInsert && end - begin < 32) {
+        insertSort(data, begin, end);
+        return true;
     }
+        int pivot = partition(data, begin, end, strategy);
+    if (!quickSortStep(data, begin, pivot, level + 1, strategy, useInsert))
+            return false;
+    if (!quickSortStep(data, pivot + 1, end, level + 1, strategy, useInsert))
+            return false;
+
     return true;
 }
 
 bool quickSort(std::vector<int> &data) {
-    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::last);
+    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::last, false);
 }
 
-bool quickSortMedian(std::vector<int> &data) {
-    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::median);
+bool quickMedianSort(std::vector<int> &data) {
+    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::median, false);
 }
 
-bool quickSortRandom(std::vector<int> &data) {
-    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::random);
+bool quickRandomSort(std::vector<int> &data) {
+    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::random, false);
 }
 
+bool quickInsertSort(std::vector<int> &data) {
+    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::last, true);
+}
+
+bool quickInsertMedianSort(std::vector<int> &data) {
+    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::median, true);
+}
+
+bool quickInsertRandomSort(std::vector<int> &data) {
+    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::random, true);
+}

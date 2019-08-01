@@ -2,6 +2,7 @@
 
 #include <future>
 #include <list>
+#include "insertSort.h"
 
 void merge(std::vector<int> &data, std::vector<int> &copy, int begin, int mid, int end) {
     int first = begin;
@@ -31,17 +32,6 @@ void mergeSortClassic(std::vector<int> &data) {
     splitClassic(data, copy, 0, data.size());
 }
 
-void insertSort(std::vector<int> &data, int begin, int end) {
-    for (int i = begin; i < end; ++i) {
-        auto x = data.at(i);
-        int j = i - 1;
-        while (j >= begin && data.at(j) > x) {
-            data.at(j + 1) = data.at(j);
-            --j;
-        }
-        data.at(j + 1) = x;
-    }
-}
 
 void insertSort(std::vector<int> &data, std::vector<int> &copy, int begin, int end) {
     for (int i = begin; i < end; ++i) {
