@@ -1,0 +1,3319 @@
+C:\Users\asyryx.MSC\Desktop\otus_algo_homework\07_MergeQuick\cmake-build-release-visual-studio\quick.exe
+10 Distinct Random
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10 5 elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10 5 elemets swaped  and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10 10% elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10 10% elemets swaped and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10 10% of diffirent values Random
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10 5 elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10 5 elemets swaped  and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10 10% elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10 10% elemets swaped and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100 Distinct Random
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100 5 elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100 5 elemets swaped  and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100 10% elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100 10% elemets swaped and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100 10% of diffirent values Random
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100 5 elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100 5 elemets swaped  and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100 10% elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100 10% elemets swaped and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+1000 Distinct Random
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+1000 5 elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+1000 5 elemets swaped  and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+1000 10% elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+1000 10% elemets swaped and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+1000 10% of diffirent values Random
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+1000 5 elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+1000 5 elemets swaped  and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+1000 10% elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+1000 10% elemets swaped and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 0 ms
+Median+Parallel 0 ms
+Random+Parallel 0 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 0 ms
+Intro Random+Parallel 0 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10000 Distinct Random
+Classic 1 ms
+Median pivot 1 ms
+Random pivot 1 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 1 ms
+Median+Parallel 1 ms
+Random+Parallel 1 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 1 ms
+3way Median pivot 1 ms
+3way Random pivot 1 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 1 ms
+3way Median+Parallel 1 ms
+3way Random+Parallel 1 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 1 ms
+Intro Random pivot 1 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 1 ms
+Intro Median+Parallel 1 ms
+Intro Random+Parallel 1 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 1 ms
+Intro 3way Random pivot 1 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 1 ms
+Intro 3way Median+Parallel 1 ms
+Intro 3way Random+Parallel 1 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10000 5 elemets swaped
+Classic 32 ms
+Median pivot 2 ms
+Random pivot 1 ms
+Classic+Insert 31 ms
+Median+Insert 1 ms
+Random+Insert 0 ms
+Classic+Parallel 33 ms
+Median+Parallel 2 ms
+Random+Parallel 1 ms
+Classic+Insert+Parallel 34 ms
+Median+Insert+Parallel 1 ms
+Random+Insert+Parallel 0 ms
+3way Classic 45 ms
+3way Median pivot 2 ms
+3way Random pivot 0 ms
+3way Classic+Insert 44 ms
+3way Median+Insert 2 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 45 ms
+3way Median+Parallel 3 ms
+3way Random+Parallel 1 ms
+3way Classic+Insert+Parallel 45 ms
+3way Median+Insert+Parallel 2 ms
+3way Random+Insert+Parallel 0 ms
+Intro 1 ms
+Intro Median pivot 1 ms
+Intro Random pivot 1 ms
+Intro Classic+Insert 1 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 1 ms
+Intro Median+Parallel 1 ms
+Intro Random+Parallel 1 ms
+Intro Classic+Insert+Parallel 1 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 1 ms
+Intro 3way Median pivot 1 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 1 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 1 ms
+Intro 3way Median+Parallel 1 ms
+Intro 3way Random+Parallel 1 ms
+Intro 3way Classic+Insert+Parallel 1 ms
+Intro 3way Median+Insert+Parallel 1 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10000 5 elemets swaped  and reversed
+Classic 16 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 16 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 18 ms
+Median+Parallel 1 ms
+Random+Parallel 1 ms
+Classic+Insert+Parallel 18 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 24 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 23 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 24 ms
+3way Median+Parallel 1 ms
+3way Random+Parallel 1 ms
+3way Classic+Insert+Parallel 24 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 1 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 1 ms
+Intro Random+Parallel 1 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 1 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 1 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 1 ms
+Intro 3way Median+Parallel 1 ms
+Intro 3way Random+Parallel 1 ms
+Intro 3way Classic+Insert+Parallel 1 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10000 10% elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 1 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 2 ms
+Median+Parallel 1 ms
+Random+Parallel 1 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 1 ms
+3way Median+Parallel 1 ms
+3way Random+Parallel 1 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 1 ms
+Intro Median pivot 0 ms
+Intro Random pivot 1 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 2 ms
+Intro Median+Parallel 1 ms
+Intro Random+Parallel 1 ms
+Intro Classic+Insert+Parallel 1 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 1 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 1 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 2 ms
+Intro 3way Median+Parallel 1 ms
+Intro 3way Random+Parallel 1 ms
+Intro 3way Classic+Insert+Parallel 1 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10000 10% elemets swaped and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 1 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 1 ms
+Median+Parallel 1 ms
+Random+Parallel 1 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 1 ms
+3way Median+Parallel 1 ms
+3way Random+Parallel 1 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 1 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 2 ms
+Intro Median+Parallel 1 ms
+Intro Random+Parallel 1 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 1 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 2 ms
+Intro 3way Median+Parallel 1 ms
+Intro 3way Random+Parallel 1 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10000 10% of diffirent values Random
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 1 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 2 ms
+Median+Parallel 2 ms
+Random+Parallel 2 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 1 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 2 ms
+Intro Median+Parallel 2 ms
+Intro Random+Parallel 2 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10000 5 elemets swaped
+Classic 14 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 14 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 15 ms
+Median+Parallel 2 ms
+Random+Parallel 2 ms
+Classic+Insert+Parallel 15 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 4 ms
+3way Median pivot 1 ms
+3way Random pivot 0 ms
+3way Classic+Insert 4 ms
+3way Median+Insert 1 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 4 ms
+3way Median+Parallel 1 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 4 ms
+3way Median+Insert+Parallel 1 ms
+3way Random+Insert+Parallel 0 ms
+Intro 1 ms
+Intro Median pivot 1 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 1 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 1 ms
+Intro Median+Parallel 1 ms
+Intro Random+Parallel 2 ms
+Intro Classic+Insert+Parallel 1 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 1 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 1 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 1 ms
+Intro 3way Median+Parallel 1 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 1 ms
+Intro 3way Median+Insert+Parallel 1 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10000 5 elemets swaped  and reversed
+Classic 5 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 5 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 6 ms
+Median+Parallel 1 ms
+Random+Parallel 2 ms
+Classic+Insert+Parallel 5 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 1 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 1 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 1 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 1 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 1 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 0 ms
+Intro Median+Parallel 2 ms
+Intro Random+Parallel 2 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 1 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 1 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 1 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 1 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 1 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10000 10% elemets swaped
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 2 ms
+Median+Parallel 2 ms
+Random+Parallel 2 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 1 ms
+Intro Median pivot 1 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 1 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 2 ms
+Intro Median+Parallel 2 ms
+Intro Random+Parallel 2 ms
+Intro Classic+Insert+Parallel 1 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+10000 10% elemets swaped and reversed
+Classic 0 ms
+Median pivot 0 ms
+Random pivot 0 ms
+Classic+Insert 0 ms
+Median+Insert 0 ms
+Random+Insert 0 ms
+Classic+Parallel 1 ms
+Median+Parallel 2 ms
+Random+Parallel 2 ms
+Classic+Insert+Parallel 0 ms
+Median+Insert+Parallel 0 ms
+Random+Insert+Parallel 0 ms
+3way Classic 0 ms
+3way Median pivot 0 ms
+3way Random pivot 0 ms
+3way Classic+Insert 0 ms
+3way Median+Insert 0 ms
+3way Random+Insert 0 ms
+3way Classic+Parallel 0 ms
+3way Median+Parallel 0 ms
+3way Random+Parallel 0 ms
+3way Classic+Insert+Parallel 0 ms
+3way Median+Insert+Parallel 0 ms
+3way Random+Insert+Parallel 0 ms
+Intro 0 ms
+Intro Median pivot 0 ms
+Intro Random pivot 0 ms
+Intro Classic+Insert 0 ms
+Intro Median+Insert 0 ms
+Intro Random+Insert 0 ms
+Intro Classic+Parallel 2 ms
+Intro Median+Parallel 2 ms
+Intro Random+Parallel 2 ms
+Intro Classic+Insert+Parallel 0 ms
+Intro Median+Insert+Parallel 0 ms
+Intro Random+Insert+Parallel 0 ms
+Intro 3way Classic 0 ms
+Intro 3way Median pivot 0 ms
+Intro 3way Random pivot 0 ms
+Intro 3way Classic+Insert 0 ms
+Intro 3way Median+Insert 0 ms
+Intro 3way Random+Insert 0 ms
+Intro 3way Classic+Parallel 0 ms
+Intro 3way Median+Parallel 0 ms
+Intro 3way Random+Parallel 0 ms
+Intro 3way Classic+Insert+Parallel 0 ms
+Intro 3way Median+Insert+Parallel 0 ms
+Intro 3way Random+Insert+Parallel 0 ms
+100000 Distinct Random
+Classic 11 ms
+Median pivot 11 ms
+Random pivot 13 ms
+Classic+Insert 6 ms
+Median+Insert 6 ms
+Random+Insert 6 ms
+Classic+Parallel 19 ms
+Median+Parallel 16 ms
+Random+Parallel 20 ms
+Classic+Insert+Parallel 7 ms
+Median+Insert+Parallel 7 ms
+Random+Insert+Parallel 7 ms
+3way Classic 11 ms
+3way Median pivot 12 ms
+3way Random pivot 13 ms
+3way Classic+Insert 8 ms
+3way Median+Insert 8 ms
+3way Random+Insert 8 ms
+3way Classic+Parallel 17 ms
+3way Median+Parallel 17 ms
+3way Random+Parallel 20 ms
+3way Classic+Insert+Parallel 8 ms
+3way Median+Insert+Parallel 8 ms
+3way Random+Insert+Parallel 9 ms
+Intro 11 ms
+Intro Median pivot 11 ms
+Intro Random pivot 15 ms
+Intro Classic+Insert 6 ms
+Intro Median+Insert 6 ms
+Intro Random+Insert 6 ms
+Intro Classic+Parallel 18 ms
+Intro Median+Parallel 16 ms
+Intro Random+Parallel 21 ms
+Intro Classic+Insert+Parallel 7 ms
+Intro Median+Insert+Parallel 7 ms
+Intro Random+Insert+Parallel 7 ms
+Intro 3way Classic 11 ms
+Intro 3way Median pivot 11 ms
+Intro 3way Random pivot 13 ms
+Intro 3way Classic+Insert 8 ms
+Intro 3way Median+Insert 8 ms
+Intro 3way Random+Insert 8 ms
+Intro 3way Classic+Parallel 17 ms
+Intro 3way Median+Parallel 17 ms
+Intro 3way Random+Parallel 20 ms
+Intro 3way Classic+Insert+Parallel 9 ms
+Intro 3way Median+Insert+Parallel 8 ms
+Intro 3way Random+Insert+Parallel 9 ms
+100000 5 elemets swaped
+Classic stack overflow
+Median pivot 43 ms
+Random pivot 9 ms
+Classic+Insert stack overflow
+Median+Insert 36 ms
+Random+Insert 2 ms
+Classic+Parallel stack overflow
+Median+Parallel 56 ms
+Random+Parallel 17 ms
+Classic+Insert+Parallel stack overflow
+Median+Insert+Parallel 39 ms
+Random+Insert+Parallel 3 ms
+3way Classic stack overflow
+3way Median pivot 56 ms
+3way Random pivot 7 ms
+3way Classic+Insert stack overflow
+3way Median+Insert 58 ms
+3way Random+Insert 2 ms
+3way Classic+Parallel stack overflow
+3way Median+Parallel 66 ms
+3way Random+Parallel 14 ms
+3way Classic+Insert+Parallel stack overflow
+3way Median+Insert+Parallel 59 ms
+3way Random+Insert+Parallel 4 ms
+Intro 12 ms
+Intro Median pivot 15 ms
+Intro Random pivot 9 ms
+Intro Classic+Insert 12 ms
+Intro Median+Insert 9 ms
+Intro Random+Insert 2 ms
+Intro Classic+Parallel 13 ms
+Intro Median+Parallel 17 ms
+Intro Random+Parallel 15 ms
+Intro Classic+Insert+Parallel 12 ms
+Intro Median+Insert+Parallel 9 ms
+Intro Random+Insert+Parallel 3 ms
+Intro 3way Classic 15 ms
+Intro 3way Median pivot 14 ms
+Intro 3way Random pivot 7 ms
+Intro 3way Classic+Insert 15 ms
+Intro 3way Median+Insert 10 ms
+Intro 3way Random+Insert 3 ms
+Intro 3way Classic+Parallel 15 ms
+Intro 3way Median+Parallel 17 ms
+Intro 3way Random+Parallel 14 ms
+Intro 3way Classic+Insert+Parallel 15 ms
+Intro 3way Median+Insert+Parallel 10 ms
+Intro 3way Random+Insert+Parallel 3 ms
+100000 5 elemets swaped  and reversed
+Classic stack overflow
+Median pivot 6 ms
+Random pivot 8 ms
+Classic+Insert stack overflow
+Median+Insert 3 ms
+Random+Insert 2 ms
+Classic+Parallel stack overflow
+Median+Parallel 12 ms
+Random+Parallel 16 ms
+Classic+Insert+Parallel stack overflow
+Median+Insert+Parallel 5 ms
+Random+Insert+Parallel 4 ms
+3way Classic stack overflow
+3way Median pivot 7 ms
+3way Random pivot 8 ms
+3way Classic+Insert stack overflow
+3way Median+Insert 5 ms
+3way Random+Insert 3 ms
+3way Classic+Parallel stack overflow
+3way Median+Parallel 14 ms
+3way Random+Parallel 15 ms
+3way Classic+Insert+Parallel stack overflow
+3way Median+Insert+Parallel 6 ms
+3way Random+Insert+Parallel 5 ms
+Intro 11 ms
+Intro Median pivot 6 ms
+Intro Random pivot 9 ms
+Intro Classic+Insert 11 ms
+Intro Median+Insert 3 ms
+Intro Random+Insert 2 ms
+Intro Classic+Parallel 11 ms
+Intro Median+Parallel 13 ms
+Intro Random+Parallel 16 ms
+Intro Classic+Insert+Parallel 11 ms
+Intro Median+Insert+Parallel 4 ms
+Intro Random+Insert+Parallel 3 ms
+Intro 3way Classic 12 ms
+Intro 3way Median pivot 7 ms
+Intro 3way Random pivot 8 ms
+Intro 3way Classic+Insert 13 ms
+Intro 3way Median+Insert 5 ms
+Intro 3way Random+Insert 4 ms
+Intro 3way Classic+Parallel 13 ms
+Intro 3way Median+Parallel 14 ms
+Intro 3way Random+Parallel 15 ms
+Intro 3way Classic+Insert+Parallel 13 ms
+Intro 3way Median+Insert+Parallel 7 ms
+Intro 3way Random+Insert+Parallel 5 ms
+100000 10% elemets swaped
+Classic stack overflow
+Median pivot 9 ms
+Random pivot 8 ms
+Classic+Insert stack overflow
+Median+Insert 2 ms
+Random+Insert 2 ms
+Classic+Parallel stack overflow
+Median+Parallel 15 ms
+Random+Parallel 16 ms
+Classic+Insert+Parallel stack overflow
+Median+Insert+Parallel 3 ms
+Random+Insert+Parallel 4 ms
+3way Classic stack overflow
+3way Median pivot 6 ms
+3way Random pivot 8 ms
+3way Classic+Insert stack overflow
+3way Median+Insert 3 ms
+3way Random+Insert 3 ms
+3way Classic+Parallel stack overflow
+3way Median+Parallel 20 ms
+3way Random+Parallel 15 ms
+3way Classic+Insert+Parallel stack overflow
+3way Median+Insert+Parallel 4 ms
+3way Random+Insert+Parallel 5 ms
+Intro 12 ms
+Intro Median pivot 8 ms
+Intro Random pivot 10 ms
+Intro Classic+Insert 12 ms
+Intro Median+Insert 2 ms
+Intro Random+Insert 2 ms
+Intro Classic+Parallel 12 ms
+Intro Median+Parallel 14 ms
+Intro Random+Parallel 16 ms
+Intro Classic+Insert+Parallel 13 ms
+Intro Median+Insert+Parallel 3 ms
+Intro Random+Insert+Parallel 4 ms
+Intro 3way Classic 14 ms
+Intro 3way Median pivot 7 ms
+Intro 3way Random pivot 8 ms
+Intro 3way Classic+Insert 14 ms
+Intro 3way Median+Insert 3 ms
+Intro 3way Random+Insert 3 ms
+Intro 3way Classic+Parallel 14 ms
+Intro 3way Median+Parallel 21 ms
+Intro 3way Random+Parallel 15 ms
+Intro 3way Classic+Insert+Parallel 15 ms
+Intro 3way Median+Insert+Parallel 4 ms
+Intro 3way Random+Insert+Parallel 4 ms
+100000 10% elemets swaped and reversed
+Classic stack overflow
+Median pivot 6 ms
+Random pivot 10 ms
+Classic+Insert stack overflow
+Median+Insert 3 ms
+Random+Insert 3 ms
+Classic+Parallel stack overflow
+Median+Parallel 13 ms
+Random+Parallel 17 ms
+Classic+Insert+Parallel stack overflow
+Median+Insert+Parallel 5 ms
+Random+Insert+Parallel 4 ms
+3way Classic stack overflow
+3way Median pivot 8 ms
+3way Random pivot 9 ms
+3way Classic+Insert stack overflow
+3way Median+Insert 6 ms
+3way Random+Insert 5 ms
+3way Classic+Parallel stack overflow
+3way Median+Parallel 14 ms
+3way Random+Parallel 17 ms
+3way Classic+Insert+Parallel stack overflow
+3way Median+Insert+Parallel 7 ms
+3way Random+Insert+Parallel 6 ms
+Intro 15 ms
+Intro Median pivot 7 ms
+Intro Random pivot 12 ms
+Intro Classic+Insert 12 ms
+Intro Median+Insert 4 ms
+Intro Random+Insert 3 ms
+Intro Classic+Parallel 9 ms
+Intro Median+Parallel 13 ms
+Intro Random+Parallel 17 ms
+Intro Classic+Insert+Parallel 8 ms
+Intro Median+Insert+Parallel 5 ms
+Intro Random+Insert+Parallel 5 ms
+Intro 3way Classic 15 ms
+Intro 3way Median pivot 8 ms
+Intro 3way Random pivot 10 ms
+Intro 3way Classic+Insert 14 ms
+Intro 3way Median+Insert 6 ms
+Intro 3way Random+Insert 5 ms
+Intro 3way Classic+Parallel 8 ms
+Intro 3way Median+Parallel 14 ms
+Intro 3way Random+Parallel 16 ms
+Intro 3way Classic+Insert+Parallel 8 ms
+Intro 3way Median+Insert+Parallel 7 ms
+Intro 3way Random+Insert+Parallel 6 ms
+100000 10% of diffirent values Random
+Classic 9 ms
+Median pivot 11 ms
+Random pivot 11 ms
+Classic+Insert 6 ms
+Median+Insert 6 ms
+Random+Insert 6 ms
+Classic+Parallel 20 ms
+Median+Parallel 21 ms
+Random+Parallel 23 ms
+Classic+Insert+Parallel 6 ms
+Median+Insert+Parallel 6 ms
+Random+Insert+Parallel 6 ms
+3way Classic 6 ms
+3way Median pivot 6 ms
+3way Random pivot 7 ms
+3way Classic+Insert 7 ms
+3way Median+Insert 7 ms
+3way Random+Insert 7 ms
+3way Classic+Parallel 7 ms
+3way Median+Parallel 7 ms
+3way Random+Parallel 8 ms
+3way Classic+Insert+Parallel 7 ms
+3way Median+Insert+Parallel 7 ms
+3way Random+Insert+Parallel 7 ms
+Intro 8 ms
+Intro Median pivot 10 ms
+Intro Random pivot 11 ms
+Intro Classic+Insert 6 ms
+Intro Median+Insert 5 ms
+Intro Random+Insert 6 ms
+Intro Classic+Parallel 20 ms
+Intro Median+Parallel 20 ms
+Intro Random+Parallel 23 ms
+Intro Classic+Insert+Parallel 6 ms
+Intro Median+Insert+Parallel 6 ms
+Intro Random+Insert+Parallel 6 ms
+Intro 3way Classic 6 ms
+Intro 3way Median pivot 6 ms
+Intro 3way Random pivot 7 ms
+Intro 3way Classic+Insert 7 ms
+Intro 3way Median+Insert 7 ms
+Intro 3way Random+Insert 7 ms
+Intro 3way Classic+Parallel 7 ms
+Intro 3way Median+Parallel 7 ms
+Intro 3way Random+Parallel 7 ms
+Intro 3way Classic+Insert+Parallel 7 ms
+Intro 3way Median+Insert+Parallel 7 ms
+Intro 3way Random+Insert+Parallel 7 ms
+100000 5 elemets swaped
+Classic stack overflow
+Median pivot 19 ms
+Random pivot 7 ms
+Classic+Insert stack overflow
+Median+Insert 16 ms
+Random+Insert 1 ms
+Classic+Parallel stack overflow
+Median+Parallel 254 ms
+Random+Parallel 19 ms
+Classic+Insert+Parallel stack overflow
+Median+Insert+Parallel 17 ms
+Random+Insert+Parallel 3 ms
+3way Classic 564 ms
+3way Median pivot 31 ms
+3way Random pivot 2 ms
+3way Classic+Insert 573 ms
+3way Median+Insert 30 ms
+3way Random+Insert 2 ms
+3way Classic+Parallel 569 ms
+3way Median+Parallel 31 ms
+3way Random+Parallel 3 ms
+3way Classic+Insert+Parallel 570 ms
+3way Median+Insert+Parallel 32 ms
+3way Random+Insert+Parallel 3 ms
+Intro 12 ms
+Intro Median pivot 12 ms
+Intro Random pivot 7 ms
+Intro Classic+Insert 12 ms
+Intro Median+Insert 9 ms
+Intro Random+Insert 2 ms
+Intro Classic+Parallel 12 ms
+Intro Median+Parallel 21 ms
+Intro Random+Parallel 19 ms
+Intro Classic+Insert+Parallel 12 ms
+Intro Median+Insert+Parallel 10 ms
+Intro Random+Insert+Parallel 3 ms
+Intro 3way Classic 14 ms
+Intro 3way Median pivot 10 ms
+Intro 3way Random pivot 2 ms
+Intro 3way Classic+Insert 14 ms
+Intro 3way Median+Insert 10 ms
+Intro 3way Random+Insert 2 ms
+Intro 3way Classic+Parallel 14 ms
+Intro 3way Median+Parallel 11 ms
+Intro 3way Random+Parallel 3 ms
+Intro 3way Classic+Insert+Parallel 15 ms
+Intro 3way Median+Insert+Parallel 11 ms
+Intro 3way Random+Insert+Parallel 3 ms
+100000 5 elemets swaped  and reversed
+Classic stack overflow
+Median pivot 6 ms
+Random pivot 7 ms
+Classic+Insert stack overflow
+Median+Insert 3 ms
+Random+Insert 2 ms
+Classic+Parallel stack overflow
+Median+Parallel 19 ms
+Random+Parallel 20 ms
+Classic+Insert+Parallel stack overflow
+Median+Insert+Parallel 6 ms
+Random+Insert+Parallel 3 ms
+3way Classic 154 ms
+3way Median pivot 3 ms
+3way Random pivot 3 ms
+3way Classic+Insert 153 ms
+3way Median+Insert 3 ms
+3way Random+Insert 3 ms
+3way Classic+Parallel 152 ms
+3way Median+Parallel 4 ms
+3way Random+Parallel 4 ms
+3way Classic+Insert+Parallel 155 ms
+3way Median+Insert+Parallel 4 ms
+3way Random+Insert+Parallel 3 ms
+Intro 12 ms
+Intro Median pivot 14 ms
+Intro Random pivot 8 ms
+Intro Classic+Insert 12 ms
+Intro Median+Insert 12 ms
+Intro Random+Insert 2 ms
+Intro Classic+Parallel 12 ms
+Intro Median+Parallel 10 ms
+Intro Random+Parallel 20 ms
+Intro Classic+Insert+Parallel 12 ms
+Intro Median+Insert+Parallel 11 ms
+Intro Random+Insert+Parallel 3 ms
+Intro 3way Classic 12 ms
+Intro 3way Median pivot 3 ms
+Intro 3way Random pivot 3 ms
+Intro 3way Classic+Insert 13 ms
+Intro 3way Median+Insert 3 ms
+Intro 3way Random+Insert 3 ms
+Intro 3way Classic+Parallel 13 ms
+Intro 3way Median+Parallel 4 ms
+Intro 3way Random+Parallel 4 ms
+Intro 3way Classic+Insert+Parallel 13 ms
+Intro 3way Median+Insert+Parallel 4 ms
+Intro 3way Random+Insert+Parallel 3 ms
+100000 10% elemets swaped
+Classic stack overflow
+Median pivot 6 ms
+Random pivot 8 ms
+Classic+Insert stack overflow
+Median+Insert 2 ms
+Random+Insert 2 ms
+Classic+Parallel stack overflow
+Median+Parallel 17 ms
+Random+Parallel 20 ms
+Classic+Insert+Parallel stack overflow
+Median+Insert+Parallel 3 ms
+Random+Insert+Parallel 3 ms
+3way Classic 520 ms
+3way Median pivot 3 ms
+3way Random pivot 3 ms
+3way Classic+Insert 519 ms
+3way Median+Insert 2 ms
+3way Random+Insert 3 ms
+3way Classic+Parallel 521 ms
+3way Median+Parallel 3 ms
+3way Random+Parallel 4 ms
+3way Classic+Insert+Parallel 520 ms
+3way Median+Insert+Parallel 3 ms
+3way Random+Insert+Parallel 3 ms
+Intro 12 ms
+Intro Median pivot 6 ms
+Intro Random pivot 8 ms
+Intro Classic+Insert 12 ms
+Intro Median+Insert 2 ms
+Intro Random+Insert 2 ms
+Intro Classic+Parallel 12 ms
+Intro Median+Parallel 17 ms
+Intro Random+Parallel 20 ms
+Intro Classic+Insert+Parallel 12 ms
+Intro Median+Insert+Parallel 3 ms
+Intro Random+Insert+Parallel 4 ms
+Intro 3way Classic 14 ms
+Intro 3way Median pivot 2 ms
+Intro 3way Random pivot 3 ms
+Intro 3way Classic+Insert 14 ms
+Intro 3way Median+Insert 2 ms
+Intro 3way Random+Insert 3 ms
+Intro 3way Classic+Parallel 14 ms
+Intro 3way Median+Parallel 3 ms
+Intro 3way Random+Parallel 4 ms
+Intro 3way Classic+Insert+Parallel 14 ms
+Intro 3way Median+Insert+Parallel 3 ms
+Intro 3way Random+Insert+Parallel 4 ms
+100000 10% elemets swaped and reversed
+Classic stack overflow
+Median pivot 6 ms
+Random pivot 8 ms
+Classic+Insert stack overflow
+Median+Insert 3 ms
+Random+Insert 3 ms
+Classic+Parallel stack overflow
+Median+Parallel 19 ms
+Random+Parallel 21 ms
+Classic+Insert+Parallel stack overflow
+Median+Insert+Parallel 5 ms
+Random+Insert+Parallel 4 ms
+3way Classic 98 ms
+3way Median pivot 3 ms
+3way Random pivot 4 ms
+3way Classic+Insert 98 ms
+3way Median+Insert 4 ms
+3way Random+Insert 4 ms
+3way Classic+Parallel 110 ms
+3way Median+Parallel 4 ms
+3way Random+Parallel 5 ms
+3way Classic+Insert+Parallel 107 ms
+3way Median+Insert+Parallel 4 ms
+3way Random+Insert+Parallel 5 ms
+Intro 13 ms
+Intro Median pivot 14 ms
+Intro Random pivot 8 ms
+Intro Classic+Insert 12 ms
+Intro Median+Insert 12 ms
+Intro Random+Insert 3 ms
+Intro Classic+Parallel 8 ms
+Intro Median+Parallel 11 ms
+Intro Random+Parallel 20 ms
+Intro Classic+Insert+Parallel 8 ms
+Intro Median+Insert+Parallel 13 ms
+Intro Random+Insert+Parallel 4 ms
+Intro 3way Classic 13 ms
+Intro 3way Median pivot 3 ms
+Intro 3way Random pivot 3 ms
+Intro 3way Classic+Insert 13 ms
+Intro 3way Median+Insert 4 ms
+Intro 3way Random+Insert 4 ms
+Intro 3way Classic+Parallel 7 ms
+Intro 3way Median+Parallel 4 ms
+Intro 3way Random+Parallel 5 ms
+Intro 3way Classic+Insert+Parallel 7 ms
+Intro 3way Median+Insert+Parallel 4 ms
+Intro 3way Random+Insert+Parallel 5 ms
+1000000 Distinct Random
+Classic 124 ms
+Median pivot 126 ms
+Random pivot 143 ms
+Classic+Insert 74 ms
+Median+Insert 74 ms
+Random+Insert 80 ms
+Classic+Parallel 188 ms
+Median+Parallel 173 ms
+Random+Parallel 212 ms
+Classic+Insert+Parallel 85 ms
+Median+Insert+Parallel 77 ms
+Random+Insert+Parallel 82 ms
+3way Classic 132 ms
+3way Median pivot 128 ms
+3way Random pivot 149 ms
+3way Classic+Insert 104 ms
+3way Median+Insert 100 ms
+3way Random+Insert 103 ms
+3way Classic+Parallel 196 ms
+3way Median+Parallel 193 ms
+3way Random+Parallel 211 ms
+3way Classic+Insert+Parallel 98 ms
+3way Median+Insert+Parallel 93 ms
+3way Random+Insert+Parallel 100 ms
+Intro 124 ms
+Intro Median pivot 122 ms
+Intro Random pivot 148 ms
+Intro Classic+Insert 79 ms
+Intro Median+Insert 77 ms
+Intro Random+Insert 83 ms
+Intro Classic+Parallel 193 ms
+Intro Median+Parallel 170 ms
+Intro Random+Parallel 208 ms
+Intro Classic+Insert+Parallel 78 ms
+Intro Median+Insert+Parallel 75 ms
+Intro Random+Insert+Parallel 80 ms
+Intro 3way Classic 130 ms
+Intro 3way Median pivot 127 ms
+Intro 3way Random pivot 146 ms
+Intro 3way Classic+Insert 98 ms
+Intro 3way Median+Insert 96 ms
+Intro 3way Random+Insert 102 ms
+Intro 3way Classic+Parallel 183 ms
+Intro 3way Median+Parallel 182 ms
+Intro 3way Random+Parallel 206 ms
+Intro 3way Classic+Insert+Parallel 97 ms
+Intro 3way Median+Insert+Parallel 93 ms
+Intro 3way Random+Insert+Parallel 101 ms
+1000000 5 elemets swaped
+Median pivot 120 ms
+Random pivot 89 ms
+Median+Insert 21 ms
+Random+Insert 33 ms
+Median+Parallel 125 ms
+Random+Parallel 168 ms
+Median+Insert+Parallel 26 ms
+Random+Insert+Parallel 48 ms
+3way Median pivot 81 ms
+3way Random pivot 95 ms
+3way Median+Insert 28 ms
+3way Random+Insert 46 ms
+3way Median+Parallel 132 ms
+3way Random+Parallel 161 ms
+3way Median+Insert+Parallel 32 ms
+3way Random+Insert+Parallel 61 ms
+Intro 154 ms
+Intro Median pivot 210 ms
+Intro Random pivot 177 ms
+Intro Classic+Insert 154 ms
+Intro Median+Insert 109 ms
+Intro Random+Insert 126 ms
+Intro Classic+Parallel 153 ms
+Intro Median+Parallel 215 ms
+Intro Random+Parallel 221 ms
+Intro Classic+Insert+Parallel 155 ms
+Intro Median+Insert+Parallel 116 ms
+Intro Random+Insert+Parallel 130 ms
+Intro 3way Classic 177 ms
+Intro 3way Median pivot 167 ms
+Intro 3way Random pivot 180 ms
+Intro 3way Classic+Insert 176 ms
+Intro 3way Median+Insert 114 ms
+Intro 3way Random+Insert 138 ms
+Intro 3way Classic+Parallel 179 ms
+Intro 3way Median+Parallel 215 ms
+Intro 3way Random+Parallel 212 ms
+Intro 3way Classic+Insert+Parallel 178 ms
+Intro 3way Median+Insert+Parallel 117 ms
+Intro 3way Random+Insert+Parallel 143 ms
+1000000 5 elemets swaped  and reversed
+Median pivot 75 ms
+Random pivot 103 ms
+Median+Insert 42 ms
+Random+Insert 47 ms
+Median+Parallel 132 ms
+Random+Parallel 180 ms
+Median+Insert+Parallel 53 ms
+Random+Insert+Parallel 69 ms
+3way Median pivot 88 ms
+3way Random pivot 143 ms
+3way Median+Insert 70 ms
+3way Random+Insert 109 ms
+3way Median+Parallel 152 ms
+3way Random+Parallel 207 ms
+3way Median+Insert+Parallel 72 ms
+3way Random+Insert+Parallel 118 ms
+Intro 139 ms
+Intro Median pivot 72 ms
+Intro Random pivot 184 ms
+Intro Classic+Insert 139 ms
+Intro Median+Insert 44 ms
+Intro Random+Insert 173 ms
+Intro Classic+Parallel 151 ms
+Intro Median+Parallel 158 ms
+Intro Random+Parallel 218 ms
+Intro Classic+Insert+Parallel 145 ms
+Intro Median+Insert+Parallel 51 ms
+Intro Random+Insert+Parallel 160 ms
+Intro 3way Classic 195 ms
+Intro 3way Median pivot 96 ms
+Intro 3way Random pivot 241 ms
+Intro 3way Classic+Insert 167 ms
+Intro 3way Median+Insert 74 ms
+Intro 3way Random+Insert 195 ms
+Intro 3way Classic+Parallel 164 ms
+Intro 3way Median+Parallel 152 ms
+Intro 3way Random+Parallel 246 ms
+Intro 3way Classic+Insert+Parallel 179 ms
+Intro 3way Median+Insert+Parallel 76 ms
+Intro 3way Random+Insert+Parallel 202 ms
+1000000 10% elemets swaped
+Median pivot 152 ms
+Random pivot 97 ms
+Median+Insert 47 ms
+Random+Insert 35 ms
+Median+Parallel 158 ms
+Random+Parallel 173 ms
+Median+Insert+Parallel 58 ms
+Random+Insert+Parallel 70 ms
+3way Median pivot 132 ms
+3way Random pivot 93 ms
+3way Median+Insert 66 ms
+3way Random+Insert 46 ms
+3way Median+Parallel 176 ms
+3way Random+Parallel 163 ms
+3way Median+Insert+Parallel 76 ms
+3way Random+Insert+Parallel 61 ms
+Intro 152 ms
+Intro Median pivot 211 ms
+Intro Random pivot 180 ms
+Intro Classic+Insert 154 ms
+Intro Median+Insert 110 ms
+Intro Random+Insert 128 ms
+Intro Classic+Parallel 152 ms
+Intro Median+Parallel 215 ms
+Intro Random+Parallel 211 ms
+Intro Classic+Insert+Parallel 153 ms
+Intro Median+Insert+Parallel 115 ms
+Intro Random+Insert+Parallel 135 ms
+Intro 3way Classic 177 ms
+Intro 3way Median pivot 168 ms
+Intro 3way Random pivot 177 ms
+Intro 3way Classic+Insert 176 ms
+Intro 3way Median+Insert 115 ms
+Intro 3way Random+Insert 138 ms
+Intro 3way Classic+Parallel 177 ms
+Intro 3way Median+Parallel 215 ms
+Intro 3way Random+Parallel 211 ms
+Intro 3way Classic+Insert+Parallel 177 ms
+Intro 3way Median+Insert+Parallel 120 ms
+Intro 3way Random+Insert+Parallel 148 ms
+1000000 10% elemets swaped and reversed
+Median pivot 75 ms
+Random pivot 100 ms
+Median+Insert 42 ms
+Random+Insert 58 ms
+Median+Parallel 135 ms
+Random+Parallel 186 ms
+Median+Insert+Parallel 52 ms
+Random+Insert+Parallel 61 ms
+3way Median pivot 87 ms
+3way Random pivot 140 ms
+3way Median+Insert 68 ms
+3way Random+Insert 114 ms
+3way Median+Parallel 153 ms
+3way Random+Parallel 275 ms
+3way Median+Insert+Parallel 74 ms
+3way Random+Insert+Parallel 116 ms
+Intro 142 ms
+Intro Median pivot 72 ms
+Intro Random pivot 184 ms
+Intro Classic+Insert 140 ms
+Intro Median+Insert 41 ms
+Intro Random+Insert 143 ms
+Intro Classic+Parallel 97 ms
+Intro Median+Parallel 131 ms
+Intro Random+Parallel 206 ms
+Intro Classic+Insert+Parallel 95 ms
+Intro Median+Insert+Parallel 54 ms
+Intro Random+Insert+Parallel 150 ms
+Intro 3way Classic 170 ms
+Intro 3way Median pivot 88 ms
+Intro 3way Random pivot 229 ms
+Intro 3way Classic+Insert 161 ms
+Intro 3way Median+Insert 76 ms
+Intro 3way Random+Insert 202 ms
+Intro 3way Classic+Parallel 98 ms
+Intro 3way Median+Parallel 153 ms
+Intro 3way Random+Parallel 235 ms
+Intro 3way Classic+Insert+Parallel 96 ms
+Intro 3way Median+Insert+Parallel 76 ms
+Intro 3way Random+Insert+Parallel 199 ms
+1000000 10% of diffirent values Random
+Classic 110 ms
+Median pivot 112 ms
+Random pivot 134 ms
+Classic+Insert 71 ms
+Median+Insert 71 ms
+Random+Insert 72 ms
+Classic+Parallel 219 ms
+Median+Parallel 224 ms
+Random+Parallel 247 ms
+Classic+Insert+Parallel 73 ms
+Median+Insert+Parallel 71 ms
+Random+Insert+Parallel 76 ms
+3way Classic 85 ms
+3way Median pivot 83 ms
+3way Random pivot 88 ms
+3way Classic+Insert 86 ms
+3way Median+Insert 85 ms
+3way Random+Insert 89 ms
+3way Classic+Parallel 81 ms
+3way Median+Parallel 79 ms
+3way Random+Parallel 84 ms
+3way Classic+Insert+Parallel 79 ms
+3way Median+Insert+Parallel 78 ms
+3way Random+Insert+Parallel 82 ms
+Intro 111 ms
+Intro Median pivot 111 ms
+Intro Random pivot 135 ms
+Intro Classic+Insert 71 ms
+Intro Median+Insert 72 ms
+Intro Random+Insert 74 ms
+Intro Classic+Parallel 216 ms
+Intro Median+Parallel 230 ms
+Intro Random+Parallel 247 ms
+Intro Classic+Insert+Parallel 74 ms
+Intro Median+Insert+Parallel 73 ms
+Intro Random+Insert+Parallel 77 ms
+Intro 3way Classic 86 ms
+Intro 3way Median pivot 83 ms
+Intro 3way Random pivot 88 ms
+Intro 3way Classic+Insert 87 ms
+Intro 3way Median+Insert 85 ms
+Intro 3way Random+Insert 89 ms
+Intro 3way Classic+Parallel 79 ms
+Intro 3way Median+Parallel 80 ms
+Intro 3way Random+Parallel 85 ms
+Intro 3way Classic+Insert+Parallel 81 ms
+Intro 3way Median+Insert+Parallel 78 ms
+Intro 3way Random+Insert+Parallel 82 ms
+1000000 5 elemets swaped
+Median pivot 55 ms
+Random pivot 83 ms
+Median+Insert 18 ms
+Random+Insert 33 ms
+Median+Parallel 174 ms
+Random+Parallel 231 ms
+Median+Insert+Parallel 23 ms
+Random+Insert+Parallel 43 ms
+3way Classic stack overflow
+3way Median pivot 26 ms
+3way Random pivot 46 ms
+3way Classic+Insert stack overflow
+3way Median+Insert 24 ms
+3way Random+Insert 44 ms
+3way Classic+Parallel stack overflow
+3way Median+Parallel 33 ms
+3way Random+Parallel 57 ms
+3way Classic+Insert+Parallel stack overflow
+3way Median+Insert+Parallel 28 ms
+3way Random+Insert+Parallel 63 ms
+Intro 160 ms
+Intro Median pivot 148 ms
+Intro Random pivot 174 ms
+Intro Classic+Insert 152 ms
+Intro Median+Insert 109 ms
+Intro Random+Insert 126 ms
+Intro Classic+Parallel 152 ms
+Intro Median+Parallel 266 ms
+Intro Random+Parallel 231 ms
+Intro Classic+Insert+Parallel 151 ms
+Intro Median+Insert+Parallel 113 ms
+Intro Random+Insert+Parallel 130 ms
+Intro 3way Classic 177 ms
+Intro 3way Median pivot 115 ms
+Intro 3way Random pivot 137 ms
+Intro 3way Classic+Insert 177 ms
+Intro 3way Median+Insert 113 ms
+Intro 3way Random+Insert 137 ms
+Intro 3way Classic+Parallel 177 ms
+Intro 3way Median+Parallel 122 ms
+Intro 3way Random+Parallel 142 ms
+Intro 3way Classic+Insert+Parallel 177 ms
+Intro 3way Median+Insert+Parallel 117 ms
+Intro 3way Random+Insert+Parallel 140 ms
+1000000 5 elemets swaped  and reversed
+Median pivot 72 ms
+Random pivot 96 ms
+Median+Insert 50 ms
+Random+Insert 50 ms
+Median+Parallel 205 ms
+Random+Parallel 224 ms
+Median+Insert+Parallel 68 ms
+Random+Insert+Parallel 58 ms
+3way Classic stack overflow
+3way Median pivot 44 ms
+3way Random pivot 100 ms
+3way Classic+Insert stack overflow
+3way Median+Insert 45 ms
+3way Random+Insert 91 ms
+3way Classic+Parallel stack overflow
+3way Median+Parallel 49 ms
+3way Random+Parallel 101 ms
+3way Classic+Insert+Parallel stack overflow
+3way Median+Insert+Parallel 47 ms
+3way Random+Insert+Parallel 101 ms
+Intro 147 ms
+Intro Median pivot 162 ms
+Intro Random pivot 179 ms
+Intro Classic+Insert 147 ms
+Intro Median+Insert 144 ms
+Intro Random+Insert 136 ms
+Intro Classic+Parallel 144 ms
+Intro Median+Parallel 269 ms
+Intro Random+Parallel 251 ms
+Intro Classic+Insert+Parallel 146 ms
+Intro Median+Insert+Parallel 159 ms
+Intro Random+Insert+Parallel 140 ms
+Intro 3way Classic 161 ms
+Intro 3way Median pivot 44 ms
+Intro 3way Random pivot 190 ms
+Intro 3way Classic+Insert 160 ms
+Intro 3way Median+Insert 46 ms
+Intro 3way Random+Insert 184 ms
+Intro 3way Classic+Parallel 160 ms
+Intro 3way Median+Parallel 48 ms
+Intro 3way Random+Parallel 187 ms
+Intro 3way Classic+Insert+Parallel 159 ms
+Intro 3way Median+Insert+Parallel 46 ms
+Intro 3way Random+Insert+Parallel 187 ms
+1000000 10% elemets swaped
+Median pivot 57 ms
+Random pivot 85 ms
+Median+Insert 20 ms
+Random+Insert 32 ms
+Median+Parallel 178 ms
+Random+Parallel 215 ms
+Median+Insert+Parallel 25 ms
+Random+Insert+Parallel 44 ms
+3way Classic stack overflow
+3way Median pivot 22 ms
+3way Random pivot 44 ms
+3way Classic+Insert stack overflow
+3way Median+Insert 21 ms
+3way Random+Insert 47 ms
+3way Classic+Parallel stack overflow
+3way Median+Parallel 28 ms
+3way Random+Parallel 56 ms
+3way Classic+Insert+Parallel stack overflow
+3way Median+Insert+Parallel 25 ms
+3way Random+Insert+Parallel 50 ms
+Intro 154 ms
+Intro Median pivot 148 ms
+Intro Random pivot 172 ms
+Intro Classic+Insert 152 ms
+Intro Median+Insert 112 ms
+Intro Random+Insert 126 ms
+Intro Classic+Parallel 153 ms
+Intro Median+Parallel 265 ms
+Intro Random+Parallel 229 ms
+Intro Classic+Insert+Parallel 153 ms
+Intro Median+Insert+Parallel 116 ms
+Intro Random+Insert+Parallel 133 ms
+Intro 3way Classic 177 ms
+Intro 3way Median pivot 22 ms
+Intro 3way Random pivot 139 ms
+Intro 3way Classic+Insert 178 ms
+Intro 3way Median+Insert 21 ms
+Intro 3way Random+Insert 135 ms
+Intro 3way Classic+Parallel 177 ms
+Intro 3way Median+Parallel 27 ms
+Intro 3way Random+Parallel 145 ms
+Intro 3way Classic+Insert+Parallel 179 ms
+Intro 3way Median+Insert+Parallel 24 ms
+Intro 3way Random+Insert+Parallel 137 ms
+1000000 10% elemets swaped and reversed
+Median pivot 75 ms
+Random pivot 94 ms
+Median+Insert 49 ms
+Random+Insert 46 ms
+Median+Parallel 205 ms
+Random+Parallel 224 ms
+Median+Insert+Parallel 71 ms
+Random+Insert+Parallel 59 ms
+3way Classic stack overflow
+3way Median pivot 46 ms
+3way Random pivot 97 ms
+3way Classic+Insert stack overflow
+3way Median+Insert 48 ms
+3way Random+Insert 87 ms
+3way Classic+Parallel stack overflow
+3way Median+Parallel 49 ms
+3way Random+Parallel 107 ms
+3way Classic+Insert+Parallel stack overflow
+3way Median+Insert+Parallel 48 ms
+3way Random+Insert+Parallel 98 ms
+Intro 148 ms
+Intro Median pivot 166 ms
+Intro Random pivot 183 ms
+Intro Classic+Insert 147 ms
+Intro Median+Insert 143 ms
+Intro Random+Insert 144 ms
+Intro Classic+Parallel 98 ms
+Intro Median+Parallel 278 ms
+Intro Random+Parallel 237 ms
+Intro Classic+Insert+Parallel 95 ms
+Intro Median+Insert+Parallel 161 ms
+Intro Random+Insert+Parallel 148 ms
+Intro 3way Classic 163 ms
+Intro 3way Median pivot 47 ms
+Intro 3way Random pivot 185 ms
+Intro 3way Classic+Insert 162 ms
+Intro 3way Median+Insert 48 ms
+Intro 3way Random+Insert 190 ms
+Intro 3way Classic+Parallel 98 ms
+Intro 3way Median+Parallel 48 ms
+Intro 3way Random+Parallel 188 ms
+Intro 3way Classic+Insert+Parallel 97 ms
+Intro 3way Median+Insert+Parallel 48 ms
+Intro 3way Random+Insert+Parallel 190 ms
+10000000 Distinct Random
+Classic 1335 ms
+Median pivot 1499 ms
+Random pivot 1541 ms
+Classic+Insert 897 ms
+Median+Insert 893 ms
+Random+Insert 909 ms
+Classic+Parallel 1912 ms
+Median+Parallel 1771 ms
+Random+Parallel 2163 ms
+Classic+Insert+Parallel 871 ms
+Median+Insert+Parallel 812 ms
+Random+Insert+Parallel 881 ms
+3way Classic 1454 ms
+3way Median pivot 1513 ms
+3way Random pivot 1629 ms
+3way Classic+Insert 1187 ms
+3way Median+Insert 1149 ms
+3way Random+Insert 1192 ms
+3way Classic+Parallel 1929 ms
+3way Median+Parallel 1876 ms
+3way Random+Parallel 2166 ms
+3way Classic+Insert+Parallel 1092 ms
+3way Median+Insert+Parallel 996 ms
+3way Random+Insert+Parallel 1128 ms
+Intro 1372 ms
+Intro Median pivot 1529 ms
+Intro Random pivot 1563 ms
+Intro Classic+Insert 898 ms
+Intro Median+Insert 894 ms
+Intro Random+Insert 908 ms
+Intro Classic+Parallel 1962 ms
+Intro Median+Parallel 1785 ms
+Intro Random+Parallel 2142 ms
+Intro Classic+Insert+Parallel 865 ms
+Intro Median+Insert+Parallel 816 ms
+Intro Random+Insert+Parallel 885 ms
+Intro 3way Classic 1448 ms
+Intro 3way Median pivot 1506 ms
+Intro 3way Random pivot 1632 ms
+Intro 3way Classic+Insert 1184 ms
+Intro 3way Median+Insert 1151 ms
+Intro 3way Random+Insert 1197 ms
+Intro 3way Classic+Parallel 1945 ms
+Intro 3way Median+Parallel 1898 ms
+Intro 3way Random+Parallel 2142 ms
+Intro 3way Classic+Insert+Parallel 1078 ms
+Intro 3way Median+Insert+Parallel 993 ms
+Intro 3way Random+Insert+Parallel 1098 ms
+10000000 5 elemets swaped
+Median pivot 1069 ms
+Random pivot 2447 ms
+Median+Insert 246 ms
+Random+Insert 1902 ms
+Median+Parallel 1348 ms
+Random+Parallel 3271 ms
+Median+Insert+Parallel 307 ms
+Random+Insert+Parallel 1957 ms
+3way Median pivot 734 ms
+3way Random pivot 3320 ms
+3way Median+Insert 317 ms
+3way Random+Insert 2785 ms
+3way Median+Parallel 1241 ms
+3way Random+Parallel 3904 ms
+3way Median+Insert+Parallel 351 ms
+3way Random+Insert+Parallel 2746 ms
+Intro 1856 ms
+Intro Median pivot 2165 ms
+Intro Random pivot 1640 ms
+Intro Classic+Insert 1856 ms
+Intro Median+Insert 1348 ms
+Intro Random+Insert 1583 ms
+Intro Classic+Parallel 1856 ms
+Intro Median+Parallel 2382 ms
+Intro Random+Parallel 1551 ms
+Intro Classic+Insert+Parallel 1864 ms
+Intro Median+Insert+Parallel 1406 ms
+Intro Random+Insert+Parallel 1447 ms
+Intro 3way Classic 2126 ms
+Intro 3way Median pivot 1820 ms
+Intro 3way Random pivot 1857 ms
+Intro 3way Classic+Insert 2125 ms
+Intro 3way Median+Insert 1405 ms
+Intro 3way Random+Insert 1784 ms
+Intro 3way Classic+Parallel 2123 ms
+Intro 3way Median+Parallel 2319 ms
+Intro 3way Random+Parallel 1658 ms
+Intro 3way Classic+Insert+Parallel 2125 ms
+Intro 3way Median+Insert+Parallel 1442 ms
+Intro 3way Random+Insert+Parallel 1582 ms
+10000000 5 elemets swaped  and reversed
+Median pivot 793 ms
+Random pivot 3400 ms
+Median+Insert 521 ms
+Random+Insert 2977 ms
+Median+Parallel 1367 ms
+Random+Parallel 4290 ms
+Median+Insert+Parallel 638 ms
+Random+Insert+Parallel 3010 ms
+3way Median pivot 1011 ms
+3way Random pivot 7312 ms
+3way Median+Insert 864 ms
+3way Random+Insert 7370 ms
+3way Median+Parallel 1557 ms
+3way Random+Parallel 8420 ms
+3way Median+Insert+Parallel 851 ms
+3way Random+Insert+Parallel 7014 ms
+Intro 1694 ms
+Intro Median pivot 789 ms
+Intro Random pivot 1893 ms
+Intro Classic+Insert 1692 ms
+Intro Median+Insert 523 ms
+Intro Random+Insert 1818 ms
+Intro Classic+Parallel 1690 ms
+Intro Median+Parallel 1360 ms
+Intro Random+Parallel 1691 ms
+Intro Classic+Insert+Parallel 1693 ms
+Intro Median+Insert+Parallel 636 ms
+Intro Random+Insert+Parallel 1642 ms
+Intro 3way Classic 1934 ms
+Intro 3way Median pivot 1005 ms
+Intro 3way Random pivot 2900 ms
+Intro 3way Classic+Insert 1986 ms
+Intro 3way Median+Insert 888 ms
+Intro 3way Random+Insert 2891 ms
+Intro 3way Classic+Parallel 1934 ms
+Intro 3way Median+Parallel 1557 ms
+Intro 3way Random+Parallel 2198 ms
+Intro 3way Classic+Insert+Parallel 1938 ms
+Intro 3way Median+Insert+Parallel 855 ms
+Intro 3way Random+Insert+Parallel 2418 ms
+10000000 10% elemets swaped
+Median pivot 1045 ms
+Random pivot 2399 ms
+Median+Insert 222 ms
+Random+Insert 1863 ms
+Median+Parallel 1258 ms
+Random+Parallel 3164 ms
+Median+Insert+Parallel 279 ms
+Random+Insert+Parallel 2014 ms
+3way Median pivot 695 ms
+3way Random pivot 3223 ms
+3way Median+Insert 281 ms
+3way Random+Insert 2718 ms
+3way Median+Parallel 1203 ms
+3way Random+Parallel 3913 ms
+3way Median+Insert+Parallel 318 ms
+3way Random+Insert+Parallel 2944 ms
+Intro 1851 ms
+Intro Median pivot 1035 ms
+Intro Random pivot 1640 ms
+Intro Classic+Insert 1852 ms
+Intro Median+Insert 220 ms
+Intro Random+Insert 1583 ms
+Intro Classic+Parallel 1854 ms
+Intro Median+Parallel 1271 ms
+Intro Random+Parallel 1542 ms
+Intro Classic+Insert+Parallel 1858 ms
+Intro Median+Insert+Parallel 282 ms
+Intro Random+Insert+Parallel 1476 ms
+Intro 3way Classic 2127 ms
+Intro 3way Median pivot 694 ms
+Intro 3way Random pivot 1851 ms
+Intro 3way Classic+Insert 2122 ms
+Intro 3way Median+Insert 278 ms
+Intro 3way Random+Insert 1782 ms
+Intro 3way Classic+Parallel 2126 ms
+Intro 3way Median+Parallel 1202 ms
+Intro 3way Random+Parallel 1665 ms
+Intro 3way Classic+Insert+Parallel 2128 ms
+Intro 3way Median+Insert+Parallel 323 ms
+Intro 3way Random+Insert+Parallel 1598 ms
+10000000 10% elemets swaped and reversed
+Median pivot 799 ms
+Random pivot 3391 ms
+Median+Insert 521 ms
+Random+Insert 3020 ms
+Median+Parallel 1398 ms
+Random+Parallel 4297 ms
+Median+Insert+Parallel 628 ms
+Random+Insert+Parallel 3047 ms
+3way Median pivot 1008 ms
+3way Random pivot 7618 ms
+3way Median+Insert 861 ms
+3way Random+Insert 7268 ms
+3way Median+Parallel 1564 ms
+3way Random+Parallel 8528 ms
+3way Median+Insert+Parallel 864 ms
+3way Random+Insert+Parallel 7125 ms
+Intro 1700 ms
+Intro Median pivot 787 ms
+Intro Random pivot 1861 ms
+Intro Classic+Insert 1703 ms
+Intro Median+Insert 524 ms
+Intro Random+Insert 1823 ms
+Intro Classic+Parallel 1119 ms
+Intro Median+Parallel 1392 ms
+Intro Random+Parallel 1687 ms
+Intro Classic+Insert+Parallel 1114 ms
+Intro Median+Insert+Parallel 636 ms
+Intro Random+Insert+Parallel 1636 ms
+Intro 3way Classic 1935 ms
+Intro 3way Median pivot 1008 ms
+Intro 3way Random pivot 2887 ms
+Intro 3way Classic+Insert 1937 ms
+Intro 3way Median+Insert 862 ms
+Intro 3way Random+Insert 2851 ms
+Intro 3way Classic+Parallel 1121 ms
+Intro 3way Median+Parallel 1574 ms
+Intro 3way Random+Parallel 2260 ms
+Intro 3way Classic+Insert+Parallel 1122 ms
+Intro 3way Median+Insert+Parallel 854 ms
+Intro 3way Random+Insert+Parallel 2380 ms
+10000000 10% of diffirent values Random
+Classic 1258 ms
+Median pivot 1240 ms
+Random pivot 1462 ms
+Classic+Insert 874 ms
+Median+Insert 856 ms
+Random+Insert 883 ms
+Classic+Parallel 2338 ms
+Median+Parallel 2263 ms
+Random+Parallel 2510 ms
+Classic+Insert+Parallel 842 ms
+Median+Insert+Parallel 785 ms
+Random+Insert+Parallel 859 ms
+3way Classic 1039 ms
+3way Median pivot 1023 ms
+3way Random pivot 1081 ms
+3way Classic+Insert 1057 ms
+3way Median+Insert 1042 ms
+3way Random+Insert 1086 ms
+3way Classic+Parallel 933 ms
+3way Median+Parallel 882 ms
+3way Random+Parallel 955 ms
+3way Classic+Insert+Parallel 924 ms
+3way Median+Insert+Parallel 876 ms
+3way Random+Insert+Parallel 931 ms
+Intro 1229 ms
+Intro Median pivot 1244 ms
+Intro Random pivot 1465 ms
+Intro Classic+Insert 868 ms
+Intro Median+Insert 858 ms
+Intro Random+Insert 877 ms
+Intro Classic+Parallel 2321 ms
+Intro Median+Parallel 2289 ms
+Intro Random+Parallel 2539 ms
+Intro Classic+Insert+Parallel 841 ms
+Intro Median+Insert+Parallel 781 ms
+Intro Random+Insert+Parallel 857 ms
+Intro 3way Classic 1036 ms
+Intro 3way Median pivot 1021 ms
+Intro 3way Random pivot 1080 ms
+Intro 3way Classic+Insert 1056 ms
+Intro 3way Median+Insert 1043 ms
+Intro 3way Random+Insert 1086 ms
+Intro 3way Classic+Parallel 929 ms
+Intro 3way Median+Parallel 876 ms
+Intro 3way Random+Parallel 952 ms
+Intro 3way Classic+Insert+Parallel 924 ms
+Intro 3way Median+Insert+Parallel 875 ms
+Intro 3way Random+Insert+Parallel 929 ms
+10000000 5 elemets swaped
+Median pivot 554 ms
+Random pivot 2413 ms
+Median+Insert 225 ms
+Random+Insert 1817 ms
+Median+Parallel 1713 ms
+Random+Parallel 3727 ms
+Median+Insert+Parallel 276 ms
+Random+Insert+Parallel 1877 ms
+3way Median pivot 273 ms
+3way Random pivot 2624 ms
+3way Median+Insert 248 ms
+3way Random+Insert 2665 ms
+3way Median+Parallel 305 ms
+3way Random+Parallel 2739 ms
+3way Median+Insert+Parallel 247 ms
+3way Random+Insert+Parallel 2731 ms
+Intro 1854 ms
+Intro Median pivot 1676 ms
+Intro Random pivot 1637 ms
+Intro Classic+Insert 1852 ms
+Intro Median+Insert 1349 ms
+Intro Random+Insert 1580 ms
+Intro Classic+Parallel 1857 ms
+Intro Median+Parallel 2832 ms
+Intro Random+Parallel 1551 ms
+Intro Classic+Insert+Parallel 1852 ms
+Intro Median+Insert+Parallel 1396 ms
+Intro Random+Insert+Parallel 1468 ms
+Intro 3way Classic 2125 ms
+Intro 3way Median pivot 1396 ms
+Intro 3way Random pivot 1787 ms
+Intro 3way Classic+Insert 2126 ms
+Intro 3way Median+Insert 1371 ms
+Intro 3way Random+Insert 1780 ms
+Intro 3way Classic+Parallel 2125 ms
+Intro 3way Median+Parallel 1427 ms
+Intro 3way Random+Parallel 1642 ms
+Intro 3way Classic+Insert+Parallel 2127 ms
+Intro 3way Median+Insert+Parallel 1374 ms
+Intro 3way Random+Insert+Parallel 1648 ms
+10000000 5 elemets swaped  and reversed
+Median pivot 968 ms
+Random pivot 3445 ms
+Median+Insert 729 ms
+Random+Insert 2861 ms
+Median+Parallel 2192 ms
+Random+Parallel 4619 ms
+Median+Insert+Parallel 883 ms
+Random+Insert+Parallel 3160 ms
+3way Median pivot 590 ms
+3way Random pivot 7105 ms
+3way Median+Insert 607 ms
+3way Random+Insert 7260 ms
+3way Median+Parallel 556 ms
+3way Random+Parallel 7179 ms
+3way Median+Insert+Parallel 554 ms
+3way Random+Insert+Parallel 7091 ms
+Intro 1793 ms
+Intro Median pivot 2018 ms
+Intro Random pivot 1868 ms
+Intro Classic+Insert 1796 ms
+Intro Median+Insert 1837 ms
+Intro Random+Insert 1812 ms
+Intro Classic+Parallel 1759 ms
+Intro Median+Parallel 3045 ms
+Intro Random+Parallel 1666 ms
+Intro Classic+Insert+Parallel 1795 ms
+Intro Median+Insert+Parallel 1980 ms
+Intro Random+Insert+Parallel 1656 ms
+Intro 3way Classic 1928 ms
+Intro 3way Median pivot 592 ms
+Intro 3way Random pivot 2851 ms
+Intro 3way Classic+Insert 1933 ms
+Intro 3way Median+Insert 614 ms
+Intro 3way Random+Insert 2856 ms
+Intro 3way Classic+Parallel 1930 ms
+Intro 3way Median+Parallel 555 ms
+Intro 3way Random+Parallel 2408 ms
+Intro 3way Classic+Insert+Parallel 1928 ms
+Intro 3way Median+Insert+Parallel 561 ms
+Intro 3way Random+Insert+Parallel 2374 ms
+10000000 10% elemets swaped
+Median pivot 552 ms
+Random pivot 2320 ms
+Median+Insert 222 ms
+Random+Insert 1894 ms
+Median+Parallel 1712 ms
+Random+Parallel 3678 ms
+Median+Insert+Parallel 273 ms
+Random+Insert+Parallel 2072 ms
+3way Median pivot 268 ms
+3way Random pivot 2589 ms
+3way Median+Insert 242 ms
+3way Random+Insert 2663 ms
+3way Median+Parallel 301 ms
+3way Random+Parallel 2939 ms
+3way Median+Insert+Parallel 243 ms
+3way Random+Insert+Parallel 2810 ms
+Intro 1931 ms
+Intro Median pivot 584 ms
+Intro Random pivot 1688 ms
+Intro Classic+Insert 1914 ms
+Intro Median+Insert 224 ms
+Intro Random+Insert 1628 ms
+Intro Classic+Parallel 1882 ms
+Intro Median+Parallel 1703 ms
+Intro Random+Parallel 1537 ms
+Intro Classic+Insert+Parallel 1860 ms
+Intro Median+Insert+Parallel 271 ms
+Intro Random+Insert+Parallel 1481 ms
+Intro 3way Classic 2132 ms
+Intro 3way Median pivot 267 ms
+Intro 3way Random pivot 1784 ms
+Intro 3way Classic+Insert 2129 ms
+Intro 3way Median+Insert 241 ms
+Intro 3way Random+Insert 1781 ms
+Intro 3way Classic+Parallel 2126 ms
+Intro 3way Median+Parallel 300 ms
+Intro 3way Random+Parallel 1627 ms
+Intro 3way Classic+Insert+Parallel 2124 ms
+Intro 3way Median+Insert+Parallel 241 ms
+Intro 3way Random+Insert+Parallel 1655 ms
+10000000 10% elemets swaped and reversed
+Median pivot 954 ms
+Random pivot 3418 ms
+Median+Insert 715 ms
+Random+Insert 3088 ms
+Median+Parallel 2199 ms
+Random+Parallel 4684 ms
+Median+Insert+Parallel 869 ms
+Random+Insert+Parallel 2958 ms
+3way Median pivot 603 ms
+3way Random pivot 6848 ms
+3way Median+Insert 617 ms
+3way Random+Insert 7075 ms
+3way Median+Parallel 556 ms
+3way Random+Parallel 7068 ms
+3way Median+Insert+Parallel 556 ms
+3way Random+Insert+Parallel 6994 ms
+Intro 1774 ms
+Intro Median pivot 2017 ms
+Intro Random pivot 1862 ms
+Intro Classic+Insert 1767 ms
+Intro Median+Insert 1830 ms
+Intro Random+Insert 1815 ms
+Intro Classic+Parallel 1124 ms
+Intro Median+Parallel 3045 ms
+Intro Random+Parallel 1672 ms
+Intro Classic+Insert+Parallel 1123 ms
+Intro Median+Insert+Parallel 1970 ms
+Intro Random+Insert+Parallel 1629 ms
+Intro 3way Classic 1934 ms
+Intro 3way Median pivot 591 ms
+Intro 3way Random pivot 2850 ms
+Intro 3way Classic+Insert 1941 ms
+Intro 3way Median+Insert 614 ms
+Intro 3way Random+Insert 2843 ms
+Intro 3way Classic+Parallel 1130 ms
+Intro 3way Median+Parallel 554 ms
+Intro 3way Random+Parallel 2450 ms
+Intro 3way Classic+Insert+Parallel 1129 ms
+Intro 3way Median+Insert+Parallel 551 ms
+Intro 3way Random+Insert+Parallel 2421 ms
