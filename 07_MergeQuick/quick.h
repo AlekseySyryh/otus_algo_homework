@@ -2,6 +2,7 @@
 
 #include <future>
 #include "insertSort.h"
+#include "heapSort.h"
 #include <queue>
 
 enum pivotStrategy {
@@ -9,7 +10,8 @@ enum pivotStrategy {
     median,
     random
 };
-const int maxRun = 30000;
+const int stopLevel = 10000;
+const int minParallelBlock = 10000;
 
 int partition(std::vector<int> &data, int begin, int end, pivotStrategy strategy) {
     if (strategy == pivotStrategy::median) {
@@ -41,33 +43,33 @@ int partition(std::vector<int> &data, int begin, int end, pivotStrategy strategy
 }
 
 struct task {
-    task(int begin, int end) : begin(begin), end(end) {}
+    task(int begin, int end, int level) : begin(begin), end(end), level(level) {}
 
     int begin;
     int end;
+    int level;
 };
 
-bool quickSortStep(std::vector<int> &data, pivotStrategy strategy, bool useInsert) {
+bool quickSortStep(std::vector<int> &data, pivotStrategy strategy, bool useInsert, bool useIntro) {
     std::queue<task> tasks;
-    tasks.emplace(0, (int) data.size());
-    std::chrono::time_point<std::chrono::high_resolution_clock> start = std::chrono::high_resolution_clock::now();
-    size_t ix = 0;
+    tasks.emplace(0, (int) data.size(), 0);
+    int introLimit = (int) std::ceil(5 * std::log(data.size()));
     while (tasks.size() > 0) {
         auto task = tasks.front();
         tasks.pop();
+        if (useIntro && task.level > introLimit) {
+            heapSort(data);
+            return true;
+        }
+        if (task.level > stopLevel) return false;
         if (task.begin >= task.end) continue;
         if (useInsert && task.end - task.begin < 32) {
             insertSort(data, task.begin, task.end);
             continue;
         }
         int pivot = partition(data, task.begin, task.end, strategy);
-        tasks.emplace(task.begin, pivot);
-        tasks.emplace(pivot + 1, task.end);
-        ++ix;
-        if (ix % 1000 == 0 && std::chrono::duration_cast<std::chrono::milliseconds>(
-                std::chrono::high_resolution_clock::now() - start).count() > maxRun) {
-            return false;
-        }
+        tasks.emplace(task.begin, pivot, task.level + 1);
+        tasks.emplace(pivot + 1, task.end, task.level + 1);
     }
     return true;
 }
@@ -84,26 +86,31 @@ std::vector<task> step(task subtask, std::vector<int> &data, pivotStrategy strat
             return tasks;
         }
         int pivot = partition(data, subtask.begin, subtask.end, strategy);
-        tasks.emplace_back(subtask.begin, pivot);
-        tasks.emplace_back(pivot + 1, subtask.end);
+    tasks.emplace_back(subtask.begin, pivot, subtask.level + 1);
+    tasks.emplace_back(pivot + 1, subtask.end, subtask.level + 1);
         return tasks;
 
 }
 
-const int minParallelBlock = 10000;
+
 
 bool quickSortParallelStep(std::vector<int> &data, pivotStrategy strategy,
-                           bool useInsert) {
+                           bool useInsert, bool useIntro) {
     std::queue<task> tasks, subtasks;
     std::vector<std::unique_ptr<std::future<std::vector<task>>>> futures;
     futures.reserve(threads);
-    tasks.emplace(0, (int) data.size());
-    std::chrono::time_point<std::chrono::high_resolution_clock> start = std::chrono::high_resolution_clock::now();
-    size_t ix = 0;
+    tasks.emplace(0, (int) data.size(), 0);
+
+    int introLimit = (int) std::ceil(5 * std::log(data.size()));
     while (tasks.size() > 0) {
         while (tasks.size() > 0 && subtasks.size() < threads) {
             task task = tasks.front();
             tasks.pop();
+            if (useIntro && task.level > introLimit) {
+                heapSort(data);
+                return true;
+            }
+            if (task.level > stopLevel) return false;
             if (task.end - task.begin >= minParallelBlock) {
                 subtasks.push(task);
             } else {
@@ -138,61 +145,56 @@ bool quickSortParallelStep(std::vector<int> &data, pivotStrategy strategy,
             }
         }
         futures.clear();
-        ++ix;
-        if (ix % 1000 == 0 && std::chrono::duration_cast<std::chrono::milliseconds>(
-                std::chrono::high_resolution_clock::now() - start).count() > maxRun) {
-            return false;
-        }
     }
     return true;
 }
 
 bool quickSort(std::vector<int> &data) {
-    return quickSortStep(data, pivotStrategy::last, false);
+    return quickSortStep(data, pivotStrategy::last, false, false);
 }
 
 bool quickMedianSort(std::vector<int> &data) {
-    return quickSortStep(data, pivotStrategy::median, false);
+    return quickSortStep(data, pivotStrategy::median, false, false);
 }
 
 bool quickRandomSort(std::vector<int> &data) {
-    return quickSortStep(data, pivotStrategy::random, false);
+    return quickSortStep(data, pivotStrategy::random, false, false);
 }
 
 bool quickInsertSort(std::vector<int> &data) {
-    return quickSortStep(data, pivotStrategy::last, true);
+    return quickSortStep(data, pivotStrategy::last, true, false);
 }
 
 bool quickInsertMedianSort(std::vector<int> &data) {
-    return quickSortStep(data, pivotStrategy::median, true);
+    return quickSortStep(data, pivotStrategy::median, true, false);
 }
 
 bool quickInsertRandomSort(std::vector<int> &data) {
-    return quickSortStep(data, pivotStrategy::random, true);
+    return quickSortStep(data, pivotStrategy::random, true, false);
 }
 
 bool quickParallelSort(std::vector<int> &data) {
-    return quickSortParallelStep(data, pivotStrategy::last, false);
+    return quickSortParallelStep(data, pivotStrategy::last, false, false);
 }
 
 bool quickMedianParallelSort(std::vector<int> &data) {
-    return quickSortParallelStep(data, pivotStrategy::median, false);
+    return quickSortParallelStep(data, pivotStrategy::median, false, false);
 }
 
 bool quickRandomParallelSort(std::vector<int> &data) {
-    return quickSortParallelStep(data, pivotStrategy::random, false);
+    return quickSortParallelStep(data, pivotStrategy::random, false, false);
 }
 
 bool quickInsertParallelSort(std::vector<int> &data) {
-    return quickSortParallelStep(data, pivotStrategy::last, true);
+    return quickSortParallelStep(data, pivotStrategy::last, true, false);
 }
 
 bool quickInsertMedianParallelSort(std::vector<int> &data) {
-    return quickSortParallelStep(data, pivotStrategy::median, true);
+    return quickSortParallelStep(data, pivotStrategy::median, true, false);
 }
 
 bool quickInsertRandomParallelSort(std::vector<int> &data) {
-    return quickSortParallelStep(data, pivotStrategy::random, true);
+    return quickSortParallelStep(data, pivotStrategy::random, true, false);
 }
 
 std::pair<int, int> partition3(std::vector<int> &data, int begin, int end, pivotStrategy strategy) {
@@ -233,14 +235,18 @@ std::pair<int, int> partition3(std::vector<int> &data, int begin, int end, pivot
     return {eqBegin, eqEnd};
 }
 
-bool quickSort3Step(std::vector<int> &data, pivotStrategy strategy, bool useInsert) {
+bool quickSort3Step(std::vector<int> &data, pivotStrategy strategy, bool useInsert, bool useIntro) {
     std::queue<task> tasks;
-    tasks.emplace(0, (int) data.size());
-    std::chrono::time_point<std::chrono::high_resolution_clock> start = std::chrono::high_resolution_clock::now();
-    size_t ix = 0;
+    tasks.emplace(0, (int) data.size(), 0);
+    int introLimit = (int) std::ceil(5 * std::log(data.size()));
     while (tasks.size() > 0) {
         auto task = tasks.front();
         tasks.pop();
+        if (useIntro && task.level > introLimit) {
+            heapSort(data);
+            return true;
+        }
+        if (task.level > stopLevel) return false;
         if (task.begin >= task.end) continue;
         if (useInsert && task.end - task.begin < 32) {
             insertSort(data, task.begin, task.end);
@@ -248,14 +254,9 @@ bool quickSort3Step(std::vector<int> &data, pivotStrategy strategy, bool useInse
         }
         auto pivots = partition3(data, task.begin, task.end, strategy);
         if (task.begin < pivots.first)
-            tasks.emplace(task.begin, pivots.first);
+            tasks.emplace(task.begin, pivots.first, task.level + 1);
         if (pivots.second + 1 < task.end)
-            tasks.emplace(pivots.second + 1, task.end);
-        ++ix;
-        if (ix % 1000 == 0 && std::chrono::duration_cast<std::chrono::milliseconds>(
-                std::chrono::high_resolution_clock::now() - start).count() > maxRun) {
-            return false;
-        }
+            tasks.emplace(pivots.second + 1, task.end, task.level + 1);
     }
     return true;
 }
@@ -271,25 +272,29 @@ std::vector<task> step3(task subtask, std::vector<int> &data, pivotStrategy stra
     }
     auto pivots = partition3(data, subtask.begin, subtask.end, strategy);
     if (subtask.begin < pivots.first)
-        tasks.emplace_back(subtask.begin, pivots.first);
+        tasks.emplace_back(subtask.begin, pivots.first, subtask.level + 1);
     if (pivots.second + 1 < subtask.end)
-        tasks.emplace_back(pivots.second + 1, subtask.end);
+        tasks.emplace_back(pivots.second + 1, subtask.end, subtask.level + 1);
     return tasks;
 
 }
 
 bool quickSort3ParallelStep(std::vector<int> &data, pivotStrategy strategy,
-                            bool useInsert) {
+                            bool useInsert, bool useIntro) {
     std::queue<task> tasks, subtasks;
     std::vector<std::unique_ptr<std::future<std::vector<task>>>> futures;
     futures.reserve(threads);
-    tasks.emplace(0, (int) data.size());
-    std::chrono::time_point<std::chrono::high_resolution_clock> start = std::chrono::high_resolution_clock::now();
-    size_t ix = 0;
+    tasks.emplace(0, (int) data.size(), 0);
+    int introLimit = (int) std::ceil(5 * std::log(data.size()));
     while (tasks.size() > 0) {
         while (tasks.size() > 0 && subtasks.size() < threads) {
             task task = tasks.front();
             tasks.pop();
+            if (useIntro && task.level > introLimit) {
+                heapSort(data);
+                return true;
+            }
+            if (task.level > stopLevel) return false;
             if (task.end - task.begin >= minParallelBlock) {
                 subtasks.push(task);
             } else {
@@ -324,60 +329,151 @@ bool quickSort3ParallelStep(std::vector<int> &data, pivotStrategy strategy,
             }
         }
         futures.clear();
-        ++ix;
-        if (ix % 1000 == 0 && std::chrono::duration_cast<std::chrono::milliseconds>(
-                std::chrono::high_resolution_clock::now() - start).count() > maxRun) {
-            return false;
-        }
     }
     return true;
 }
 
 
 bool quick3WaySort(std::vector<int> &data) {
-    return quickSort3Step(data, pivotStrategy::last, false);
+    return quickSort3Step(data, pivotStrategy::last, false, false);
 }
 
 bool quick3WayMedianSort(std::vector<int> &data) {
-    return quickSort3Step(data, pivotStrategy::median, false);
+    return quickSort3Step(data, pivotStrategy::median, false, false);
 }
 
 bool quick3WayRandomSort(std::vector<int> &data) {
-    return quickSort3Step(data, pivotStrategy::random, false);
+    return quickSort3Step(data, pivotStrategy::random, false, false);
 }
 
 bool quick3WayInsertSort(std::vector<int> &data) {
-    return quickSort3Step(data, pivotStrategy::last, true);
+    return quickSort3Step(data, pivotStrategy::last, true, false);
 }
 
 bool quick3WayInsertMedianSort(std::vector<int> &data) {
-    return quickSort3Step(data, pivotStrategy::median, true);
+    return quickSort3Step(data, pivotStrategy::median, true, false);
 }
 
 bool quick3WayInsertRandomSort(std::vector<int> &data) {
-    return quickSort3Step(data, pivotStrategy::random, true);
+    return quickSort3Step(data, pivotStrategy::random, true, false);
 }
 
 bool quick3WayParallelSort(std::vector<int> &data) {
-    return quickSort3ParallelStep(data, pivotStrategy::last, false);
+    return quickSort3ParallelStep(data, pivotStrategy::last, false, false);
 }
 
 bool quick3WayMedianParallelSort(std::vector<int> &data) {
-    return quickSort3ParallelStep(data, pivotStrategy::median, false);
+    return quickSort3ParallelStep(data, pivotStrategy::median, false, false);
 }
 
 bool quick3WayRandomParallelSort(std::vector<int> &data) {
-    return quickSort3ParallelStep(data, pivotStrategy::random, false);
+    return quickSort3ParallelStep(data, pivotStrategy::random, false, false);
 }
 
 bool quick3WayInsertParallelSort(std::vector<int> &data) {
-    return quickSort3ParallelStep(data, pivotStrategy::last, true);
+    return quickSort3ParallelStep(data, pivotStrategy::last, true, false);
 }
 
 bool quick3WayInsertMedianParallelSort(std::vector<int> &data) {
-    return quickSort3ParallelStep(data, pivotStrategy::median, true);
+    return quickSort3ParallelStep(data, pivotStrategy::median, true, false);
 }
 
 bool quick3WayInsertRandomParallelSort(std::vector<int> &data) {
-    return quickSort3ParallelStep(data, pivotStrategy::random, true);
+    return quickSort3ParallelStep(data, pivotStrategy::random, true, false);
+}
+
+bool introSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::last, false, true);
+}
+
+bool introMedianSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::median, false, true);
+}
+
+bool introRandomSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::random, false, true);
+}
+
+bool introInsertSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::last, true, true);
+}
+
+bool introInsertMedianSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::median, true, true);
+}
+
+bool introInsertRandomSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::random, true, true);
+}
+
+bool introParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::last, false, true);
+}
+
+bool introMedianParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::median, false, true);
+}
+
+bool introRandomParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::random, false, true);
+}
+
+bool introInsertParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::last, true, true);
+}
+
+bool introInsertMedianParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::median, true, true);
+}
+
+bool introInsertRandomParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::random, true, true);
+}
+
+bool intro3WaySort(std::vector<int> &data) {
+    return quickSort3Step(data, pivotStrategy::last, false, true);
+}
+
+bool intro3WayMedianSort(std::vector<int> &data) {
+    return quickSort3Step(data, pivotStrategy::median, false, true);
+}
+
+bool intro3WayRandomSort(std::vector<int> &data) {
+    return quickSort3Step(data, pivotStrategy::random, false, true);
+}
+
+bool intro3WayInsertSort(std::vector<int> &data) {
+    return quickSort3Step(data, pivotStrategy::last, true, true);
+}
+
+bool intro3WayInsertMedianSort(std::vector<int> &data) {
+    return quickSort3Step(data, pivotStrategy::median, true, true);
+}
+
+bool intro3WayInsertRandomSort(std::vector<int> &data) {
+    return quickSort3Step(data, pivotStrategy::random, true, true);
+}
+
+bool intro3WayParallelSort(std::vector<int> &data) {
+    return quickSort3ParallelStep(data, pivotStrategy::last, false, true);
+}
+
+bool intro3WayMedianParallelSort(std::vector<int> &data) {
+    return quickSort3ParallelStep(data, pivotStrategy::median, false, true);
+}
+
+bool intro3WayRandomParallelSort(std::vector<int> &data) {
+    return quickSort3ParallelStep(data, pivotStrategy::random, false, true);
+}
+
+bool intro3WayInsertParallelSort(std::vector<int> &data) {
+    return quickSort3ParallelStep(data, pivotStrategy::last, true, true);
+}
+
+bool intro3WayInsertMedianParallelSort(std::vector<int> &data) {
+    return quickSort3ParallelStep(data, pivotStrategy::median, true, true);
+}
+
+bool intro3WayInsertRandomParallelSort(std::vector<int> &data) {
+    return quickSort3ParallelStep(data, pivotStrategy::random, true, true);
 }
