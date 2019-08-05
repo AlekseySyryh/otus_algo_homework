@@ -2,6 +2,7 @@
 
 #include <future>
 #include "insertSort.h"
+#include <queue>
 
 enum pivotStrategy {
     last,
@@ -22,7 +23,7 @@ int partition(std::vector<int> &data, int begin, int end, pivotStrategy strategy
         }
     } else if (strategy == pivotStrategy::random) {
         if (end - begin != 1) {
-            int ix = begin + 1.0 * std::rand() * (end - begin - 1) / RAND_MAX;
+            int ix = begin + std::rand() % (end - begin - 1);
             std::swap(data[ix], data[end - 1]);
         }
     }
@@ -38,65 +39,143 @@ int partition(std::vector<int> &data, int begin, int end, pivotStrategy strategy
     return i + 1;
 }
 
-static size_t maxLevel = 10000;
+struct task {
+    task(int begin, int end) : begin(begin), end(end) {}
 
-bool quickSortStep(std::vector<int> &data, int begin, int end, size_t level, pivotStrategy strategy, bool useInsert) {
-    if (level > maxLevel) return false;
-    if (begin >= end) return true;
-    if (useInsert && end - begin < 32) {
-        insertSort(data, begin, end);
-        return true;
+    int begin;
+    int end;
+};
+
+void quickSortStep(std::vector<int> &data, pivotStrategy strategy, bool useInsert) {
+    std::queue<task> tasks;
+    tasks.emplace(0, (int) data.size());
+
+    while (tasks.size() > 0) {
+        auto task = tasks.front();
+        tasks.pop();
+        if (task.begin >= task.end) continue;
+        if (useInsert && task.end - task.begin < 32) {
+            insertSort(data, task.begin, task.end);
+            continue;
+        }
+        int pivot = partition(data, task.begin, task.end, strategy);
+        tasks.emplace(task.begin, pivot);
+        tasks.emplace(pivot + 1, task.end);
     }
-        int pivot = partition(data, begin, end, strategy);
-    if (!quickSortStep(data, begin, pivot, level + 1, strategy, useInsert))
-            return false;
-    if (!quickSortStep(data, pivot + 1, end, level + 1, strategy, useInsert))
-            return false;
-
-    return true;
 }
 
-bool quickSortParallelStep(std::vector<int> &data, int begin, int end, size_t level, pivotStrategy strategy,
+auto threads = std::thread::hardware_concurrency();
+
+std::vector<task> step(task subtask, std::vector<int> &data, pivotStrategy strategy,
+                       bool useInsert) {
+    {
+        std::vector<task> tasks;
+        if (subtask.begin >= subtask.end) return tasks;
+        if (useInsert && subtask.end - subtask.begin < 32) {
+            insertSort(data, subtask.begin, subtask.end);
+            return tasks;
+        }
+        int pivot = partition(data, subtask.begin, subtask.end, strategy);
+        tasks.emplace_back(subtask.begin, pivot);
+        tasks.emplace_back(pivot + 1, subtask.end);
+        return tasks;
+    }
+}
+
+const int minParallelBlock = 10000;
+
+void quickSortParallelStep(std::vector<int> &data, pivotStrategy strategy,
                            bool useInsert) {
-    if (level > maxLevel) return false;
-    if (begin >= end) return true;
-    if (useInsert && end - begin < 32) {
-        insertSort(data, begin, end);
-        return true;
+    std::queue<task> tasks, subtasks;
+    std::vector<std::unique_ptr<std::future<std::vector<task>>>> futures;
+    futures.reserve(threads);
+    tasks.emplace(0, (int) data.size());
+    while (tasks.size() > 0) {
+        while (tasks.size() > 0 && subtasks.size() < threads) {
+            task task = tasks.front();
+            tasks.pop();
+            if (task.end - task.begin >= minParallelBlock) {
+                subtasks.push(task);
+            } else {
+                auto newTasks = step(task, data, strategy, useInsert);
+                for (auto &newTask:newTasks) {
+                    if (newTask.end - newTask.begin > 1)
+                        tasks.push(newTask);
+                }
+            }
+        }
+        if (subtasks.size() == 1) {
+            auto subtask = subtasks.front();
+            subtasks.pop();
+            auto newTasks = step(subtask, data, strategy, useInsert);
+            for (auto &newTask:newTasks) {
+                if (newTask.end - newTask.begin > 1)
+                    tasks.push(newTask);
+            }
+        }
+
+        while (subtasks.size() > 0) {
+            auto subtask = subtasks.front();
+            subtasks.pop();
+            futures.push_back(std::make_unique<std::future<std::vector<task>>>(
+                    std::async([&, subtask]() { return step(subtask, data, strategy, useInsert); })));
+        }
+        for (auto &future:futures) {
+            auto newTasks = future.get()->get();
+            for (auto &newTask:newTasks) {
+                if (newTask.end - newTask.begin > 1)
+                    tasks.push(newTask);
+            }
+        }
+        futures.clear();
     }
-    int pivot = partition(data, begin, end, strategy);
-    auto t1 = std::async(
-            [=, &data]() { return quickSortParallelStep(data, begin, pivot, level + 1, strategy, useInsert); });
-    auto t2 = std::async(
-            [=, &data]() { return quickSortParallelStep(data, pivot + 1, end, level + 1, strategy, useInsert); });
-    if (!t1.get() || !t2.get()) return false;
-    return true;
 }
 
-bool quickSort(std::vector<int> &data) {
-    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::last, false);
+void quickSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::last, false);
 }
 
-bool quickMedianSort(std::vector<int> &data) {
-    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::median, false);
+void quickMedianSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::median, false);
 }
 
-bool quickRandomSort(std::vector<int> &data) {
-    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::random, false);
+void quickRandomSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::random, false);
 }
 
-bool quickInsertSort(std::vector<int> &data) {
-    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::last, true);
+void quickInsertSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::last, true);
 }
 
-bool quickInsertMedianSort(std::vector<int> &data) {
-    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::median, true);
+void quickInsertMedianSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::median, true);
 }
 
-bool quickInsertRandomSort(std::vector<int> &data) {
-    return quickSortStep(data, 0, data.size(), 0, pivotStrategy::random, true);
+void quickInsertRandomSort(std::vector<int> &data) {
+    return quickSortStep(data, pivotStrategy::random, true);
 }
 
-bool quickParallelSort(std::vector<int> &data) {
-    return quickSortParallelStep(data, 0, data.size(), 0, pivotStrategy::last, false);
+void quickParallelSort(std::vector<int> &data) {
+    quickSortParallelStep(data, pivotStrategy::last, false);
 }
+
+void quickMedianParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::median, false);
+}
+
+void quickRandomParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::random, false);
+}
+
+void quickInsertParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::last, true);
+}
+
+void quickInsertMedianParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::median, true);
+}
+
+void quickInsertRandomParallelSort(std::vector<int> &data) {
+    return quickSortParallelStep(data, pivotStrategy::random, true);
+}
+
