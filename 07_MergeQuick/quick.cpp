@@ -8,7 +8,7 @@
 
 struct algInfo {
     std::string Name;
-    std::function<void(std::vector<int> &)> Func;
+    std::function<bool(std::vector<int> &)> Func;
 };
 
 std::vector<algInfo> algorithms =
@@ -45,7 +45,10 @@ void doTest(std::vector<int> data) {
         std::vector<int> d(data);
         std::cout << alg.Name << " ";
         start = std::chrono::high_resolution_clock::now();
-        alg.Func(d);
+        if (!alg.Func(d)) {
+            std::cout << ">60000 ms" << std::endl;
+            continue;
+        }
         end = std::chrono::high_resolution_clock::now();
         if (!std::is_sorted(d.begin(), d.end())) {
             std::cout << "Fail!";
