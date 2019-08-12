@@ -8,13 +8,16 @@
 template<typename T>
 struct node {
     explicit node(T item) : val(item) {};
+    ~node(){
+        std::cout << "Dtor "<<val<<std::endl;
+    }
     T val;
     std::shared_ptr<node<T>> left;
     std::shared_ptr<node<T>> right;
     std::shared_ptr<node<T>> parent;
 
     bool updateLevel() {
-        size_t newLevel;
+        int newLevel;
         if (!left && !right) {
             newLevel = 0;
         } else if (!left) {
@@ -31,7 +34,7 @@ struct node {
         return false;
     }
 
-    size_t level = 0;
+    int level = 0;
 };
 
 template<typename T>
@@ -42,6 +45,18 @@ struct tree {
             root->updateLevel();
         } else {
             add(root, std::make_shared<node<T>>(item));
+        }
+    }
+
+    void checkBalance(std::shared_ptr<node<T>> node) {
+        while (node) {
+            if (node->updateLevel()) {
+                int left = node->left ? node->left->level:0;
+                int right = node->right ? node->right->level:0;             }
+                node = node->parent;
+            } else {
+                break;
+            }
         }
     }
 
@@ -66,13 +81,7 @@ struct tree {
                 }
             }
         }
-        while (nodeToIns) {
-            if (nodeToIns->updateLevel()) {
-                nodeToIns = nodeToIns->parent;
-            } else {
-                break;
-            }
-        }
+        checkBalance(nodeToIns);
     }
 
     std::shared_ptr<node<T>> find(T item) {
@@ -158,7 +167,7 @@ struct tree {
 
 int main() {
     std::vector<char> chars;
-    size_t len = 10;
+    size_t len = 20;
     for (char c = 'A'; c < 'A' + len; ++c) {
         chars.push_back(c);
     }
