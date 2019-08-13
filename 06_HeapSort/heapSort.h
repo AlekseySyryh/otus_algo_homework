@@ -15,8 +15,9 @@ size_t rightChild(size_t i){
 }
 
 template <typename array>
-void drown(array &heap, size_t i, size_t size) {
+bool drown(array &heap, size_t i, size_t size) {
     size_t largest = i;
+    bool wasDrown = false;
     do {
         i = largest;
         size_t l = leftChild(i);
@@ -27,9 +28,12 @@ void drown(array &heap, size_t i, size_t size) {
             largest = i;
         if (r < size && heap[largest] < heap[r])
             largest = r;
-        if (largest != i)
+        if (largest != i) {
             std::swap(heap[i], heap[largest]);
+            wasDrown = true;
+        }
     } while (i != largest);
+    return wasDrown;
 }
 
 template <typename array>
@@ -67,10 +71,11 @@ dType heapDelete(std::vector<dType> &data, size_t ix) {
     std::swap(data[ix], data.back());
     dType deleted = data.back();
     data.pop_back();
-    while (true) {
-        drown(data, ix, data.size());
-        if (ix == 0) break;
-        ix = parent(ix);
+    drown(data, ix, data.size());
+    if (ix != 0) {
+        do {
+            ix = parent(ix);
+        } while (drown(data, ix, data.size()) && ix != 0);
     }
     return deleted;
 }
