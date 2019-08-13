@@ -67,6 +67,10 @@ dType heapDelete(std::vector<dType> &data, size_t ix) {
     std::swap(data[ix], data.back());
     dType deleted = data.back();
     data.pop_back();
-    drown(data, ix, data.size());
+    while (true) {
+        drown(data, ix, data.size());
+        if (ix == 0) break;
+        ix = parent(ix);
+    }
     return deleted;
 }

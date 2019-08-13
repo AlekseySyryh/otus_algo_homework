@@ -43,5 +43,14 @@ int main() {
     std::cout << "Heap: " << data2 << std::endl;
     isCorrectHeap = checkHeap(data2);
     std::cout << "Is heap correct? " << std::boolalpha << isCorrectHeap << std::endl;
+    std::vector<int> data3{10, 2, 9, 1, 1, 8};
+    std::cout << "New vector" << std::endl;
+    isCorrectHeap = checkHeap(data3);
+    std::cout << "Is heap correct? " << std::boolalpha << isCorrectHeap << std::endl;
+    deleted = heapDelete(data3, 3);
+    std::cout << "Deleted " << deleted << std::endl;
+    std::cout << "Heap: " << data3 << std::endl;
+    isCorrectHeap = checkHeap(data3);
+    std::cout << "Is heap correct? " << std::boolalpha << isCorrectHeap << std::endl;
     return EXIT_SUCCESS;
 }
