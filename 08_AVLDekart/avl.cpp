@@ -58,6 +58,8 @@ struct tree {
                     if (left - right >= 2) {
                         if (node->left->left->level >= node->left->right->level) {
                             smallRightTurn(node);
+                        } else {
+                            bigRightTurn(node);
                         }
                     } else if (left - right <= -2) {
                         if (node->right->right->level >= node->right->left->level) {
@@ -104,11 +106,17 @@ struct tree {
         b->left = a;
         b->parent = a->parent;
         a->parent = b;
-        c->parent = a;
+        if (c)
+            c->parent = a;
         a->updateLevel();
         b->updateLevel();
         if (a == root) {
             root = b;
+        } else {
+            if (b->parent->left == a)
+                b->parent->left = b;
+            else
+                b->parent->right = b;
         }
     }
 
@@ -119,12 +127,26 @@ struct tree {
         b->right = a;
         b->parent = a->parent;
         a->parent = b;
-        c->parent = a;
+        if (c)
+            c->parent = a;
         a->updateLevel();
         b->updateLevel();
         if (a == root) {
             root = b;
+        } else {
+            if (b->parent->left == a)
+                b->parent->left = b;
+            else
+                b->parent->right = b;
         }
+    }
+
+    void bigRightTurn(std::shared_ptr<node<T>> a) {
+        auto b = a->left;
+        auto c = b->right;
+        smallRightTurn(a);
+        smallRightTurn(a);
+        smallLeftTurn(b);
     }
 
     std::shared_ptr<node<T>> find(T item) {
@@ -314,9 +336,64 @@ void smallRightTurnTest() {
     std::cout << "Small right turn check complete" << std::endl << "Before: " << std::endl << before << "After: "
               << std::endl << srt.print() << std::endl;
 }
+
+void bigRightTurnTest() {
+/* Например:
+             H                         D
+         B       Z                   B   H
+       A   D               ->       A C F Z
+          C F                                         */
+    tree<char> srt;
+    //Без поворота
+    srt.doTurns = false;
+    srt.add('H');
+    srt.add('B');
+    srt.add('Z');
+    srt.add('A');
+    srt.add('D');
+    srt.add('C');
+    srt.add('F');
+    std::string result = srt.print();
+    std::string before = result;
+    result = std::string(result.begin(),
+                         std::remove(result.begin(), result.end(), ' '));//Удаляем пробелы, что-бы было проще сравнивать
+
+    if (result != "H\nBZ\nAD\nCF\n") {
+        std::cerr << "Big right turn pre check fail";
+        exit(EXIT_FAILURE);
+    }
+    //Поворачиваем вручную
+    srt.bigRightTurn(srt.root);
+    result = srt.print();
+    result = std::string(result.begin(), std::remove(result.begin(), result.end(), ' '));
+    if (result != "D\nBH\nACFZ\n") {
+        std::cerr << "Big right turn turn check fail";
+        exit(EXIT_FAILURE);
+    }
+    //А теперь - пусть сам вертит!
+    srt = {};
+    srt.add('H');
+    srt.add('B');
+    srt.add('Z');
+    srt.add('A');
+    srt.add('D');
+    srt.add('C');
+    srt.add('F');
+    result = srt.print();
+    result = std::string(result.begin(), std::remove(result.begin(), result.end(), ' '));
+    if (result != "D\nBH\nACFZ\n") {
+        std::cerr << "Small right turn auto turn check fail";
+        exit(EXIT_FAILURE);
+    }
+    std::cout << "Small right turn check complete" << std::endl << "Before: " << std::endl << before << "After: "
+              << std::endl << srt.print() << std::endl;
+}
+
 int main() {
     smallLeftTurnTest();
     smallRightTurnTest();
+    bigRightTurnTest();
+
     /*   std::vector<char> chars;
        size_t len = 20;
        for (char c = 'A'; c < 'A' + len; ++c) {
