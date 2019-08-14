@@ -53,13 +53,37 @@ struct tree {
                     int left = node->left ? node->left->level : 0;
                     int right = node->right ? node->right->level : 0;
                     if (left - right >= 2) {
-                        if (node->left->left->level >= node->left->right->level) {
+                        int ll;
+                        if (!node->left || !node->left->left) {
+                            ll = 0;
+                        } else {
+                            ll = node->left->left->level;
+                        }
+                        int lr;
+                        if (!node->left || !node->left->right) {
+                            lr = 0;
+                        } else {
+                            lr = node->left->right->level;
+                        }
+                        if (ll >= lr) {
                             smallRightTurn(node);
                         } else {
                             bigRightTurn(node);
                         }
                     } else if (left - right <= -2) {
-                        if (node->right->right->level >= node->right->left->level) {
+                        int rr;
+                        if (!node->right || !node->right->right) {
+                            rr = 0;
+                        } else {
+                            rr = node->right->right->level;
+                        }
+                        int rl;
+                        if (!node->right || !node->right->left) {
+                            rl = 0;
+                        } else {
+                            rl = node->right->left->level;
+                        }
+                        if (rr >= rl) {
                             smallLeftTurn(node);
                         } else {
                             bigLeftTurn(node);
@@ -450,26 +474,26 @@ int main() {
     smallRightTurnTest();
     bigRightTurnTest();
     bigLeftTurnTest();
-    /*   std::vector<char> chars;
-       size_t len = 20;
-       for (char c = 'A'; c < 'A' + len; ++c) {
+    std::vector<char> chars;
+    for (char c = 'A'; c <= 'Z'; ++c) {
            chars.push_back(c);
        }
-       std::random_shuffle(chars.begin(), chars.end());
+
+    std::random_shuffle(chars.begin(), chars.end());
        tree<char> tree;
        for (char c:chars) {
            std::cout << "Adding " << c << std::endl;
            tree.add(c);
-           tree.print();
+           std::cout << tree.print() << std::endl;
            std::cout << "----" << std::endl;
        }
-       std::random_shuffle(chars.begin(), chars.end());
-       for (char c:chars) {
-           std::cout << "Removing " << c << std::endl;
-           tree.del(tree.find(c));
-           tree.print();
-           std::cout << "----" << std::endl;
-       }*/
+    /* std::random_shuffle(chars.begin(), chars.end());
+     for (char c:chars) {
+         std::cout << "Removing " << c << std::endl;
+         tree.del(tree.find(c));
+         std::cout << tree.print() << std::endl;
+         std::cout << "----" << std::endl;
+     }*/
 
     return 0;
 }
