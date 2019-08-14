@@ -9,9 +9,6 @@
 template<typename T>
 struct node {
     explicit node(T item) : val(item) {};
-    ~node(){
-        std::cout << "Dtor "<<val<<std::endl;
-    }
     T val;
     std::shared_ptr<node<T>> left;
     std::shared_ptr<node<T>> right;
@@ -64,6 +61,8 @@ struct tree {
                     } else if (left - right <= -2) {
                         if (node->right->right->level >= node->right->left->level) {
                             smallLeftTurn(node);
+                        } else {
+                            bigLeftTurn(node);
                         }
                     }
                 }
@@ -141,9 +140,15 @@ struct tree {
         }
     }
 
+    void bigLeftTurn(std::shared_ptr<node<T>> a) {
+        auto b = a->right;
+        smallLeftTurn(a);
+        smallLeftTurn(a);
+        smallRightTurn(b);
+    }
+
     void bigRightTurn(std::shared_ptr<node<T>> a) {
         auto b = a->left;
-        auto c = b->right;
         smallRightTurn(a);
         smallRightTurn(a);
         smallLeftTurn(b);
@@ -337,6 +342,57 @@ void smallRightTurnTest() {
               << std::endl << srt.print() << std::endl;
 }
 
+void bigLeftTurnTest() {
+/* Например:
+       B                         F
+   A       H             ->    B   H
+         F   Z                A E G Z
+        E G                            */
+    tree<char> srt;
+    //Без поворота
+    srt.doTurns = false;
+    srt.add('B');
+    srt.add('A');
+    srt.add('H');
+    srt.add('F');
+    srt.add('Z');
+    srt.add('E');
+    srt.add('G');
+    std::string result = srt.print();
+    std::string before = result;
+    result = std::string(result.begin(),
+                         std::remove(result.begin(), result.end(), ' '));//Удаляем пробелы, что-бы было проще сравнивать
+    if (result != "B\nAH\nFZ\nEG\n") {
+        std::cerr << "Big left turn pre check fail";
+        exit(EXIT_FAILURE);
+    }
+    //Поворачиваем вручную
+    srt.bigLeftTurn(srt.root);
+    result = srt.print();
+    result = std::string(result.begin(), std::remove(result.begin(), result.end(), ' '));
+    if (result != "F\nBH\nAEGZ\n") {
+        std::cerr << "Big left turn turn check fail";
+        exit(EXIT_FAILURE);
+    }
+    //А теперь - пусть сам вертит!
+    srt = {};
+    srt.add('B');
+    srt.add('A');
+    srt.add('H');
+    srt.add('F');
+    srt.add('Z');
+    srt.add('E');
+    srt.add('G');
+    result = srt.print();
+    result = std::string(result.begin(), std::remove(result.begin(), result.end(), ' '));
+    if (result != "F\nBH\nAEGZ\n") {
+        std::cerr << "Big left turn auto turn check fail";
+        exit(EXIT_FAILURE);
+    }
+    std::cout << "Big left turn check complete" << std::endl << "Before: " << std::endl << before << "After: "
+              << std::endl << srt.print() << std::endl;
+}
+
 void bigRightTurnTest() {
 /* Например:
              H                         D
@@ -382,10 +438,10 @@ void bigRightTurnTest() {
     result = srt.print();
     result = std::string(result.begin(), std::remove(result.begin(), result.end(), ' '));
     if (result != "D\nBH\nACFZ\n") {
-        std::cerr << "Small right turn auto turn check fail";
+        std::cerr << "Big right turn auto turn check fail";
         exit(EXIT_FAILURE);
     }
-    std::cout << "Small right turn check complete" << std::endl << "Before: " << std::endl << before << "After: "
+    std::cout << "Big right turn check complete" << std::endl << "Before: " << std::endl << before << "After: "
               << std::endl << srt.print() << std::endl;
 }
 
@@ -393,7 +449,7 @@ int main() {
     smallLeftTurnTest();
     smallRightTurnTest();
     bigRightTurnTest();
-
+    bigLeftTurnTest();
     /*   std::vector<char> chars;
        size_t len = 20;
        for (char c = 'A'; c < 'A' + len; ++c) {
