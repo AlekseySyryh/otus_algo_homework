@@ -52,5 +52,27 @@ int main() {
     std::cout << "Heap: " << data3 << std::endl;
     isCorrectHeap = checkHeap(data3);
     std::cout << "Is heap correct? " << std::boolalpha << isCorrectHeap << std::endl;
+    const size_t randomVectorSize = 10000;
+    std::vector<int> randomVector(randomVectorSize);
+    for (int i = 0; i < randomVectorSize; ++i) {
+        randomVector[i] = i;
+    }
+    std::random_shuffle(randomVector.begin(), randomVector.end());
+    heapSort(randomVector);
+    if (!std::is_sorted(randomVector.begin(), randomVector.end())) {
+        std::cout << "Random vector incorrect sort" << std::endl;
+        return EXIT_FAILURE;
+    } else {
+        std::cout << "Random vector correct sort" << std::endl;
+    }
+    std::random_shuffle(randomVector.begin(), randomVector.end());
+    buildHeap(randomVector);
+    isCorrectHeap = checkHeap(randomVector);
+    while (isCorrectHeap && randomVector.size() > 0) {
+        int ix = std::rand() % randomVector.size();
+        heapDelete(randomVector, ix);
+        isCorrectHeap = checkHeap(randomVector);
+    }
+    std::cout << "Random heap delete correct ? " << std::boolalpha << isCorrectHeap << std::endl;
     return EXIT_SUCCESS;
 }
