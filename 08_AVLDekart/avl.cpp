@@ -59,6 +59,10 @@ struct tree {
                         if (node->left->left->level >= node->left->right->level) {
                             smallRightTurn(node);
                         }
+                    } else if (left - right <= -2) {
+                        if (node->right->right->level >= node->right->left->level) {
+                            smallLeftTurn(node);
+                        }
                     }
                 }
 
@@ -93,6 +97,21 @@ struct tree {
         checkBalance(nodeToIns);
     }
 
+    void smallLeftTurn(std::shared_ptr<node<T>> a) {
+        auto b = a->right;
+        auto c = b->left;
+        a->right = c;
+        b->left = a;
+        b->parent = a->parent;
+        a->parent = b;
+        c->parent = a;
+        a->updateLevel();
+        b->updateLevel();
+        if (a == root) {
+            root = b;
+        }
+    }
+
     void smallRightTurn(std::shared_ptr<node<T>> a) {
         auto b = a->left;
         auto c = b->right;
@@ -101,6 +120,8 @@ struct tree {
         b->parent = a->parent;
         a->parent = b;
         c->parent = a;
+        a->updateLevel();
+        b->updateLevel();
         if (a == root) {
             root = b;
         }
@@ -192,8 +213,59 @@ struct tree {
     bool doTurns = true;
 };
 
+void smallLeftTurnTest() {
+/* Например:
+       B                         F
+   A       F             ->    B   H
+         E   H                A E G Z
+            G Z                           */
+    tree<char> srt;
+    //Без поворота
+    srt.doTurns = false;
+    srt.add('B');
+    srt.add('A');
+    srt.add('F');
+    srt.add('E');
+    srt.add('H');
+    srt.add('G');
+    srt.add('Z');
+    std::string result = srt.print();
+    std::string before = result;
+    result = std::string(result.begin(),
+                         std::remove(result.begin(), result.end(), ' '));//Удаляем пробелы, что-бы было проще сравнивать
+    if (result != "B\nAF\nEH\nGZ\n") {
+        std::cerr << "Small left turn pre check fail";
+        exit(EXIT_FAILURE);
+    }
+    //Поворачиваем вручную
+    srt.smallLeftTurn(srt.root);
+    result = srt.print();
+    result = std::string(result.begin(), std::remove(result.begin(), result.end(), ' '));
+    if (result != "F\nBH\nAEGZ\n") {
+        std::cerr << "Small left turn turn check fail";
+        exit(EXIT_FAILURE);
+    }
+    //А теперь - пусть сам вертит!
+    srt = {};
+    srt.add('B');
+    srt.add('A');
+    srt.add('F');
+    srt.add('E');
+    srt.add('H');
+    srt.add('G');
+    srt.add('Z');
+    result = srt.print();
+    result = std::string(result.begin(), std::remove(result.begin(), result.end(), ' '));
+    if (result != "F\nBH\nAEGZ\n") {
+        std::cerr << "Small left turn auto turn check fail";
+        exit(EXIT_FAILURE);
+    }
+    std::cout << "Small left turn check complete" << std::endl << "Before: " << std::endl << before << "After: "
+              << std::endl << srt.print() << std::endl;
+}
+
 void smallRightTurnTest() {
-/* Например
+/* Например:
              H                         D
          D       Z                   B   H
        B   F               ->       A C F Z
@@ -213,7 +285,7 @@ void smallRightTurnTest() {
     result = std::string(result.begin(),
                          std::remove(result.begin(), result.end(), ' '));//Удаляем пробелы, что-бы было проще сравнивать
     if (result != "H\nDZ\nBF\nAC\n") {
-        std::cerr << "Pre check fail";
+        std::cerr << "Small right turn pre check fail";
         exit(EXIT_FAILURE);
     }
     //Поворачиваем вручную
@@ -221,7 +293,7 @@ void smallRightTurnTest() {
     result = srt.print();
     result = std::string(result.begin(), std::remove(result.begin(), result.end(), ' '));
     if (result != "D\nBH\nACFZ\n") {
-        std::cerr << "Turn check fail";
+        std::cerr << "Small right turn turn check fail";
         exit(EXIT_FAILURE);
     }
     //А теперь - пусть сам вертит!
@@ -236,13 +308,14 @@ void smallRightTurnTest() {
     result = srt.print();
     result = std::string(result.begin(), std::remove(result.begin(), result.end(), ' '));
     if (result != "D\nBH\nACFZ\n") {
-        std::cerr << "Auto turn check fail";
+        std::cerr << "Small right turn auto turn check fail";
         exit(EXIT_FAILURE);
     }
     std::cout << "Small right turn check complete" << std::endl << "Before: " << std::endl << before << "After: "
               << std::endl << srt.print() << std::endl;
 }
 int main() {
+    smallLeftTurnTest();
     smallRightTurnTest();
     /*   std::vector<char> chars;
        size_t len = 20;
