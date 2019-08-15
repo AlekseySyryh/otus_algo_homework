@@ -1,0 +1,1138 @@
+Small left turn check complete
+Before:
+       B
+   A       F
+         E   H
+            G Z
+After:
+   F
+ B   H
+A E G Z
+
+Small right turn check complete
+Before:
+       H
+   D       Z
+ B   F
+A C
+After:
+   D
+ B   H
+A C F Z
+
+Big right turn check complete
+Before:
+       H
+   B       Z
+ A   D
+    C F
+After:
+   D
+ B   H
+A C F Z
+
+Big left turn check complete
+Before:
+       B
+   A       H
+         F   Z
+        E G
+After:
+   F
+ B   H
+A E G Z
+
+Sequencial test
+Adding 0
+0
+
+----
+Adding 1
+ 0
+  1
+
+----
+Adding 2
+ 1
+0 2
+
+----
+Adding 3
+   1
+ 0   2
+      3
+
+----
+Adding 4
+   1
+ 0   3
+    2 4
+
+----
+Adding 5
+   3
+ 1   4
+0 2   5
+
+----
+Adding 6
+   3
+ 1   5
+0 2 4 6
+
+----
+Adding 7
+       3
+   1       5
+ 0   2   4   6
+              7
+
+----
+Adding 8
+       3
+   1       5
+ 0   2   4   7
+            6 8
+
+----
+Adding 9
+       3
+   1       7
+ 0   2   5   8
+        4 6   9
+
+----
+Adding A
+       3
+   1       7
+ 0   2   5   9
+        4 6 8 A
+
+----
+Adding B
+       7
+   3       9
+ 1   5   8   A
+0 2 4 6       B
+
+----
+Adding C
+       7
+   3       9
+ 1   5   8   B
+0 2 4 6     A C
+
+----
+Adding D
+       7
+   3       B
+ 1   5   9   C
+0 2 4 6 8 A   D
+
+----
+Adding E
+       7
+   3       B
+ 1   5   9   D
+0 2 4 6 8 A C E
+
+----
+Adding F
+               7
+       3               B
+   1       5       9       D
+ 0   2   4   6   8   A   C   E
+                              F
+
+----
+Adding G
+               7
+       3               B
+   1       5       9       D
+ 0   2   4   6   8   A   C   F
+                            E G
+
+----
+Adding H
+               7
+       3               B
+   1       5       9       F
+ 0   2   4   6   8   A   D   G
+                        C E   H
+
+----
+Adding I
+               7
+       3               B
+   1       5       9       F
+ 0   2   4   6   8   A   D   H
+                        C E G I
+
+----
+Adding J
+               7
+       3               F
+   1       5       B       H
+ 0   2   4   6   9   D   G   I
+                8 A C E       J
+
+----
+Adding K
+               7
+       3               F
+   1       5       B       H
+ 0   2   4   6   9   D   G   J
+                8 A C E     I K
+
+----
+Adding L
+               7
+       3               F
+   1       5       B       J
+ 0   2   4   6   9   D   H   K
+                8 A C E G I   L
+
+----
+Adding M
+               7
+       3               F
+   1       5       B       J
+ 0   2   4   6   9   D   H   L
+                8 A C E G I K M
+
+----
+Adding N
+               F
+       7               J
+   3       B       H       L
+ 1   5   9   D   G   I   K   M
+0 2 4 6 8 A C E               N
+
+----
+Adding O
+               F
+       7               J
+   3       B       H       L
+ 1   5   9   D   G   I   K   N
+0 2 4 6 8 A C E             M O
+
+----
+Adding P
+               F
+       7               J
+   3       B       H       N
+ 1   5   9   D   G   I   L   O
+0 2 4 6 8 A C E         K M   P
+
+----
+Adding Q
+               F
+       7               J
+   3       B       H       N
+ 1   5   9   D   G   I   L   P
+0 2 4 6 8 A C E         K M O Q
+
+----
+Adding R
+               F
+       7               N
+   3       B       J       P
+ 1   5   9   D   H   L   O   Q
+0 2 4 6 8 A C E G I K M       R
+
+----
+Adding S
+               F
+       7               N
+   3       B       J       P
+ 1   5   9   D   H   L   O   R
+0 2 4 6 8 A C E G I K M     Q S
+
+----
+Adding T
+               F
+       7               N
+   3       B       J       R
+ 1   5   9   D   H   L   P   S
+0 2 4 6 8 A C E G I K M O Q   T
+
+----
+Adding U
+               F
+       7               N
+   3       B       J       R
+ 1   5   9   D   H   L   P   T
+0 2 4 6 8 A C E G I K M O Q S U
+
+----
+Adding V
+                               F
+               7                               N
+       3               B               J               R
+   1       5       9       D       H       L       P       T
+ 0   2   4   6   8   A   C   E   G   I   K   M   O   Q   S   U
+                                                              V
+
+----
+Adding W
+                               F
+               7                               N
+       3               B               J               R
+   1       5       9       D       H       L       P       T
+ 0   2   4   6   8   A   C   E   G   I   K   M   O   Q   S   V
+                                                            U W
+
+----
+Adding X
+                               F
+               7                               N
+       3               B               J               R
+   1       5       9       D       H       L       P       V
+ 0   2   4   6   8   A   C   E   G   I   K   M   O   Q   T   W
+                                                        S U   X
+
+----
+Adding Y
+                               F
+               7                               N
+       3               B               J               R
+   1       5       9       D       H       L       P       V
+ 0   2   4   6   8   A   C   E   G   I   K   M   O   Q   T   X
+                                                        S U W Y
+
+----
+Adding Z
+                               F
+               7                               N
+       3               B               J               V
+   1       5       9       D       H       L       R       X
+ 0   2   4   6   8   A   C   E   G   I   K   M   P   T   W   Y
+                                                O Q S U       Z
+
+----
+Removing 0
+                               F
+               7                               N
+       3               B               J               V
+   1       5       9       D       H       L       R       X
+     2   4   6   8   A   C   E   G   I   K   M   P   T   W   Y
+                                                O Q S U       Z
+
+----
+Removing 1
+                               F
+               7                               N
+       3               B               J               V
+   2       5       9       D       H       L       R       X
+         4   6   8   A   C   E   G   I   K   M   P   T   W   Y
+                                                O Q S U       Z
+
+----
+Removing 2
+                               F
+               7                               N
+       5               B               J               V
+   3       6       9       D       H       L       R       X
+     4           8   A   C   E   G   I   K   M   P   T   W   Y
+                                                O Q S U       Z
+
+----
+Removing 3
+                               F
+               7                               N
+       5               B               J               V
+   4       6       9       D       H       L       R       X
+                 8   A   C   E   G   I   K   M   P   T   W   Y
+                                                O Q S U       Z
+
+----
+Removing 4
+                               F
+               7                               N
+       5               B               J               V
+           6       9       D       H       L       R       X
+                 8   A   C   E   G   I   K   M   P   T   W   Y
+                                                O Q S U       Z
+
+----
+Removing 5
+                               F
+               B                               N
+       7               D               J               V
+   6       9       C       E       H       L       R       X
+         8   A                   G   I   K   M   P   T   W   Y
+                                                O Q S U       Z
+
+----
+Removing 6
+                               F
+               B                               N
+       9               D               J               V
+   7       A       C       E       H       L       R       X
+     8                           G   I   K   M   P   T   W   Y
+                                                O Q S U       Z
+
+----
+Removing 7
+               N
+       F               V
+   B       J       R       X
+ 9   D   H   L   P   T   W   Y
+8 A C E G I K M O Q S U       Z
+
+----
+Removing 8
+               N
+       F               V
+   B       J       R       X
+ 9   D   H   L   P   T   W   Y
+  A C E G I K M O Q S U       Z
+
+----
+Removing 9
+               N
+       F               V
+   B       J       R       X
+ A   D   H   L   P   T   W   Y
+    C E G I K M O Q S U       Z
+
+----
+Removing A
+               N
+       F               V
+   D       J       R       X
+ B   E   H   L   P   T   W   Y
+  C     G I K M O Q S U       Z
+
+----
+Removing B
+               N
+       F               V
+   D       J       R       X
+ C   E   H   L   P   T   W   Y
+        G I K M O Q S U       Z
+
+----
+Removing C
+               N
+       F               V
+   D       J       R       X
+     E   H   L   P   T   W   Y
+        G I K M O Q S U       Z
+
+----
+Removing D
+               N
+       J               V
+   F       L       R       X
+ E   H   K   M   P   T   W   Y
+    G I         O Q S U       Z
+
+----
+Removing E
+               N
+       J               V
+   H       L       R       X
+ F   I   K   M   P   T   W   Y
+  G             O Q S U       Z
+
+----
+Removing F
+               N
+       J               V
+   H       L       R       X
+ G   I   K   M   P   T   W   Y
+                O Q S U       Z
+
+----
+Removing G
+               N
+       J               V
+   H       L       R       X
+     I   K   M   P   T   W   Y
+                O Q S U       Z
+
+----
+Removing H
+               N
+       J               V
+   I       L       R       X
+         K   M   P   T   W   Y
+                O Q S U       Z
+
+----
+Removing I
+               N
+       L               V
+   J       M       R       X
+     K           P   T   W   Y
+                O Q S U       Z
+
+----
+Removing J
+               V
+       N               X
+   L       R       W       Y
+ K   M   P   T               Z
+        O Q S U
+
+----
+Removing K
+               V
+       N               X
+   L       R       W       Y
+     M   P   T               Z
+        O Q S U
+
+----
+Removing L
+               V
+       R               X
+   N       T       W       Y
+ M   P   S   U               Z
+    O Q
+
+----
+Removing M
+               V
+       R               X
+   P       T       W       Y
+ N   Q   S   U               Z
+  O
+
+----
+Removing N
+       V
+   R       X
+ P   T   W   Y
+O Q S U       Z
+
+----
+Removing O
+       V
+   R       X
+ P   T   W   Y
+  Q S U       Z
+
+----
+Removing P
+       V
+   R       X
+ Q   T   W   Y
+    S U       Z
+
+----
+Removing Q
+       V
+   T       X
+ R   U   W   Y
+  S           Z
+
+----
+Removing R
+       V
+   T       X
+ S   U   W   Y
+              Z
+
+----
+Removing S
+       V
+   T       X
+     U   W   Y
+              Z
+
+----
+Removing T
+   X
+ V   Y
+U W   Z
+
+----
+Removing U
+   X
+ V   Y
+  W   Z
+
+----
+Removing V
+   X
+ W   Y
+      Z
+
+----
+Removing W
+ Y
+X Z
+
+----
+Removing X
+ Y
+  Z
+
+----
+Removing Y
+Z
+
+----
+Removing Z
+
+----
+Random test
+Adding C
+C
+
+----
+Adding 1
+ C
+1
+
+----
+Adding 9
+   1
+     C
+    9
+
+----
+Adding O
+   C
+ 1   O
+  9
+
+----
+Adding 0
+   C
+ 1   O
+0 9
+
+----
+Adding R
+   C
+ 1   O
+0 9   R
+
+----
+Adding P
+       C
+   1       R
+ 0   9   O
+          P
+
+----
+Adding V
+       C
+   1       R
+ 0   9   O   V
+          P
+
+----
+Adding T
+       C
+   1       R
+ 0   9   O   V
+          P T
+
+----
+Adding F
+       C
+   1       R
+ 0   9   O   V
+        F P T
+
+----
+Adding I
+       O
+   C       R
+ 1   F   P   V
+0 9   I     T
+
+----
+Adding S
+       O
+   C       R
+ 1   F   P   T
+0 9   I     S V
+
+----
+Adding W
+       O
+   C       T
+ 1   F   R   V
+0 9   I P S   W
+
+----
+Adding D
+       O
+   C       T
+ 1   F   R   V
+0 9 D I P S   W
+
+----
+Adding N
+               O
+       C               T
+   1       F       R       V
+ 0   9   D   I   P   S       W
+              N
+
+----
+Adding X
+               O
+       C               T
+   1       F       R       W
+ 0   9   D   I   P   S   V   X
+              N
+
+----
+Adding Q
+               O
+       C               T
+   1       F       R       W
+ 0   9   D   I   P   S   V   X
+              N   Q
+
+----
+Adding 3
+               O
+       C               T
+   1       F       R       W
+ 0   9   D   I   P   S   V   X
+    3         N   Q
+
+----
+Adding K
+               O
+       C               T
+   1       I       R       W
+ 0   9   F   N   P   S   V   X
+    3   D   K     Q
+
+----
+Adding H
+               O
+       C               T
+   1       I       R       W
+ 0   9   F   N   P   S   V   X
+    3   D H K     Q
+
+----
+Adding 8
+               O
+       C               T
+   3       I       R       W
+ 1   9   F   N   P   S   V   X
+0   8   D H K     Q
+
+----
+Adding J
+               O
+       C               T
+   3       I       R       W
+ 1   9   F   K   P   S   V   X
+0   8   D H J N   Q
+
+----
+Adding M
+                               O
+               C                               T
+       3               I               R               W
+   1       9       F       K       P       S       V       X
+ 0       8       D   H   J   N       Q
+                            M
+
+----
+Adding Y
+                               O
+               C                               T
+       3               I               R               W
+   1       9       F       K       P       S       V       X
+ 0       8       D   H   J   N       Q                       Y
+                            M
+
+----
+Adding U
+                               O
+               C                               T
+       3               I               R               W
+   1       9       F       K       P       S       V       X
+ 0       8       D   H   J   N       Q           U           Y
+                            M
+
+----
+Adding 7
+                               O
+               C                               T
+       3               I               R               W
+   1       8       F       K       P       S       V       X
+ 0       7   9   D   H   J   N       Q           U           Y
+                            M
+
+----
+Adding 6
+                               O
+               C                               T
+       3               I               R               W
+   1       8       F       K       P       S       V       X
+ 0       7   9   D   H   J   N       Q           U           Y
+        6                   M
+
+----
+Adding B
+                               O
+               C                               T
+       3               I               R               W
+   1       8       F       K       P       S       V       X
+ 0       7   9   D   H   J   N       Q           U           Y
+        6     B             M
+
+----
+Adding 5
+                               O
+               C                               T
+       3               I               R               W
+   1       8       F       K       P       S       V       X
+ 0       6   9   D   H   J   N       Q           U           Y
+        5 7   B             M
+
+----
+Adding 4
+                               O
+               C                               T
+       6               I               R               W
+   3       8       F       K       P       S       V       X
+ 1   5   7   9   D   H   J   N       Q           U           Y
+0   4         B             M
+
+----
+Adding 2
+                               O
+               C                               T
+       6               I               R               W
+   3       8       F       K       P       S       V       X
+ 1   5   7   9   D   H   J   N       Q           U           Y
+0 2 4         B             M
+
+----
+Adding L
+                               O
+               C                               T
+       6               I               R               W
+   3       8       F       K       P       S       V       X
+ 1   5   7   9   D   H   J   M       Q           U           Y
+0 2 4         B             L N
+
+----
+Adding E
+                               O
+               C                               T
+       6               I               R               W
+   3       8       F       K       P       S       V       X
+ 1   5   7   9   D   H   J   M       Q           U           Y
+0 2 4         B   E         L N
+
+----
+Adding Z
+                               O
+               C                               T
+       6               I               R               W
+   3       8       F       K       P       S       V       Y
+ 1   5   7   9   D   H   J   M       Q           U       X   Z
+0 2 4         B   E         L N
+
+----
+Adding A
+                               O
+               C                               T
+       6               I               R               W
+   3       9       F       K       P       S       V       Y
+ 1   5   8   B   D   H   J   M       Q           U       X   Z
+0 2 4   7   A     E         L N
+
+----
+Adding G
+                               O
+               C                               T
+       6               I               R               W
+   3       9       F       K       P       S       V       Y
+ 1   5   8   B   D   H   J   M       Q           U       X   Z
+0 2 4   7   A     E G       L N
+
+----
+Removing Z
+                               O
+               C                               T
+       6               I               R               W
+   3       9       F       K       P       S       V       Y
+ 1   5   8   B   D   H   J   M       Q           U       X
+0 2 4   7   A     E G       L N
+
+----
+Removing K
+                               O
+               C                               T
+       6               I               R               W
+   3       9       F       M       P       S       V       Y
+ 1   5   8   B   D   H   J   N       Q           U       X
+0 2 4   7   A     E G     L
+
+----
+Removing T
+                               C
+               6                               O
+       3               9               I               S
+   1       5       8       B       F       M       R       W
+ 0   2   4       7       A       D   H   J   N   P       V   Y
+                                  E G     L       Q     U   X
+
+----
+Removing 8
+                               C
+               6                               O
+       3               9               I               S
+   1       5       7       B       F       M       R       W
+ 0   2   4               A       D   H   J   N   P       V   Y
+                                  E G     L       Q     U   X
+
+----
+Removing G
+                               C
+               6                               O
+       3               9               I               S
+   1       5       7       B       F       M       R       W
+ 0   2   4               A       D   H   J   N   P       V   Y
+                                  E       L       Q     U   X
+
+----
+Removing 5
+                               C
+               6                               O
+       3               9               I               S
+   1       4       7       B       F       M       R       W
+ 0   2                   A       D   H   J   N   P       V   Y
+                                  E       L       Q     U   X
+
+----
+Removing M
+                               C
+               6                               O
+       3               9               I               S
+   1       4       7       B       F       L       R       W
+ 0   2                   A       D   H   J   N   P       V   Y
+                                  E               Q     U   X
+
+----
+Removing I
+                               C
+               6                               O
+       3               9               F               S
+   1       4       7       B       D       L       R       W
+ 0   2                   A           E   H   N   P       V   Y
+                                          J       Q     U   X
+
+----
+Removing N
+                               C
+               6                               O
+       3               9               F               S
+   1       4       7       B       D       H       R       W
+ 0   2                   A           E       L   P       V   Y
+                                            J     Q     U   X
+
+----
+Removing 2
+                               C
+               6                               O
+       3               9               F               S
+   1       4       7       B       D       H       R       W
+ 0                       A           E       L   P       V   Y
+                                            J     Q     U   X
+
+----
+Removing P
+                               C
+               6                               O
+       3               9               F               S
+   1       4       7       B       D       H       R       W
+ 0                       A           E       L   Q       V   Y
+                                            J           U   X
+
+----
+Removing B
+                               C
+               6                               O
+       3               9               F               S
+   1       4       7       A       D       H       R       W
+ 0                                   E       L   Q       V   Y
+                                            J           U   X
+
+----
+Removing 4
+                               O
+               C                               S
+       6               F               R               W
+   1       9       D       H       Q               V       Y
+ 0   3   7   A       E       L                   U       X
+                            J
+
+----
+Removing Q
+                               O
+               C                               W
+       6               F               S               Y
+   1       9       D       H       R       V       X
+ 0   3   7   A       E       L           U
+                            J
+
+----
+Removing A
+                               O
+               C                               W
+       6               F               S               Y
+   1       9       D       H       R       V       X
+ 0   3   7           E       L           U
+                            J
+
+----
+Removing 1
+                               O
+               C                               W
+       6               F               S               Y
+   0       9       D       H       R       V       X
+     3   7           E       L           U
+                            J
+
+----
+Removing 9
+                               O
+               C                               W
+       6               F               S               Y
+   0       7       D       H       R       V       X
+     3               E       L           U
+                            J
+
+----
+Removing H
+               O
+       C               W
+   6       F       S       Y
+ 0   7   D   L   R   V   X
+  3       E J       U
+
+----
+Removing C
+               O
+       7               W
+   6       F       S       Y
+ 0       D   L   R   V   X
+  3       E J       U
+
+----
+Removing S
+               O
+       7               W
+   6       F       V       Y
+ 0       D   L   R       X
+  3       E J     U
+
+----
+Removing F
+               O
+       7               W
+   6       E       V       Y
+ 0       D   L   R       X
+  3         J     U
+
+----
+Removing Y
+               O
+       7               V
+   6       E       R       W
+ 0       D   L       U       X
+  3         J
+
+----
+Removing O
+               7
+       6               L
+   0               E       V
+     3           D   J   R   W
+                          U   X
+
+----
+Removing D
+               7
+       6               L
+   0               E       V
+     3               J   R   W
+                          U   X
+
+----
+Removing 7
+       L
+   6       V
+ 0   E   R   W
+  3   J   U   X
+
+----
+Removing X
+       L
+   6       V
+ 0   E   R   W
+  3   J   U
+
+----
+Removing L
+       6
+   0       R
+     3   E   V
+          J U W
+
+----
+Removing J
+       6
+   0       R
+     3   E   V
+            U W
+
+----
+Removing 0
+   R
+ 6   V
+3 E U W
+
+----
+Removing V
+   R
+ 6   U
+3 E   W
+
+----
+Removing W
+   R
+ 6   U
+3 E
+
+----
+Removing E
+   R
+ 6   U
+3
+
+----
+Removing U
+ 6
+3 R
+
+----
+Removing R
+ 6
+3
+
+----
+Removing 3
+6
+
+----
+Removing 6
+
+----

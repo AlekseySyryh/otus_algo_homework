@@ -48,10 +48,10 @@ struct tree {
 
     void checkBalance(std::shared_ptr<node<T>> node) {
         while (node) {
-            if (node->updateLevel()) {
+            node->updateLevel();
                 if (doTurns) {
-                    int left = node->left ? node->left->level : 0;
-                    int right = node->right ? node->right->level : 0;
+                    int left = node->left ? node->left->level : -1;
+                    int right = node->right ? node->right->level : -1;
                     if (left - right >= 2) {
                         int ll;
                         if (!node->left || !node->left->left) {
@@ -67,8 +67,10 @@ struct tree {
                         }
                         if (ll >= lr) {
                             smallRightTurn(node);
+                            node = node->parent;
                         } else {
                             bigRightTurn(node);
+                            node = node->parent;
                         }
                     } else if (left - right <= -2) {
                         int rr;
@@ -85,16 +87,15 @@ struct tree {
                         }
                         if (rr >= rl) {
                             smallLeftTurn(node);
+                            node = node->parent;
                         } else {
                             bigLeftTurn(node);
+                            node = node->parent;
                         }
                     }
                 }
-
+            if (node)
                 node = node->parent;
-            } else {
-                break;
-            }
         }
     }
 
@@ -119,7 +120,7 @@ struct tree {
                 }
             }
         }
-        checkBalance(nodeToIns);
+        checkBalance(child);
     }
 
     void smallLeftTurn(std::shared_ptr<node<T>> a) {
@@ -219,9 +220,11 @@ struct tree {
                 }
             }
         }
+        checkBalance(item->parent);
         item->parent.reset();
         item->left.reset();
         item->right.reset();
+
     }
 
     std::string print() {
@@ -469,31 +472,42 @@ void bigRightTurnTest() {
               << std::endl << srt.print() << std::endl;
 }
 
+void test(bool seq) {
+    std::vector<char> chars;
+    for (char c = '0'; c <= '9'; ++c) {
+        chars.push_back(c);
+    }
+    for (char c = 'A'; c <= 'Z'; ++c) {
+        chars.push_back(c);
+    }
+    if (!seq)
+        std::random_shuffle(chars.begin(), chars.end());
+    tree<char> tree;
+    for (char c:chars) {
+        std::cout << "Adding " << c << std::endl;
+        tree.add(c);
+        std::cout << tree.print() << std::endl;
+        std::cout << "----" << std::endl;
+    }
+    if (!seq)
+        std::random_shuffle(chars.begin(), chars.end());
+    for (char c:chars) {
+        std::cout << "Removing " << c << std::endl;
+        tree.del(tree.find(c));
+        std::cout << tree.print() << std::endl;
+        std::cout << "----" << std::endl;
+    }
+}
+
 int main() {
     smallLeftTurnTest();
     smallRightTurnTest();
     bigRightTurnTest();
     bigLeftTurnTest();
-    std::vector<char> chars;
-    for (char c = 'A'; c <= 'Z'; ++c) {
-           chars.push_back(c);
-       }
-
-    std::random_shuffle(chars.begin(), chars.end());
-       tree<char> tree;
-       for (char c:chars) {
-           std::cout << "Adding " << c << std::endl;
-           tree.add(c);
-           std::cout << tree.print() << std::endl;
-           std::cout << "----" << std::endl;
-       }
-    /* std::random_shuffle(chars.begin(), chars.end());
-     for (char c:chars) {
-         std::cout << "Removing " << c << std::endl;
-         tree.del(tree.find(c));
-         std::cout << tree.print() << std::endl;
-         std::cout << "----" << std::endl;
-     }*/
+    std::cout << "Sequencial test" << std::endl;
+    test(true);
+    std::cout << "Random test" << std::endl;
+    test(false);
 
     return 0;
 }
